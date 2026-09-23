@@ -1,0 +1,84 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+*venv*/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.ipynb_checkpoints/
+
+# Jupyter / notebooks
+*.ipynb_checkpoints/
+*.ipynb
+
+# IDE / editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Environment / secrets / credentials
+.env
+.env.*
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+secrets/
+credentials/
+*.secret
+
+# ML / data science artifacts
+*.csv
+*.XPT
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.hdf5
+*.parquet
+*.feather
+*.arrow
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.keras
+*.tflite
+*.model
+*.bin
+
+# Experiment tracking / local outputs
+mlruns/
+wandb/
+logs/
+artifacts/
+checkpoints/
+models/
+
+# Temporary and generated files
+*.log
+*.tmp
+*.temp
+*.bak
+*.orig
+*.gz
+*.zip
+*.tar
+*.tar.gz
