@@ -135,6 +135,26 @@ def synthetic(n=1000, seed=42):
     return d
 
 
+def load_data(path):
+    path = Path(path)
+    if path.suffix.lower() == '.csv':
+        h = hashlib.sha256()
+        with path.open('rb') as f:
+            for block in iter(lambda: f.read(1024 * 1024), b''):
+                h.update(block)
+        return pd.read_csv(path), h.hexdigest()
+    hasher = hashlib.sha256()
+    with path.open('rb') as f:
+        for block in iter(lambda: f.read(1024 * 1024), b''):
+            hasher.update(block)
+    digest = hasher.hexdigest()
+    frames = []
+    for chunk in pd.read_sas(path, format='xport', chunksize=20000):
+        columns = FEATURES + ['CVDSTRK3'] + [c for c in DESIGN if c in chunk]
+        frames.append(chunk[columns])
+    return pd.concat(frames, ignore_index=True), digest
+
+
 def run(args):
     out = Path(args.output)
     out.mkdir(parents=True, exist_ok=False)  # Never overwrite an earlier experiment.
@@ -143,13 +163,7 @@ def run(args):
     else:
         if not args.data:
             raise ValueError('--data is required unless --smoke is selected')
-        path = Path(args.data)
-        hasher = hashlib.sha256()
-        with path.open('rb') as f:
-            for block in iter(lambda: f.read(1024 * 1024), b''):
-                hasher.update(block)
-        digest = hasher.hexdigest()
-        raw = pd.read_sas(path, format='xport')
+        raw, digest = load_data(args.data)
     X, y, design = clean(raw)
     train, val, test = split_indices(y, args.seed)
     model = build_model(args.model, args.seed)
