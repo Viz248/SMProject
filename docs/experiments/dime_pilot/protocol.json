@@ -1,0 +1,31 @@
+{
+  "status": "EXPLORATORY_DEVELOPMENT_PILOT",
+  "official_DIME_reproduction": false,
+  "base": "DIME ICLR 2024 Eq.3",
+  "reference_commit": "06ba70f7bcd54dbd8ccd64bed398dfef90d09da5",
+  "primary": "Brier benefit of crossfit_brier versus insample_brier after exactly 3 acquisitions",
+  "implementation": "Fixed CE-trained masked MLP, separate unconstrained value MLP, three-fold target estimation; no joint DIME optimization, no external calibration",
+  "folds": 3,
+  "episodes_per_record": 3,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "epochs": 30,
+  "value_epochs": 25,
+  "final_test_accessed": false,
+  "brfss2025_accessed": false,
+  "limitations": [
+    "Complete-case BRFSS sample; no survey-design inference",
+    "Historical development cohort already explored",
+    "Small bounded pilot; no hyperparameter search",
+    "Fold teachers trained on 2/3 while deployment predictor uses full fit; matched-size and split controls included",
+    "Split control has fewer distinct value-training records",
+    "Record bootstrap does not incorporate training uncertainty; seeds reported separately",
+    "Not an official DIME, GDFS, ACO or L2M benchmark reproduction"
+  ],
+  "python": "3.12.14",
+  "torch": "2.14.1+cpu",
+  "dataset_sha256": "1568dec8239ade0dcf89bddadb1c119abf0fcb2955c015382b87767763f6a74c"
+}

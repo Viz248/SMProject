@@ -1,0 +1,19 @@
+{
+  "python": "3.12.14",
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0",
+    "joblib": "1.5.3",
+    "threadpoolctl": "3.6.0",
+    "torch": "2.14.1+cpu",
+    "pytorch-tabnet": "4.1.0",
+    "matplotlib": "3.10.8"
+  },
+  "seed_policy": "Fixed 2024 split seed 42. MLP initialization seeds 42\u201344 and training bootstrap seeds 45\u201346; development sample RNG 2026. No new 2024 final-test scoring.",
+  "full_source_hashes": "See ../../DATA_PROVENANCE.json and external2023_provenance.json",
+  "tests": "21 unittest tests passed; includes fresh-process TabNet native checkpoint roundtrip",
+  "notebook_validation": "JSON and Python cell syntax only; Colab account/Drive integration not executed",
+  "serialization": "Native TabNet ZIP embedded in portable predictor, atomic replacement; old custom-metric pickle failure preserved"
+}

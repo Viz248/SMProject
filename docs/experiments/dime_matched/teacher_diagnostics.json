@@ -1,0 +1,83 @@
+{
+  "status": "POST_HOC_DEVELOPMENT_DIAGNOSTIC_NO_FITTING",
+  "final_test_accessed": false,
+  "brfss2025_accessed": false,
+  "datasets": {
+    "brfss2024": [
+      {
+        "seed": 42,
+        "teacher_mean_delta_minus_full": -6.408606978523092e-05,
+        "teacher_full_delta_rmse": 0.006177116211475931,
+        "cf_mse_full": 0.0001345619482779803,
+        "cf_mse_teacher_mean": 8.666095600198066e-05,
+        "insample_mse_full": 0.00013845382174709802,
+        "insample_mse_teacher_mean": 8.994209211836577e-05,
+        "cf_centered_mse_full": 0.0001078562112576561,
+        "insample_centered_mse_full": 0.00010970401196707558,
+        "teacher_centered_drift_rmse": 0.005500113059039563
+      },
+      {
+        "seed": 43,
+        "teacher_mean_delta_minus_full": 8.787030250177201e-05,
+        "teacher_full_delta_rmse": 0.0068676311558155305,
+        "cf_mse_full": 0.00012572419595724418,
+        "cf_mse_teacher_mean": 0.00012637572254499456,
+        "insample_mse_full": 0.00012240396759480784,
+        "insample_mse_teacher_mean": 0.00012550737602744794,
+        "cf_centered_mse_full": 0.00010558553955160648,
+        "insample_centered_mse_full": 0.00010480664732034281,
+        "teacher_centered_drift_rmse": 0.006324135325688522
+      },
+      {
+        "seed": 44,
+        "teacher_mean_delta_minus_full": 3.1558157723644094e-05,
+        "teacher_full_delta_rmse": 0.007824447230805266,
+        "cf_mse_full": 0.0001801497551261577,
+        "cf_mse_teacher_mean": 8.893229420799343e-05,
+        "insample_mse_full": 0.00018653026323818344,
+        "insample_mse_teacher_mean": 9.414803710284463e-05,
+        "cf_centered_mse_full": 0.00015302122652159888,
+        "insample_centered_mse_full": 0.00015806252134690002,
+        "teacher_centered_drift_rmse": 0.007153841060887269
+      }
+    ],
+    "wisconsin": [
+      {
+        "seed": 42,
+        "teacher_mean_delta_minus_full": -0.015228888430448204,
+        "teacher_full_delta_rmse": 0.0584001594123081,
+        "cf_mse_full": 0.004259197692310289,
+        "cf_mse_teacher_mean": 0.00016944917565393794,
+        "insample_mse_full": 0.0034569956294663285,
+        "insample_mse_teacher_mean": 0.0009061060462836986,
+        "cf_centered_mse_full": 0.0029746149245314765,
+        "insample_centered_mse_full": 0.0025992921952492807,
+        "teacher_centered_drift_rmse": 0.047887888125887304
+      },
+      {
+        "seed": 43,
+        "teacher_mean_delta_minus_full": -0.011026037770872922,
+        "teacher_full_delta_rmse": 0.03819249950425377,
+        "cf_mse_full": 0.0020026463649819733,
+        "cf_mse_teacher_mean": 0.0001480911639021023,
+        "insample_mse_full": 0.001660101625441363,
+        "insample_mse_teacher_mean": 0.0004652280128784467,
+        "cf_centered_mse_full": 0.001455258158372942,
+        "insample_centered_mse_full": 0.0012844185791517997,
+        "teacher_centered_drift_rmse": 0.03225113949049609
+      },
+      {
+        "seed": 44,
+        "teacher_mean_delta_minus_full": -0.012071650616873666,
+        "teacher_full_delta_rmse": 0.04228384514296831,
+        "cf_mse_full": 0.002380946605774729,
+        "cf_mse_teacher_mean": 0.0001484607482263787,
+        "insample_mse_full": 0.002044015629366075,
+        "insample_mse_teacher_mean": 0.000667256729076161,
+        "cf_centered_mse_full": 0.0018012645331078939,
+        "insample_centered_mse_full": 0.0016340258026499958,
+        "teacher_centered_drift_rmse": 0.03659808602059949
+      }
+    ]
+  }
+}

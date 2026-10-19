@@ -1,0 +1,362 @@
+[
+  {
+    "family": "hist_gradient_boosting",
+    "scenario": "full",
+    "condition": "mask_trained",
+    "contrast": {
+      "estimate": 3.0237353387668343e-05,
+      "standard_error": null,
+      "ci95": null,
+      "psus": 349241,
+      "strata": 2034,
+      "singleton_strata": 93,
+      "degrees_freedom": 347207,
+      "method": "stratified-PSU Taylor ratio mean; with-replacement; no FPC; conditional on fitted models"
+    }
+  },
+  {
+    "family": "hist_gradient_boosting",
+    "scenario": "full",
+    "condition": "subset_retrained",
+    "contrast": {
+      "estimate": 0.0,
+      "standard_error": null,
+      "ci95": null,
+      "psus": 349241,
+      "strata": 2034,
+      "singleton_strata": 93,
+      "degrees_freedom": 347207,
+      "method": "stratified-PSU Taylor ratio mean; with-replacement; no FPC; conditional on fitted models"
+    }
+  },
+  {
+    "family": "hist_gradient_boosting",
+    "scenario": "full",
+    "condition": "fixed_global_calibration",
+    "contrast": {
+      "estimate": 0.0,
+      "standard_error": null,
+      "ci95": null,
+      "psus": 349241,
+      "strata": 2034,
+      "singleton_strata": 93,
+      "degrees_freedom": 347207,
+      "method": "stratified-PSU Taylor ratio mean; with-replacement; no FPC; conditional on fitted models"
+    }
+  },
+  {
+    "family": "hist_gradient_boosting",
+    "scenario": "without_health_state",
+    "condition": "mask_trained",
+    "contrast": {
+      "estimate": -0.00014938324953993315,
+      "standard_error": null,
+      "ci95": null,
+      "psus": 349241,
+      "strata": 2034,
+      "singleton_strata": 93,
+      "degrees_freedom": 347207,
+      "method": "stratified-PSU Taylor ratio mean; with-replacement; no FPC; conditional on fitted models"
+    }
+  },
+  {
+    "family": "hist_gradient_boosting",
+    "scenario": "without_health_state",
+    "condition": "subset_retrained",
+    "contrast": {
+      "estimate": -0.00018932307591581007,
+      "standard_error": null,
+      "ci95": null,
+      "psus": 349241,
+      "strata": 2034,
+      "singleton_strata": 93,
+      "degrees_freedom": 347207,
+      "method": "stratified-PSU Taylor ratio mean; with-replacement; no FPC; conditional on fitted models"
+    }
+  },
+  {
+    "family": "hist_gradient_boosting",
+    "scenario": "without_health_state",
+    "condition": "fixed_global_calibration",
+    "contrast": {
+      "estimate": 8.913538904931773e-06,
+      "standard_error": null,
+      "ci95": null,
+      "psus": 349241,
+      "strata": 2034,
+      "singleton_strata": 93,
+      "degrees_freedom": 347207,
+      "method": "stratified-PSU Taylor ratio mean; with-replacement; no FPC; conditional on fitted models"
+    }
+  },
+  {
+    "family": "hist_gradient_boosting",
+    "scenario": "demographics_history",
+    "condition": "mask_trained",
+    "contrast": {
+      "estimate": -0.00015656598130562793,
+      "standard_error": null,
+      "ci95": null,
+      "psus": 349241,
+      "strata": 2034,
+      "singleton_strata": 93,
+      "degrees_freedom": 347207,
+      "method": "stratified-PSU Taylor ratio mean; with-replacement; no FPC; conditional on fitted models"
+    }
+  },
+  {
+    "family": "hist_gradient_boosting",
+    "scenario": "demographics_history",
+    "condition": "subset_retrained",
+    "contrast": {
+      "estimate": -0.00021026597900180875,
+      "standard_error": null,
+      "ci95": null,
+      "psus": 349241,
+      "strata": 2034,
+      "singleton_strata": 93,
+      "degrees_freedom": 347207,
+      "method": "stratified-PSU Taylor ratio mean; with-replacement; no FPC; conditional on fitted models"
+    }
+  },
+  {
+    "family": "hist_gradient_boosting",
+    "scenario": "demographics_history",
+    "condition": "fixed_global_calibration",
+    "contrast": {
+      "estimate": 0.00022752533696550478,
+      "standard_error": null,
+      "ci95": null,
+      "psus": 349241,
+      "strata": 2034,
+      "singleton_strata": 93,
+      "degrees_freedom": 347207,
+      "method": "stratified-PSU Taylor ratio mean; with-replacement; no FPC; conditional on fitted models"
+    }
+  },
+  {
+    "family": "hist_gradient_boosting",
+    "scenario": "demographics",
+    "condition": "mask_trained",
+    "contrast": {
+      "estimate": -0.0009997038640408235,
+      "standard_error": null,
+      "ci95": null,
+      "psus": 349241,
+      "strata": 2034,
+      "singleton_strata": 93,
+      "degrees_freedom": 347207,
+      "method": "stratified-PSU Taylor ratio mean; with-replacement; no FPC; conditional on fitted models"
+    }
+  },
+  {
+    "family": "hist_gradient_boosting",
+    "scenario": "demographics",
+    "condition": "subset_retrained",
+    "contrast": {
+      "estimate": -0.0010120546879298893,
+      "standard_error": null,
+      "ci95": null,
+      "psus": 349241,
+      "strata": 2034,
+      "singleton_strata": 93,
+      "degrees_freedom": 347207,
+      "method": "stratified-PSU Taylor ratio mean; with-replacement; no FPC; conditional on fitted models"
+    }
+  },
+  {
+    "family": "hist_gradient_boosting",
+    "scenario": "demographics",
+    "condition": "fixed_global_calibration",
+    "contrast": {
+      "estimate": 0.021293225130681128,
+      "standard_error": null,
+      "ci95": null,
+      "psus": 349241,
+      "strata": 2034,
+      "singleton_strata": 93,
+      "degrees_freedom": 347207,
+      "method": "stratified-PSU Taylor ratio mean; with-replacement; no FPC; conditional on fitted models"
+    }
+  },
+  {
+    "family": "mlp",
+    "scenario": "full",
+    "condition": "mask_trained",
+    "contrast": {
+      "estimate": -4.13962590999561e-05,
+      "standard_error": null,
+      "ci95": null,
+      "psus": 349241,
+      "strata": 2034,
+      "singleton_strata": 93,
+      "degrees_freedom": 347207,
+      "method": "stratified-PSU Taylor ratio mean; with-replacement; no FPC; conditional on fitted models"
+    }
+  },
+  {
+    "family": "mlp",
+    "scenario": "full",
+    "condition": "subset_retrained",
+    "contrast": {
+      "estimate": 0.0,
+      "standard_error": null,
+      "ci95": null,
+      "psus": 349241,
+      "strata": 2034,
+      "singleton_strata": 93,
+      "degrees_freedom": 347207,
+      "method": "stratified-PSU Taylor ratio mean; with-replacement; no FPC; conditional on fitted models"
+    }
+  },
+  {
+    "family": "mlp",
+    "scenario": "full",
+    "condition": "fixed_global_calibration",
+    "contrast": {
+      "estimate": 0.0,
+      "standard_error": null,
+      "ci95": null,
+      "psus": 349241,
+      "strata": 2034,
+      "singleton_strata": 93,
+      "degrees_freedom": 347207,
+      "method": "stratified-PSU Taylor ratio mean; with-replacement; no FPC; conditional on fitted models"
+    }
+  },
+  {
+    "family": "mlp",
+    "scenario": "without_health_state",
+    "condition": "mask_trained",
+    "contrast": {
+      "estimate": -0.00020270186859825014,
+      "standard_error": null,
+      "ci95": null,
+      "psus": 349241,
+      "strata": 2034,
+      "singleton_strata": 93,
+      "degrees_freedom": 347207,
+      "method": "stratified-PSU Taylor ratio mean; with-replacement; no FPC; conditional on fitted models"
+    }
+  },
+  {
+    "family": "mlp",
+    "scenario": "without_health_state",
+    "condition": "subset_retrained",
+    "contrast": {
+      "estimate": -0.00020798032112303222,
+      "standard_error": null,
+      "ci95": null,
+      "psus": 349241,
+      "strata": 2034,
+      "singleton_strata": 93,
+      "degrees_freedom": 347207,
+      "method": "stratified-PSU Taylor ratio mean; with-replacement; no FPC; conditional on fitted models"
+    }
+  },
+  {
+    "family": "mlp",
+    "scenario": "without_health_state",
+    "condition": "fixed_global_calibration",
+    "contrast": {
+      "estimate": 8.631634192003764e-05,
+      "standard_error": null,
+      "ci95": null,
+      "psus": 349241,
+      "strata": 2034,
+      "singleton_strata": 93,
+      "degrees_freedom": 347207,
+      "method": "stratified-PSU Taylor ratio mean; with-replacement; no FPC; conditional on fitted models"
+    }
+  },
+  {
+    "family": "mlp",
+    "scenario": "demographics_history",
+    "condition": "mask_trained",
+    "contrast": {
+      "estimate": -0.00022999074075440122,
+      "standard_error": null,
+      "ci95": null,
+      "psus": 349241,
+      "strata": 2034,
+      "singleton_strata": 93,
+      "degrees_freedom": 347207,
+      "method": "stratified-PSU Taylor ratio mean; with-replacement; no FPC; conditional on fitted models"
+    }
+  },
+  {
+    "family": "mlp",
+    "scenario": "demographics_history",
+    "condition": "subset_retrained",
+    "contrast": {
+      "estimate": -0.00026706383823238606,
+      "standard_error": null,
+      "ci95": null,
+      "psus": 349241,
+      "strata": 2034,
+      "singleton_strata": 93,
+      "degrees_freedom": 347207,
+      "method": "stratified-PSU Taylor ratio mean; with-replacement; no FPC; conditional on fitted models"
+    }
+  },
+  {
+    "family": "mlp",
+    "scenario": "demographics_history",
+    "condition": "fixed_global_calibration",
+    "contrast": {
+      "estimate": 0.004191311789344585,
+      "standard_error": null,
+      "ci95": null,
+      "psus": 349241,
+      "strata": 2034,
+      "singleton_strata": 93,
+      "degrees_freedom": 347207,
+      "method": "stratified-PSU Taylor ratio mean; with-replacement; no FPC; conditional on fitted models"
+    }
+  },
+  {
+    "family": "mlp",
+    "scenario": "demographics",
+    "condition": "mask_trained",
+    "contrast": {
+      "estimate": -3.0391024328488057e-05,
+      "standard_error": null,
+      "ci95": null,
+      "psus": 349241,
+      "strata": 2034,
+      "singleton_strata": 93,
+      "degrees_freedom": 347207,
+      "method": "stratified-PSU Taylor ratio mean; with-replacement; no FPC; conditional on fitted models"
+    }
+  },
+  {
+    "family": "mlp",
+    "scenario": "demographics",
+    "condition": "subset_retrained",
+    "contrast": {
+      "estimate": -2.256199582243063e-05,
+      "standard_error": null,
+      "ci95": null,
+      "psus": 349241,
+      "strata": 2034,
+      "singleton_strata": 93,
+      "degrees_freedom": 347207,
+      "method": "stratified-PSU Taylor ratio mean; with-replacement; no FPC; conditional on fitted models"
+    }
+  },
+  {
+    "family": "mlp",
+    "scenario": "demographics",
+    "condition": "fixed_global_calibration",
+    "contrast": {
+      "estimate": 0.04995717630577055,
+      "standard_error": null,
+      "ci95": null,
+      "psus": 349241,
+      "strata": 2034,
+      "singleton_strata": 93,
+      "degrees_freedom": 347207,
+      "method": "stratified-PSU Taylor ratio mean; with-replacement; no FPC; conditional on fitted models"
+    }
+  }
+]

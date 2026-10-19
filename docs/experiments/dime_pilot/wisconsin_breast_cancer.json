@@ -1,0 +1,1086 @@
+{
+  "dataset": "wisconsin_breast_cancer",
+  "feature_names": [
+    "mean radius",
+    "mean texture",
+    "mean perimeter",
+    "mean area",
+    "mean smoothness",
+    "mean compactness",
+    "mean concavity",
+    "mean concave points",
+    "mean symmetry",
+    "mean fractal dimension",
+    "radius error",
+    "texture error",
+    "perimeter error",
+    "area error",
+    "smoothness error",
+    "compactness error",
+    "concavity error",
+    "concave points error",
+    "symmetry error",
+    "fractal dimension error",
+    "worst radius",
+    "worst texture",
+    "worst perimeter",
+    "worst area",
+    "worst smoothness",
+    "worst compactness",
+    "worst concavity",
+    "worst concave points",
+    "worst symmetry",
+    "worst fractal dimension"
+  ],
+  "initial_features": [],
+  "records_fit": 398,
+  "records_development_evaluation": 171,
+  "positive_fit": 148,
+  "positive_evaluation": 64,
+  "seeds": [
+    {
+      "seed": 42,
+      "curves": {
+        "insample_brier": [
+          {
+            "budget": 0,
+            "brier": 0.23567579686641693,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.10706169903278351,
+            "average_precision": 0.9649236840603752,
+            "auroc": 0.9759053738317758
+          },
+          {
+            "budget": 2,
+            "brier": 0.07652323693037033,
+            "average_precision": 0.9655297971464961,
+            "auroc": 0.9754672897196262
+          },
+          {
+            "budget": 3,
+            "brier": 0.06669294089078903,
+            "average_precision": 0.9696724163155462,
+            "auroc": 0.9759053738317756
+          }
+        ],
+        "crossfit_brier": [
+          {
+            "budget": 0,
+            "brier": 0.23567579686641693,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.11401696503162384,
+            "average_precision": 0.9619646018779735,
+            "auroc": 0.9737879672897196
+          },
+          {
+            "budget": 2,
+            "brier": 0.06734082847833633,
+            "average_precision": 0.9758968972987098,
+            "auroc": 0.9820385514018691
+          },
+          {
+            "budget": 3,
+            "brier": 0.054071180522441864,
+            "average_precision": 0.9788606207364972,
+            "auroc": 0.9840829439252335
+          }
+        ],
+        "matched_size_insample_brier": [
+          {
+            "budget": 0,
+            "brier": 0.23567579686641693,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.10706169903278351,
+            "average_precision": 0.9649236840603752,
+            "auroc": 0.9759053738317758
+          },
+          {
+            "budget": 2,
+            "brier": 0.07683258503675461,
+            "average_precision": 0.9659249600328288,
+            "auroc": 0.9760514018691588
+          },
+          {
+            "budget": 3,
+            "brier": 0.05057067051529884,
+            "average_precision": 0.9814711187735109,
+            "auroc": 0.9858352803738317
+          }
+        ],
+        "crossfit_postloss": [
+          {
+            "budget": 0,
+            "brier": 0.23567579686641693,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.11738613247871399,
+            "average_precision": 0.9322102960029699,
+            "auroc": 0.9470648364485981
+          },
+          {
+            "budget": 2,
+            "brier": 0.07441909611225128,
+            "average_precision": 0.9693903081865765,
+            "auroc": 0.9778037383177569
+          },
+          {
+            "budget": 3,
+            "brier": 0.06772727519273758,
+            "average_precision": 0.962349583181387,
+            "auroc": 0.9705023364485981
+          }
+        ],
+        "insample_ce": [
+          {
+            "budget": 0,
+            "brier": 0.23567579686641693,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.10706169903278351,
+            "average_precision": 0.9649236840603752,
+            "auroc": 0.9759053738317758
+          },
+          {
+            "budget": 2,
+            "brier": 0.07738052308559418,
+            "average_precision": 0.9631735784838928,
+            "auroc": 0.973714953271028
+          },
+          {
+            "budget": 3,
+            "brier": 0.058413561433553696,
+            "average_precision": 0.9727284194052666,
+            "auroc": 0.9804322429906542
+          }
+        ],
+        "split_brier": [
+          {
+            "budget": 0,
+            "brier": 0.23567579686641693,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.11401696503162384,
+            "average_precision": 0.9619646018779735,
+            "auroc": 0.9737879672897196
+          },
+          {
+            "budget": 2,
+            "brier": 0.06734082847833633,
+            "average_precision": 0.9758968972987098,
+            "auroc": 0.9820385514018691
+          },
+          {
+            "budget": 3,
+            "brier": 0.050390347838401794,
+            "average_precision": 0.9817109769140819,
+            "auroc": 0.9861273364485982
+          }
+        ],
+        "random": [
+          {
+            "budget": 0,
+            "brier": 0.23567579686641693,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.18737132847309113,
+            "average_precision": 0.7016092412498118,
+            "auroc": 0.7647488317757009
+          },
+          {
+            "budget": 2,
+            "brier": 0.1481674611568451,
+            "average_precision": 0.8067222044500088,
+            "auroc": 0.851927570093458
+          },
+          {
+            "budget": 3,
+            "brier": 0.12551620602607727,
+            "average_precision": 0.8344225172746671,
+            "auroc": 0.8901869158878505
+          }
+        ],
+        "static": [
+          {
+            "budget": 0,
+            "brier": 0.23567579686641693,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.11738613247871399,
+            "average_precision": 0.9322102960029699,
+            "auroc": 0.9470648364485981
+          },
+          {
+            "budget": 2,
+            "brier": 0.06743510067462921,
+            "average_precision": 0.9711370002522115,
+            "auroc": 0.9785338785046729
+          },
+          {
+            "budget": 3,
+            "brier": 0.04968807101249695,
+            "average_precision": 0.9822726048551084,
+            "auroc": 0.9867114485981308
+          }
+        ]
+      },
+      "value_calibration": {
+        "insample_brier": {
+          "mse": 0.00853311150187357,
+          "mean_bias": 0.003413592412669529,
+          "bins": [
+            {
+              "n": 944,
+              "predicted_mean": -0.016116123646497726,
+              "realized_mean": -0.007743560580443695
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.0021786780562251806,
+              "realized_mean": 0.0004459558448667573
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.014508061110973358,
+              "realized_mean": 0.011643922393652527
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.0415990985929966,
+              "realized_mean": 0.02984175909919892
+            },
+            {
+              "n": 943,
+              "predicted_mean": 0.11396417021751404,
+              "realized_mean": 0.1048718356236975
+            }
+          ]
+        },
+        "crossfit_brier": {
+          "mse": 0.008726014048169025,
+          "mean_bias": 0.002033177493354051,
+          "bins": [
+            {
+              "n": 944,
+              "predicted_mean": -0.004060765728354454,
+              "realized_mean": -0.004059593237935812
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.005316609051078558,
+              "realized_mean": -0.00018634207142577866
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.017868032678961754,
+              "realized_mean": 0.013606917864532556
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.03916505351662636,
+              "realized_mean": 0.025677689611193637
+            },
+            {
+              "n": 943,
+              "predicted_mean": 0.09091994166374207,
+              "realized_mean": 0.1040203382046296
+            }
+          ]
+        },
+        "matched_size_insample_brier": {
+          "mse": 0.00876146080040468,
+          "mean_bias": 0.0017963773721422994,
+          "bins": [
+            {
+              "n": 944,
+              "predicted_mean": -0.0033825021237134933,
+              "realized_mean": -0.004622639354322533
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.005489633418619633,
+              "realized_mean": -0.0012518745815499224
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.018106969073414803,
+              "realized_mean": 0.012526522598603424
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.03999623656272888,
+              "realized_mean": 0.030308806653513643
+            },
+            {
+              "n": 943,
+              "predicted_mean": 0.08781148493289948,
+              "realized_mean": 0.10209615672691301
+            }
+          ]
+        },
+        "split_brier": {
+          "mse": 0.009401322353812571,
+          "mean_bias": 0.0004410138353502763,
+          "bins": [
+            {
+              "n": 944,
+              "predicted_mean": -0.00711138965561986,
+              "realized_mean": -0.0070112913897716535
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.010792010463774204,
+              "realized_mean": 0.004651063007071894
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.024451736360788345,
+              "realized_mean": 0.015393436052773058
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.041390515863895416,
+              "realized_mean": 0.04116985341663565
+            },
+            {
+              "n": 943,
+              "predicted_mean": 0.07170651108026505,
+              "realized_mean": 0.08483562649645879
+            }
+          ]
+        }
+      },
+      "primary": {
+        "benefit_cf_over_insample": 0.01262176493217363,
+        "iid_record_bootstrap_ci": [
+          -0.0016015694552456875,
+          0.025984913792383303
+        ]
+      },
+      "action_agreement_cf_delta_post": 0.001949317738791423,
+      "seconds": 7.85004186630249
+    },
+    {
+      "seed": 43,
+      "curves": {
+        "insample_brier": [
+          {
+            "budget": 0,
+            "brier": 0.23424793779850006,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.10870049148797989,
+            "average_precision": 0.9649236840603752,
+            "auroc": 0.9759053738317758
+          },
+          {
+            "budget": 2,
+            "brier": 0.07989092916250229,
+            "average_precision": 0.9628065975639478,
+            "auroc": 0.9725467289719626
+          },
+          {
+            "budget": 3,
+            "brier": 0.05744769424200058,
+            "average_precision": 0.9756092737067592,
+            "auroc": 0.9816004672897196
+          }
+        ],
+        "crossfit_brier": [
+          {
+            "budget": 0,
+            "brier": 0.23424793779850006,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.10870049148797989,
+            "average_precision": 0.9649236840603752,
+            "auroc": 0.9759053738317758
+          },
+          {
+            "budget": 2,
+            "brier": 0.07719333469867706,
+            "average_precision": 0.9641452064989479,
+            "auroc": 0.9744450934579438
+          },
+          {
+            "budget": 3,
+            "brier": 0.05836458504199982,
+            "average_precision": 0.9736586853295474,
+            "auroc": 0.9807242990654206
+          }
+        ],
+        "matched_size_insample_brier": [
+          {
+            "budget": 0,
+            "brier": 0.23424793779850006,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.10870049148797989,
+            "average_precision": 0.9649236840603752,
+            "auroc": 0.9759053738317758
+          },
+          {
+            "budget": 2,
+            "brier": 0.07716605067253113,
+            "average_precision": 0.9641452064989479,
+            "auroc": 0.9744450934579438
+          },
+          {
+            "budget": 3,
+            "brier": 0.05639117583632469,
+            "average_precision": 0.9771206355158093,
+            "auroc": 0.9826226635514017
+          }
+        ],
+        "crossfit_postloss": [
+          {
+            "budget": 0,
+            "brier": 0.23424793779850006,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.10870049148797989,
+            "average_precision": 0.9649236840603752,
+            "auroc": 0.9759053738317758
+          },
+          {
+            "budget": 2,
+            "brier": 0.06880339980125427,
+            "average_precision": 0.9727551025343838,
+            "auroc": 0.9798481308411215
+          },
+          {
+            "budget": 3,
+            "brier": 0.059906814247369766,
+            "average_precision": 0.9762416467863276,
+            "auroc": 0.9821845794392523
+          }
+        ],
+        "insample_ce": [
+          {
+            "budget": 0,
+            "brier": 0.23424793779850006,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.10870049148797989,
+            "average_precision": 0.9649236840603752,
+            "auroc": 0.9759053738317758
+          },
+          {
+            "budget": 2,
+            "brier": 0.07827626913785934,
+            "average_precision": 0.9637597748562361,
+            "auroc": 0.9738609813084111
+          },
+          {
+            "budget": 3,
+            "brier": 0.058526307344436646,
+            "average_precision": 0.974696987725294,
+            "auroc": 0.980286214953271
+          }
+        ],
+        "split_brier": [
+          {
+            "budget": 0,
+            "brier": 0.23424793779850006,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.12474535405635834,
+            "average_precision": 0.9595773555443503,
+            "auroc": 0.9703563084112149
+          },
+          {
+            "budget": 2,
+            "brier": 0.09415615350008011,
+            "average_precision": 0.9370393374397449,
+            "auroc": 0.952248831775701
+          },
+          {
+            "budget": 3,
+            "brier": 0.06818830221891403,
+            "average_precision": 0.963748479847932,
+            "auroc": 0.9731308411214953
+          }
+        ],
+        "random": [
+          {
+            "budget": 0,
+            "brier": 0.23424793779850006,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.16856050491333008,
+            "average_precision": 0.8056448357848035,
+            "auroc": 0.8233060747663552
+          },
+          {
+            "budget": 2,
+            "brier": 0.12275177985429764,
+            "average_precision": 0.9000967789239684,
+            "auroc": 0.9157418224299065
+          },
+          {
+            "budget": 3,
+            "brier": 0.09892270714044571,
+            "average_precision": 0.9289809031566667,
+            "auroc": 0.9458235981308412
+          }
+        ],
+        "static": [
+          {
+            "budget": 0,
+            "brier": 0.23424793779850006,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.11753979325294495,
+            "average_precision": 0.9322102960029699,
+            "auroc": 0.9469918224299065
+          },
+          {
+            "budget": 2,
+            "brier": 0.06880339980125427,
+            "average_precision": 0.9727551025343838,
+            "auroc": 0.9798481308411215
+          },
+          {
+            "budget": 3,
+            "brier": 0.06203332543373108,
+            "average_precision": 0.9674333630481876,
+            "auroc": 0.974445093457944
+          }
+        ]
+      },
+      "value_calibration": {
+        "insample_brier": {
+          "mse": 0.007848650484781304,
+          "mean_bias": 0.0024704043956426626,
+          "bins": [
+            {
+              "n": 944,
+              "predicted_mean": -0.009908239357173443,
+              "realized_mean": -0.005585812149623794
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.0019060985650867224,
+              "realized_mean": 0.002234258348344984
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.013303544372320175,
+              "realized_mean": 0.012522715272924397
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.039075981825590134,
+              "realized_mean": 0.03385582735297801
+            },
+            {
+              "n": 943,
+              "predicted_mean": 0.10299224406480789,
+              "realized_mean": 0.09198157545801522
+            }
+          ]
+        },
+        "crossfit_brier": {
+          "mse": 0.007797384678457316,
+          "mean_bias": 0.0002491976248148792,
+          "bins": [
+            {
+              "n": 944,
+              "predicted_mean": -0.005036875139921904,
+              "realized_mean": -0.005310832411547235
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.0040653059259057045,
+              "realized_mean": 0.0005522014601081444
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.015864543616771698,
+              "realized_mean": 0.016442787173954462
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.03660176694393158,
+              "realized_mean": 0.03092969781276391
+            },
+            {
+              "n": 943,
+              "predicted_mean": 0.08475189656019211,
+              "realized_mean": 0.09239514835424115
+            }
+          ]
+        },
+        "matched_size_insample_brier": {
+          "mse": 0.007813478090623884,
+          "mean_bias": 0.001505020227132172,
+          "bins": [
+            {
+              "n": 944,
+              "predicted_mean": -0.004801820497959852,
+              "realized_mean": -0.004735770322177533
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.004797137342393398,
+              "realized_mean": 0.00018535668221318494
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.016975920647382736,
+              "realized_mean": 0.014693522281743556
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.039061471819877625,
+              "realized_mean": 0.033962966358149216
+            },
+            {
+              "n": 943,
+              "predicted_mean": 0.08649354428052902,
+              "realized_mean": 0.09090134497075358
+            }
+          ]
+        },
+        "split_brier": {
+          "mse": 0.008231735112726532,
+          "mean_bias": -0.0012806293893790352,
+          "bins": [
+            {
+              "n": 944,
+              "predicted_mean": -0.009888198226690292,
+              "realized_mean": -0.0011647562963474833
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.005766654387116432,
+              "realized_mean": 0.0049671697077720445
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.020816313102841377,
+              "realized_mean": 0.014863954765649227
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.04094129428267479,
+              "realized_mean": 0.037841720882612125
+            },
+            {
+              "n": 943,
+              "predicted_mean": 0.07094843685626984,
+              "realized_mean": 0.07848617925239615
+            }
+          ]
+        }
+      },
+      "primary": {
+        "benefit_cf_over_insample": -0.0009168923026644561,
+        "iid_record_bootstrap_ci": [
+          -0.004941623737814565,
+          0.0024566407815765456
+        ]
+      },
+      "action_agreement_cf_delta_post": 0.391812865497076,
+      "seconds": 6.853417873382568
+    },
+    {
+      "seed": 44,
+      "curves": {
+        "insample_brier": [
+          {
+            "budget": 0,
+            "brier": 0.23468117415905,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.10680196434259415,
+            "average_precision": 0.9619646018779735,
+            "auroc": 0.9737879672897196
+          },
+          {
+            "budget": 2,
+            "brier": 0.06639991700649261,
+            "average_precision": 0.9773968770993773,
+            "auroc": 0.9830607476635514
+          },
+          {
+            "budget": 3,
+            "brier": 0.05722009018063545,
+            "average_precision": 0.978886390780136,
+            "auroc": 0.985105140186916
+          }
+        ],
+        "crossfit_brier": [
+          {
+            "budget": 0,
+            "brier": 0.23468117415905,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.10680196434259415,
+            "average_precision": 0.9619646018779735,
+            "auroc": 0.9737879672897196
+          },
+          {
+            "budget": 2,
+            "brier": 0.06621367484331131,
+            "average_precision": 0.9775042654155285,
+            "auroc": 0.9832067757009345
+          },
+          {
+            "budget": 3,
+            "brier": 0.060298170894384384,
+            "average_precision": 0.9718637118737752,
+            "auroc": 0.9791179906542056
+          }
+        ],
+        "matched_size_insample_brier": [
+          {
+            "budget": 0,
+            "brier": 0.23468117415905,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.10680196434259415,
+            "average_precision": 0.9619646018779735,
+            "auroc": 0.9737879672897196
+          },
+          {
+            "budget": 2,
+            "brier": 0.06624303013086319,
+            "average_precision": 0.9775042654155285,
+            "auroc": 0.9832067757009345
+          },
+          {
+            "budget": 3,
+            "brier": 0.06125258281826973,
+            "average_precision": 0.9694451346398809,
+            "auroc": 0.9767815420560748
+          }
+        ],
+        "crossfit_postloss": [
+          {
+            "budget": 0,
+            "brier": 0.23468117415905,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.10680196434259415,
+            "average_precision": 0.9619646018779735,
+            "auroc": 0.9737879672897196
+          },
+          {
+            "budget": 2,
+            "brier": 0.06844288855791092,
+            "average_precision": 0.9704274565152184,
+            "auroc": 0.9778037383177571
+          },
+          {
+            "budget": 3,
+            "brier": 0.054098524153232574,
+            "average_precision": 0.9826524477217529,
+            "auroc": 0.986857476635514
+          }
+        ],
+        "insample_ce": [
+          {
+            "budget": 0,
+            "brier": 0.23468117415905,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.10838452726602554,
+            "average_precision": 0.9649236840603752,
+            "auroc": 0.9759053738317758
+          },
+          {
+            "budget": 2,
+            "brier": 0.07232722640037537,
+            "average_precision": 0.9652811454706951,
+            "auroc": 0.9757593457943925
+          },
+          {
+            "budget": 3,
+            "brier": 0.06651231646537781,
+            "average_precision": 0.9580046664109336,
+            "auroc": 0.9694801401869159
+          }
+        ],
+        "split_brier": [
+          {
+            "budget": 0,
+            "brier": 0.23468117415905,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.10680196434259415,
+            "average_precision": 0.9619646018779735,
+            "auroc": 0.9737879672897196
+          },
+          {
+            "budget": 2,
+            "brier": 0.06741839647293091,
+            "average_precision": 0.9728446781320743,
+            "auroc": 0.979410046728972
+          },
+          {
+            "budget": 3,
+            "brier": 0.06112946942448616,
+            "average_precision": 0.9694451346398809,
+            "auroc": 0.9767815420560748
+          }
+        ],
+        "random": [
+          {
+            "budget": 0,
+            "brier": 0.23468117415905,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.18280629813671112,
+            "average_precision": 0.7224721559241568,
+            "auroc": 0.7876752336448598
+          },
+          {
+            "budget": 2,
+            "brier": 0.1490422785282135,
+            "average_precision": 0.8265152214498301,
+            "auroc": 0.8679906542056075
+          },
+          {
+            "budget": 3,
+            "brier": 0.1034037172794342,
+            "average_precision": 0.9266771910327956,
+            "auroc": 0.9477219626168223
+          }
+        ],
+        "static": [
+          {
+            "budget": 0,
+            "brier": 0.23468117415905,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.11434559524059296,
+            "average_precision": 0.9322102960029699,
+            "auroc": 0.9470648364485981
+          },
+          {
+            "budget": 2,
+            "brier": 0.06890410929918289,
+            "average_precision": 0.9711370002522115,
+            "auroc": 0.9785338785046729
+          },
+          {
+            "budget": 3,
+            "brier": 0.05418325588107109,
+            "average_precision": 0.9826524477217529,
+            "auroc": 0.986857476635514
+          }
+        ]
+      },
+      "value_calibration": {
+        "insample_brier": {
+          "mse": 0.008105599133453397,
+          "mean_bias": 0.0005517314945754498,
+          "bins": [
+            {
+              "n": 944,
+              "predicted_mean": -0.011162751354277134,
+              "realized_mean": -0.0021845365203555164
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.003241367172449827,
+              "realized_mean": 0.006744963611058129
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.014481978490948677,
+              "realized_mean": 0.009534591801258745
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.037620753049850464,
+              "realized_mean": 0.03143432730536604
+            },
+            {
+              "n": 943,
+              "predicted_mean": 0.09984871000051498,
+              "realized_mean": 0.09573828519397279
+            }
+          ]
+        },
+        "crossfit_brier": {
+          "mse": 0.008127122992930443,
+          "mean_bias": -0.00045221342634398846,
+          "bins": [
+            {
+              "n": 944,
+              "predicted_mean": -0.004231918603181839,
+              "realized_mean": -0.005126576547427028
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.005192209966480732,
+              "realized_mean": 0.003199769194120924
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.016247456893324852,
+              "realized_mean": 0.01669583109266011
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.036921426653862,
+              "realized_mean": 0.03077292521178615
+            },
+            {
+              "n": 943,
+              "predicted_mean": 0.08486635237932205,
+              "realized_mean": 0.09572566907562788
+            }
+          ]
+        },
+        "matched_size_insample_brier": {
+          "mse": 0.008128647661152535,
+          "mean_bias": -0.0006367107966619357,
+          "bins": [
+            {
+              "n": 944,
+              "predicted_mean": -0.0033536453265696764,
+              "realized_mean": -0.004340752651991394
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.005408633965998888,
+              "realized_mean": 0.0031765720961075003
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.01595800742506981,
+              "realized_mean": 0.014777788633004567
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.036427587270736694,
+              "realized_mean": 0.03125280327266201
+            },
+            {
+              "n": 943,
+              "predicted_mean": 0.08363135159015656,
+              "realized_mean": 0.0964019230477185
+            }
+          ]
+        },
+        "split_brier": {
+          "mse": 0.008706286513460539,
+          "mean_bias": -0.0036495136870609924,
+          "bins": [
+            {
+              "n": 944,
+              "predicted_mean": -0.0054573966190218925,
+              "realized_mean": -0.0040913798201197785
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.006921630818396807,
+              "realized_mean": 0.007128987632262277
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.018402501940727234,
+              "realized_mean": 0.01398125444056757
+            },
+            {
+              "n": 944,
+              "predicted_mean": 0.036831531673669815,
+              "realized_mean": 0.04057010305160827
+            },
+            {
+              "n": 943,
+              "predicted_mean": 0.06629446893930435,
+              "realized_mean": 0.08366587751953011
+            }
+          ]
+        }
+      },
+      "primary": {
+        "benefit_cf_over_insample": -0.003078079437677102,
+        "iid_record_bootstrap_ci": [
+          -0.013228579168356222,
+          0.00691900263277414
+        ]
+      },
+      "action_agreement_cf_delta_post": 0.4405458089668616,
+      "seconds": 6.8707826137542725
+    }
+  ]
+}

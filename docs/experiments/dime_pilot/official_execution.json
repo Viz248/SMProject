@@ -1,0 +1,104 @@
+{
+  "status": "OFFICIAL_CLASSES_REAL_DATA_EXECUTION_CHECK",
+  "published_scores_reproduced": false,
+  "reference_commit": "06ba70f7bcd54dbd8ccd64bed398dfef90d09da5",
+  "dataset": "sklearn Wisconsin diagnostic breast cancer; 1=malignant",
+  "adaptation": "CPU; 64/32 hidden layers; fixed 30-epoch pretraining and joint budgets; max_features=5; original bounded CE value scaling; scheduler verbose argument removed via subclass; NumPy Inf compatibility alias; scoped setuptools 80.9 for Lightning 1.9",
+  "final_brfss_test_accessed": false,
+  "brfss2025_accessed": false,
+  "seeds": [
+    {
+      "seed": 42,
+      "curve": [
+        {
+          "budget": 0,
+          "brier": 0.23518839478492737,
+          "average_precision": 0.3742690058479532,
+          "auroc": 0.5
+        },
+        {
+          "budget": 1,
+          "brier": 0.06940405815839767,
+          "average_precision": 0.9515703787853923,
+          "auroc": 0.9625438084112149
+        },
+        {
+          "budget": 2,
+          "brier": 0.04581625759601593,
+          "average_precision": 0.9690693677568175,
+          "auroc": 0.9669976635514019
+        },
+        {
+          "budget": 3,
+          "brier": 0.04539944976568222,
+          "average_precision": 0.9703612675812363,
+          "auroc": 0.969626168224299
+        }
+      ],
+      "selected_checkpoint": "results/dime-official-execution-v3/checkpoint42/epoch=14-step=75.ckpt",
+      "validation_selection_loss": 0.19876666367053986
+    },
+    {
+      "seed": 43,
+      "curve": [
+        {
+          "budget": 0,
+          "brier": 0.234472393989563,
+          "average_precision": 0.3742690058479532,
+          "auroc": 0.5
+        },
+        {
+          "budget": 1,
+          "brier": 0.07723447680473328,
+          "average_precision": 0.9429799927814407,
+          "auroc": 0.9587470794392523
+        },
+        {
+          "budget": 2,
+          "brier": 0.058044422417879105,
+          "average_precision": 0.9631434576635959,
+          "auroc": 0.9750292056074765
+        },
+        {
+          "budget": 3,
+          "brier": 0.050197623670101166,
+          "average_precision": 0.9741513680794838,
+          "auroc": 0.9816004672897196
+        }
+      ],
+      "selected_checkpoint": "results/dime-official-execution-v3/checkpoint43/epoch=18-step=95.ckpt",
+      "validation_selection_loss": 0.21717600524425507
+    },
+    {
+      "seed": 44,
+      "curve": [
+        {
+          "budget": 0,
+          "brier": 0.2345447689294815,
+          "average_precision": 0.3742690058479532,
+          "auroc": 0.5
+        },
+        {
+          "budget": 1,
+          "brier": 0.07666020840406418,
+          "average_precision": 0.9472423942095672,
+          "auroc": 0.9605724299065421
+        },
+        {
+          "budget": 2,
+          "brier": 0.07410191744565964,
+          "average_precision": 0.9500196624023135,
+          "auroc": 0.9643691588785047
+        },
+        {
+          "budget": 3,
+          "brier": 0.06428650766611099,
+          "average_precision": 0.9589704235439088,
+          "auroc": 0.9706483644859814
+        }
+      ],
+      "selected_checkpoint": "results/dime-official-execution-v3/checkpoint44/epoch=9-step=50.ckpt",
+      "validation_selection_loss": 0.24820296466350555
+    }
+  ]
+}

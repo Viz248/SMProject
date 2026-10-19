@@ -1,0 +1,169 @@
+{
+  "status": "EXTERNAL_YEAR_TRANSPORT_EVALUATION",
+  "source": "Official CDC BRFSS release",
+  "dataset_sha256": "3d3bf8ef5195bde227828ddc4c90745b76e8b304f8f5b9a043b6d99895fd1615",
+  "raw_records": 433323,
+  "labeled_records": 431849,
+  "positive_records": 18350,
+  "selected_before_external_evaluation": "original_blend",
+  "results": {
+    "original_blend": {
+      "metrics": {
+        "n": 431849,
+        "prevalence": 0.04249170427626323,
+        "threshold": 0.14,
+        "auroc": 0.8150177004404882,
+        "average_precision": 0.177415923799345,
+        "brier": 0.037576410326696064,
+        "ece": 0.0012236275959318955,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 380581,
+            "probability": 0.02625921502192854,
+            "observed": 0.02599183879384415
+          },
+          {
+            "bin": 1,
+            "count": 37936,
+            "probability": 0.137479226559589,
+            "observed": 0.13198544917756222
+          },
+          {
+            "bin": 2,
+            "count": 9206,
+            "probability": 0.2399690791892183,
+            "observed": 0.22474473169671952
+          },
+          {
+            "bin": 3,
+            "count": 3556,
+            "probability": 0.34232217832291423,
+            "observed": 0.3217097862767154
+          },
+          {
+            "bin": 4,
+            "count": 567,
+            "probability": 0.4239447202850276,
+            "observed": 0.41622574955908287
+          },
+          {
+            "bin": 5,
+            "count": 3,
+            "probability": 0.5258542944659576,
+            "observed": 0.6666666666666666
+          }
+        ],
+        "precision": 0.20284193057668373,
+        "sensitivity": 0.3197275204359673,
+        "specificity": 0.9442392847382944,
+        "f1": 0.24821254812370436,
+        "confusion_matrix": [
+          [
+            390442,
+            23057
+          ],
+          [
+            12483,
+            5867
+          ]
+        ]
+      },
+      "survey_weighted_points": {
+        "prevalence": 0.03385683173406745,
+        "auroc": 0.8333495813787464,
+        "average_precision": 0.17328984079791854,
+        "brier": 0.030108264600087184,
+        "sensitivity": 0.30707471277623904,
+        "specificity": 0.9576302465406294,
+        "precision": 0.2025366706856772,
+        "interpretation": "Survey-weighted point estimates; no design-aware intervals"
+      }
+    },
+    "tabnet": {
+      "metrics": {
+        "n": 431849,
+        "prevalence": 0.04249170427626323,
+        "threshold": 0.14,
+        "auroc": 0.7954261451976402,
+        "average_precision": 0.15388556563229086,
+        "brier": 0.038115336230303415,
+        "ece": 0.0010924560431943586,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 384632,
+            "probability": 0.028637413816220897,
+            "observed": 0.028120385199359388
+          },
+          {
+            "bin": 1,
+            "count": 35004,
+            "probability": 0.1354608939998179,
+            "observed": 0.13215632499142954
+          },
+          {
+            "bin": 2,
+            "count": 11061,
+            "probability": 0.2422154821498481,
+            "observed": 0.23334237410722358
+          },
+          {
+            "bin": 3,
+            "count": 1093,
+            "probability": 0.3298312998473492,
+            "observed": 0.282708142726441
+          },
+          {
+            "bin": 4,
+            "count": 55,
+            "probability": 0.42817091078111025,
+            "observed": 0.3090909090909091
+          },
+          {
+            "bin": 5,
+            "count": 4,
+            "probability": 0.5091765953888192,
+            "observed": 0.25
+          }
+        ],
+        "precision": 0.19747534516765286,
+        "sensitivity": 0.27280653950953676,
+        "specificity": 0.9508003646925386,
+        "f1": 0.22910755148741418,
+        "confusion_matrix": [
+          [
+            393155,
+            20344
+          ],
+          [
+            13344,
+            5006
+          ]
+        ]
+      },
+      "survey_weighted_points": {
+        "prevalence": 0.03385683173406745,
+        "auroc": 0.814080317963019,
+        "average_precision": 0.14616064942292312,
+        "brier": 0.03057220751376718,
+        "sensitivity": 0.25307941137607515,
+        "specificity": 0.9636080150661175,
+        "precision": 0.19594771012922851,
+        "interpretation": "Survey-weighted point estimates; no design-aware intervals"
+      }
+    }
+  },
+  "paired_brier_advantage_tabnet_over_blend": {
+    "mean": -0.0005389259036073574,
+    "low": -0.000598426894072017,
+    "high": -0.00047590431898294875,
+    "n": 431849
+  },
+  "limitations": [
+    "Models trained in 2024 evaluated in earlier 2023 survey, not prospective forecasting",
+    "Different participating-state coverage and population mix",
+    "IID paired Brier CI, not complex-survey design CI",
+    "No external-label fitting, calibration or threshold selection; no clinical validation"
+  ]
+}

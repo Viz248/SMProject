@@ -1,0 +1,1113 @@
+{
+  "dataset": "wisconsin",
+  "fit_records": 318,
+  "stopping_records": 80,
+  "evaluation_records": 171,
+  "positives": {
+    "fit": 118,
+    "stopping": 30,
+    "evaluation": 64
+  },
+  "features": [
+    "mean radius",
+    "mean texture",
+    "mean perimeter",
+    "mean area",
+    "mean smoothness",
+    "mean compactness",
+    "mean concavity",
+    "mean concave points",
+    "mean symmetry",
+    "mean fractal dimension",
+    "radius error",
+    "texture error",
+    "perimeter error",
+    "area error",
+    "smoothness error",
+    "compactness error",
+    "concavity error",
+    "concave points error",
+    "symmetry error",
+    "fractal dimension error",
+    "worst radius",
+    "worst texture",
+    "worst perimeter",
+    "worst area",
+    "worst smoothness",
+    "worst compactness",
+    "worst concavity",
+    "worst concave points",
+    "worst symmetry",
+    "worst fractal dimension"
+  ],
+  "seeds": [
+    {
+      "seed": 42,
+      "curves": {
+        "insample_brier": [
+          {
+            "budget": 0,
+            "brier": 0.23419444262981415,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.1316346675157547,
+            "average_precision": 0.9515703787853923,
+            "auroc": 0.9625438084112149
+          },
+          {
+            "budget": 2,
+            "brier": 0.10431655496358871,
+            "average_precision": 0.9512860929535,
+            "auroc": 0.963054906542056
+          },
+          {
+            "budget": 3,
+            "brier": 0.07629189640283585,
+            "average_precision": 0.9631898284113753,
+            "auroc": 0.9693341121495327
+          }
+        ],
+        "cf_brier": [
+          {
+            "budget": 0,
+            "brier": 0.23419444262981415,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.17641796171665192,
+            "average_precision": 0.944397770116012,
+            "auroc": 0.9590391355140188
+          },
+          {
+            "budget": 2,
+            "brier": 0.14926430583000183,
+            "average_precision": 0.9706191572289722,
+            "auroc": 0.9789719626168225
+          },
+          {
+            "budget": 3,
+            "brier": 0.12448613345623016,
+            "average_precision": 0.9595698061808897,
+            "auroc": 0.967873831775701
+          }
+        ],
+        "cf_postloss": [
+          {
+            "budget": 0,
+            "brier": 0.23419444262981415,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.18659339845180511,
+            "average_precision": 0.9472423942095672,
+            "auroc": 0.9605724299065421
+          },
+          {
+            "budget": 2,
+            "brier": 0.15082398056983948,
+            "average_precision": 0.9696678751711055,
+            "auroc": 0.9775116822429907
+          },
+          {
+            "budget": 3,
+            "brier": 0.10591116547584534,
+            "average_precision": 0.9690212403642979,
+            "auroc": 0.9706483644859812
+          }
+        ],
+        "matched_size_insample": [
+          {
+            "budget": 0,
+            "brier": 0.23419444262981415,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.17641796171665192,
+            "average_precision": 0.944397770116012,
+            "auroc": 0.9590391355140188
+          },
+          {
+            "budget": 2,
+            "brier": 0.1497659981250763,
+            "average_precision": 0.9706191572289722,
+            "auroc": 0.9789719626168225
+          },
+          {
+            "budget": 3,
+            "brier": 0.11965484917163849,
+            "average_precision": 0.9545014018573894,
+            "auroc": 0.9648072429906542
+          }
+        ],
+        "native_brier": [
+          {
+            "budget": 0,
+            "brier": 0.23419444262981415,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.1316346675157547,
+            "average_precision": 0.9515703787853923,
+            "auroc": 0.9625438084112149
+          },
+          {
+            "budget": 2,
+            "brier": 0.09782246500253677,
+            "average_precision": 0.9733628054868464,
+            "auroc": 0.972838785046729
+          },
+          {
+            "budget": 3,
+            "brier": 0.08430786430835724,
+            "average_precision": 0.9752058670227142,
+            "auroc": 0.9789719626168224
+          }
+        ],
+        "random": [
+          {
+            "budget": 0,
+            "brier": 0.23419444262981415,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.19037717580795288,
+            "average_precision": 0.7912057774651894,
+            "auroc": 0.8533148364485982
+          },
+          {
+            "budget": 2,
+            "brier": 0.15668414533138275,
+            "average_precision": 0.8695261969019578,
+            "auroc": 0.9212908878504673
+          },
+          {
+            "budget": 3,
+            "brier": 0.14092740416526794,
+            "average_precision": 0.885867627219791,
+            "auroc": 0.9275700934579441
+          }
+        ],
+        "static": [
+          {
+            "budget": 0,
+            "brier": 0.23419444262981415,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.1316346675157547,
+            "average_precision": 0.9515703787853923,
+            "auroc": 0.9625438084112149
+          },
+          {
+            "budget": 2,
+            "brier": 0.10256132483482361,
+            "average_precision": 0.9500951564795409,
+            "auroc": 0.962178738317757
+          },
+          {
+            "budget": 3,
+            "brier": 0.0734938457608223,
+            "average_precision": 0.9728764653218217,
+            "auroc": 0.9747371495327103
+          }
+        ],
+        "native_ce": [
+          {
+            "budget": 0,
+            "brier": 0.2342032790184021,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.13161756098270416,
+            "average_precision": 0.9515703787853923,
+            "auroc": 0.9625438084112149
+          },
+          {
+            "budget": 2,
+            "brier": 0.10993589460849762,
+            "average_precision": 0.9679900849999302,
+            "auroc": 0.9693341121495327
+          },
+          {
+            "budget": 3,
+            "brier": 0.1024993285536766,
+            "average_precision": 0.9666859259299856,
+            "auroc": 0.9709404205607476
+          }
+        ]
+      },
+      "primary": {
+        "benefit_cf": -0.04819423619369308,
+        "conditional_record_bootstrap_ci": [
+          -0.0670153742608947,
+          -0.030706920889739482
+        ]
+      },
+      "common_state": {
+        "insample_brier": {
+          "mse": 0.0034569956294663285,
+          "signed_bias": -0.001288037910266643,
+          "bins": [
+            {
+              "n": 938,
+              "predicted": -0.003171582007780671,
+              "realized": -0.0024466590190985625
+            },
+            {
+              "n": 938,
+              "predicted": 0.005006538238376379,
+              "realized": 0.007249631628901014
+            },
+            {
+              "n": 938,
+              "predicted": 0.014933852478861809,
+              "realized": 0.01409571386915085
+            },
+            {
+              "n": 938,
+              "predicted": 0.029217109084129333,
+              "realized": 0.030031835387701405
+            },
+            {
+              "n": 937,
+              "predicted": 0.06672012060880661,
+              "realized": 0.07021806269956155
+            }
+          ],
+          "selected_predicted_benefit": 0.06462924182415009,
+          "selected_realized_benefit": 0.06377710425656075
+        },
+        "cf_brier": {
+          "mse": 0.004259197692310289,
+          "signed_bias": -0.014682938665362287,
+          "bins": [
+            {
+              "n": 938,
+              "predicted": -0.0007849470130167902,
+              "realized": -0.0001970474839595355
+            },
+            {
+              "n": 938,
+              "predicted": 0.005324306432157755,
+              "realized": 0.01812218178221198
+            },
+            {
+              "n": 938,
+              "predicted": 0.00920605193823576,
+              "realized": 0.024295811745581535
+            },
+            {
+              "n": 938,
+              "predicted": 0.01274953968822956,
+              "realized": 0.036823635396530774
+            },
+            {
+              "n": 937,
+              "predicted": 0.019200202077627182,
+              "realized": 0.040071864321610605
+            }
+          ],
+          "selected_predicted_benefit": 0.021615684032440186,
+          "selected_realized_benefit": 0.02807201618350796
+        },
+        "matched_size_insample": {
+          "mse": 0.004258701472449074,
+          "signed_bias": -0.014686033490376942,
+          "bins": [
+            {
+              "n": 938,
+              "predicted": -0.00011940958211198449,
+              "realized": 0.0017166611970966777
+            },
+            {
+              "n": 938,
+              "predicted": 0.005513628013432026,
+              "realized": 0.015684181426429515
+            },
+            {
+              "n": 938,
+              "predicted": 0.009208852425217628,
+              "realized": 0.025354618947197434
+            },
+            {
+              "n": 938,
+              "predicted": 0.01249920018017292,
+              "realized": 0.03317198193523562
+            },
+            {
+              "n": 937,
+              "predicted": 0.01857674866914749,
+              "realized": 0.04319232897739756
+            }
+          ],
+          "selected_predicted_benefit": 0.02116316370666027,
+          "selected_realized_benefit": 0.02939638325302196
+        },
+        "native_brier": {
+          "mse": 0.006607170841376485,
+          "signed_bias": -0.024034641966543792,
+          "bins": [
+            {
+              "n": 938,
+              "predicted": -0.06927182525396347,
+              "realized": 0.026964220760210836
+            },
+            {
+              "n": 938,
+              "predicted": -0.016551289707422256,
+              "realized": 0.019926283039205545
+            },
+            {
+              "n": 938,
+              "predicted": 0.008593887090682983,
+              "realized": 0.02024528706724842
+            },
+            {
+              "n": 938,
+              "predicted": 0.026315227150917053,
+              "realized": 0.025735210810303773
+            },
+            {
+              "n": 937,
+              "predicted": 0.0498933345079422,
+              "realized": 0.026230688033526958
+            }
+          ],
+          "selected_predicted_benefit": 0.06069741025567055,
+          "selected_realized_benefit": 0.05532974160258973
+        },
+        "same_state_delta_post_action_agreement": 0.2982456140350877
+      },
+      "seconds": 9.255041122436523
+    },
+    {
+      "seed": 43,
+      "curves": {
+        "insample_brier": [
+          {
+            "budget": 0,
+            "brier": 0.23995257914066315,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.1803807020187378,
+            "average_precision": 0.944397770116012,
+            "auroc": 0.9590391355140188
+          },
+          {
+            "budget": 2,
+            "brier": 0.14207687973976135,
+            "average_precision": 0.9445225388301006,
+            "auroc": 0.9594042056074766
+          },
+          {
+            "budget": 3,
+            "brier": 0.11847376823425293,
+            "average_precision": 0.950649965879901,
+            "auroc": 0.961302570093458
+          }
+        ],
+        "cf_brier": [
+          {
+            "budget": 0,
+            "brier": 0.23995257914066315,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.1855500489473343,
+            "average_precision": 0.9472423942095672,
+            "auroc": 0.9605724299065421
+          },
+          {
+            "budget": 2,
+            "brier": 0.15846556425094604,
+            "average_precision": 0.9516057354617025,
+            "auroc": 0.959696261682243
+          },
+          {
+            "budget": 3,
+            "brier": 0.14316034317016602,
+            "average_precision": 0.9679316679101896,
+            "auroc": 0.9737149532710281
+          }
+        ],
+        "cf_postloss": [
+          {
+            "budget": 0,
+            "brier": 0.23995257914066315,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.1803807020187378,
+            "average_precision": 0.944397770116012,
+            "auroc": 0.9590391355140188
+          },
+          {
+            "budget": 2,
+            "brier": 0.15374962985515594,
+            "average_precision": 0.9432923308020635,
+            "auroc": 0.9618866822429906
+          },
+          {
+            "budget": 3,
+            "brier": 0.12423337996006012,
+            "average_precision": 0.9631150588936266,
+            "auroc": 0.9791179906542056
+          }
+        ],
+        "matched_size_insample": [
+          {
+            "budget": 0,
+            "brier": 0.23995257914066315,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.1855500489473343,
+            "average_precision": 0.9472423942095672,
+            "auroc": 0.9605724299065421
+          },
+          {
+            "budget": 2,
+            "brier": 0.15526491403579712,
+            "average_precision": 0.959288652311906,
+            "auroc": 0.9633469626168225
+          },
+          {
+            "budget": 3,
+            "brier": 0.14086119830608368,
+            "average_precision": 0.9651445320887718,
+            "auroc": 0.9734228971962617
+          }
+        ],
+        "native_brier": [
+          {
+            "budget": 0,
+            "brier": 0.23995257914066315,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.17873936891555786,
+            "average_precision": 0.9429799927814407,
+            "auroc": 0.9587470794392523
+          },
+          {
+            "budget": 2,
+            "brier": 0.14845238626003265,
+            "average_precision": 0.9545829385978464,
+            "auroc": 0.9575058411214954
+          },
+          {
+            "budget": 3,
+            "brier": 0.13526766002178192,
+            "average_precision": 0.9438501296667903,
+            "auroc": 0.9545852803738318
+          }
+        ],
+        "random": [
+          {
+            "budget": 0,
+            "brier": 0.23995257914066315,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.2097221314907074,
+            "average_precision": 0.735212262849576,
+            "auroc": 0.8187792056074766
+          },
+          {
+            "budget": 2,
+            "brier": 0.18521225452423096,
+            "average_precision": 0.8156748061943179,
+            "auroc": 0.8722254672897196
+          },
+          {
+            "budget": 3,
+            "brier": 0.1606428176164627,
+            "average_precision": 0.9135939357055713,
+            "auroc": 0.925963785046729
+          }
+        ],
+        "static": [
+          {
+            "budget": 0,
+            "brier": 0.23995257914066315,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.1803807020187378,
+            "average_precision": 0.944397770116012,
+            "auroc": 0.9590391355140188
+          },
+          {
+            "budget": 2,
+            "brier": 0.14207687973976135,
+            "average_precision": 0.9445225388301006,
+            "auroc": 0.9594042056074766
+          },
+          {
+            "budget": 3,
+            "brier": 0.11866195499897003,
+            "average_precision": 0.9671498952076298,
+            "auroc": 0.9769275700934579
+          }
+        ],
+        "native_ce": [
+          {
+            "budget": 0,
+            "brier": 0.23856021463871002,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.16564524173736572,
+            "average_precision": 0.9429799927814407,
+            "auroc": 0.9587470794392523
+          },
+          {
+            "budget": 2,
+            "brier": 0.14375588297843933,
+            "average_precision": 0.9453509764392135,
+            "auroc": 0.9477219626168224
+          },
+          {
+            "budget": 3,
+            "brier": 0.13035225868225098,
+            "average_precision": 0.9394704185051215,
+            "auroc": 0.9490362149532711
+          }
+        ]
+      },
+      "primary": {
+        "benefit_cf": -0.02468658266152298,
+        "conditional_record_bootstrap_ci": [
+          -0.036258932740748866,
+          -0.011021191817380295
+        ]
+      },
+      "common_state": {
+        "insample_brier": {
+          "mse": 0.001660101625441363,
+          "signed_bias": 0.0004302109032265936,
+          "bins": [
+            {
+              "n": 938,
+              "predicted": -0.0036908937618136406,
+              "realized": -0.005666796969380198
+            },
+            {
+              "n": 938,
+              "predicted": 0.009459962137043476,
+              "realized": 0.010106460277682496
+            },
+            {
+              "n": 938,
+              "predicted": 0.017730440944433212,
+              "realized": 0.017460221892022416
+            },
+            {
+              "n": 938,
+              "predicted": 0.027792736887931824,
+              "realized": 0.02777625948877358
+            },
+            {
+              "n": 937,
+              "predicted": 0.04483082890510559,
+              "realized": 0.044295761649039075
+            }
+          ],
+          "selected_predicted_benefit": 0.045338016003370285,
+          "selected_realized_benefit": 0.043835591656881646
+        },
+        "cf_brier": {
+          "mse": 0.0020026463649819733,
+          "signed_bias": -0.011105603943223939,
+          "bins": [
+            {
+              "n": 938,
+              "predicted": 4.8764413804747164e-05,
+              "realized": -0.00033123225868949326
+            },
+            {
+              "n": 938,
+              "predicted": 0.0038642750587314367,
+              "realized": 0.012703551703305211
+            },
+            {
+              "n": 938,
+              "predicted": 0.007274481933563948,
+              "realized": 0.018719282092563527
+            },
+            {
+              "n": 938,
+              "predicted": 0.010659209452569485,
+              "realized": 0.028190610232372553
+            },
+            {
+              "n": 937,
+              "predicted": 0.01657944731414318,
+              "realized": 0.034679442629332154
+            }
+          ],
+          "selected_predicted_benefit": 0.01898728683590889,
+          "selected_realized_benefit": 0.036253221821803794
+        },
+        "matched_size_insample": {
+          "mse": 0.0020062282776628763,
+          "signed_bias": -0.011030469402420483,
+          "bins": [
+            {
+              "n": 938,
+              "predicted": -0.00016219903773162514,
+              "realized": 1.0246412371603876e-05
+            },
+            {
+              "n": 938,
+              "predicted": 0.0038470032159239054,
+              "realized": 0.012179257607694241
+            },
+            {
+              "n": 938,
+              "predicted": 0.007421144749969244,
+              "realized": 0.019975027336029398
+            },
+            {
+              "n": 938,
+              "predicted": 0.010697751305997372,
+              "realized": 0.026563604622195175
+            },
+            {
+              "n": 937,
+              "predicted": 0.016998518258333206,
+              "realized": 0.035234109750146646
+            }
+          ],
+          "selected_predicted_benefit": 0.019536375999450684,
+          "selected_realized_benefit": 0.036388999764770794
+        },
+        "native_brier": {
+          "mse": 0.006746062621468932,
+          "signed_bias": -0.023639225864391572,
+          "bins": [
+            {
+              "n": 938,
+              "predicted": -0.11017853766679764,
+              "realized": 0.0185532397685761
+            },
+            {
+              "n": 938,
+              "predicted": -0.033329326659440994,
+              "realized": 0.020166347664146805
+            },
+            {
+              "n": 938,
+              "predicted": 0.006516710855066776,
+              "realized": 0.01637799678263649
+            },
+            {
+              "n": 938,
+              "predicted": 0.03744466230273247,
+              "realized": 0.01606493061916337
+            },
+            {
+              "n": 937,
+              "predicted": 0.0753806084394455,
+              "realized": 0.022786460478912977
+            }
+          ],
+          "selected_predicted_benefit": 0.0929366871714592,
+          "selected_realized_benefit": 0.025275142426293497
+        },
+        "same_state_delta_post_action_agreement": 0.5380116959064327
+      },
+      "seconds": 8.452751159667969
+    },
+    {
+      "seed": 44,
+      "curves": {
+        "insample_brier": [
+          {
+            "budget": 0,
+            "brier": 0.23452214896678925,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.15834277868270874,
+            "average_precision": 0.9472423942095672,
+            "auroc": 0.9605724299065421
+          },
+          {
+            "budget": 2,
+            "brier": 0.12307322025299072,
+            "average_precision": 0.9734110278762926,
+            "auroc": 0.9807242990654206
+          },
+          {
+            "budget": 3,
+            "brier": 0.10777968913316727,
+            "average_precision": 0.958691301877304,
+            "auroc": 0.9655373831775702
+          }
+        ],
+        "cf_brier": [
+          {
+            "budget": 0,
+            "brier": 0.23452214896678925,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.15834277868270874,
+            "average_precision": 0.9472423942095672,
+            "auroc": 0.9605724299065421
+          },
+          {
+            "budget": 2,
+            "brier": 0.13486655056476593,
+            "average_precision": 0.9649848105965845,
+            "auroc": 0.9754672897196262
+          },
+          {
+            "budget": 3,
+            "brier": 0.11159232258796692,
+            "average_precision": 0.9693152269026889,
+            "auroc": 0.976927570093458
+          }
+        ],
+        "cf_postloss": [
+          {
+            "budget": 0,
+            "brier": 0.23452214896678925,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.18534795939922333,
+            "average_precision": 0.8999885440558802,
+            "auroc": 0.9261098130841121
+          },
+          {
+            "budget": 2,
+            "brier": 0.15400226414203644,
+            "average_precision": 0.9217657445096824,
+            "auroc": 0.9417348130841121
+          },
+          {
+            "budget": 3,
+            "brier": 0.13239282369613647,
+            "average_precision": 0.942910553115573,
+            "auroc": 0.9550233644859812
+          }
+        ],
+        "matched_size_insample": [
+          {
+            "budget": 0,
+            "brier": 0.23452214896678925,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.15834277868270874,
+            "average_precision": 0.9472423942095672,
+            "auroc": 0.9605724299065421
+          },
+          {
+            "budget": 2,
+            "brier": 0.13719671964645386,
+            "average_precision": 0.9627333140513712,
+            "auroc": 0.9745911214953271
+          },
+          {
+            "budget": 3,
+            "brier": 0.11532445251941681,
+            "average_precision": 0.9628035556432128,
+            "auroc": 0.970356308411215
+          }
+        ],
+        "native_brier": [
+          {
+            "budget": 0,
+            "brier": 0.23452214896678925,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.15834277868270874,
+            "average_precision": 0.9472423942095672,
+            "auroc": 0.9605724299065421
+          },
+          {
+            "budget": 2,
+            "brier": 0.13667243719100952,
+            "average_precision": 0.9418695681076892,
+            "auroc": 0.9545852803738318
+          },
+          {
+            "budget": 3,
+            "brier": 0.12649117410182953,
+            "average_precision": 0.9525309816958667,
+            "auroc": 0.9669976635514019
+          }
+        ],
+        "random": [
+          {
+            "budget": 0,
+            "brier": 0.23452214896678925,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.20480050146579742,
+            "average_precision": 0.7335238353155641,
+            "auroc": 0.785338785046729
+          },
+          {
+            "budget": 2,
+            "brier": 0.18321123719215393,
+            "average_precision": 0.8141304378032242,
+            "auroc": 0.8492990654205607
+          },
+          {
+            "budget": 3,
+            "brier": 0.16379719972610474,
+            "average_precision": 0.8593279253493252,
+            "auroc": 0.8938376168224299
+          }
+        ],
+        "static": [
+          {
+            "budget": 0,
+            "brier": 0.23452214896678925,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.15834277868270874,
+            "average_precision": 0.9472423942095672,
+            "auroc": 0.9605724299065421
+          },
+          {
+            "budget": 2,
+            "brier": 0.12315977364778519,
+            "average_precision": 0.9734110278762926,
+            "auroc": 0.9807242990654206
+          },
+          {
+            "budget": 3,
+            "brier": 0.10186640173196793,
+            "average_precision": 0.9706909104077432,
+            "auroc": 0.9788259345794392
+          }
+        ],
+        "native_ce": [
+          {
+            "budget": 0,
+            "brier": 0.23446550965309143,
+            "average_precision": 0.3742690058479532,
+            "auroc": 0.5
+          },
+          {
+            "budget": 1,
+            "brier": 0.16334429383277893,
+            "average_precision": 0.9472423942095672,
+            "auroc": 0.9605724299065421
+          },
+          {
+            "budget": 2,
+            "brier": 0.1436852365732193,
+            "average_precision": 0.9362362124136183,
+            "auroc": 0.9436331775700932
+          },
+          {
+            "budget": 3,
+            "brier": 0.13236646354198456,
+            "average_precision": 0.9424475453817197,
+            "auroc": 0.9548773364485981
+          }
+        ]
+      },
+      "primary": {
+        "benefit_cf": -0.0038126399360365157,
+        "conditional_record_bootstrap_ci": [
+          -0.009787867699318026,
+          0.0029904243181240174
+        ]
+      },
+      "common_state": {
+        "insample_brier": {
+          "mse": 0.002044015629366075,
+          "signed_bias": -0.00043881563092125643,
+          "bins": [
+            {
+              "n": 938,
+              "predicted": -0.004328982904553413,
+              "realized": -0.0024934127246993305
+            },
+            {
+              "n": 938,
+              "predicted": 0.005467876326292753,
+              "realized": 0.007062754374354659
+            },
+            {
+              "n": 938,
+              "predicted": 0.01382275391370058,
+              "realized": 0.016398442947946568
+            },
+            {
+              "n": 938,
+              "predicted": 0.026837697252631187,
+              "realized": 0.027794232501406915
+            },
+            {
+              "n": 937,
+              "predicted": 0.05586619675159454,
+              "realized": 0.05109204001643568
+            }
+          ],
+          "selected_predicted_benefit": 0.05151756480336189,
+          "selected_realized_benefit": 0.052729782350278726
+        },
+        "cf_brier": {
+          "mse": 0.002380946605774729,
+          "signed_bias": -0.011672018555949909,
+          "bins": [
+            {
+              "n": 938,
+              "predicted": 6.573477094207192e-06,
+              "realized": -0.001960712719730924
+            },
+            {
+              "n": 938,
+              "predicted": 0.004642890766263008,
+              "realized": 0.012313662724048439
+            },
+            {
+              "n": 938,
+              "predicted": 0.00767085375264287,
+              "realized": 0.022456268848535365
+            },
+            {
+              "n": 938,
+              "predicted": 0.011512945406138897,
+              "realized": 0.02972589464629939
+            },
+            {
+              "n": 937,
+              "predicted": 0.017637476325035095,
+              "realized": 0.03730424447392281
+            }
+          ],
+          "selected_predicted_benefit": 0.019713450223207474,
+          "selected_realized_benefit": 0.04960865399546894
+        },
+        "matched_size_insample": {
+          "mse": 0.0023845551316700893,
+          "signed_bias": -0.011672923420204262,
+          "bins": [
+            {
+              "n": 938,
+              "predicted": 0.00017293963173869997,
+              "realized": -0.0005411443825147916
+            },
+            {
+              "n": 938,
+              "predicted": 0.004555173683911562,
+              "realized": 0.010784381328600694
+            },
+            {
+              "n": 938,
+              "predicted": 0.007639219053089619,
+              "realized": 0.021936197035621562
+            },
+            {
+              "n": 938,
+              "predicted": 0.011506269685924053,
+              "realized": 0.029824500442486114
+            },
+            {
+              "n": 937,
+              "predicted": 0.017592567950487137,
+              "realized": 0.03783599044223791
+            }
+          ],
+          "selected_predicted_benefit": 0.01967022940516472,
+          "selected_realized_benefit": 0.051783445450607084
+        },
+        "native_brier": {
+          "mse": 0.009836194032720348,
+          "signed_bias": -0.024656021291651106,
+          "bins": [
+            {
+              "n": 938,
+              "predicted": -0.14028507471084595,
+              "realized": 0.01975609991514591
+            },
+            {
+              "n": 938,
+              "predicted": -0.035105619579553604,
+              "realized": 0.01862459067365006
+            },
+            {
+              "n": 938,
+              "predicted": 0.0043261414393782616,
+              "realized": 0.015794738768220722
+            },
+            {
+              "n": 938,
+              "predicted": 0.04598159343004227,
+              "realized": 0.020622356996375938
+            },
+            {
+              "n": 937,
+              "predicted": 0.10173718631267548,
+              "realized": 0.025028484455483693
+            }
+          ],
+          "selected_predicted_benefit": 0.12412329018115997,
+          "selected_realized_benefit": 0.034727506177602445
+        },
+        "same_state_delta_post_action_agreement": 0.1871345029239766
+      },
+      "seconds": 9.144467830657959
+    }
+  ]
+}

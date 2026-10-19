@@ -1,0 +1,22 @@
+{
+  "brfss2024": {
+    "insample_brier": 0.037873378644386925,
+    "crossfit_brier": 0.03766494741042455,
+    "matched_size_insample_brier": 0.037264895935853325,
+    "crossfit_postloss": 0.038086313754320145,
+    "insample_ce": 0.037356406450271606,
+    "split_brier": 0.03803249076008797,
+    "random": 0.03823596239089966,
+    "static": 0.03752423326174418
+  },
+  "wisconsin_breast_cancer": {
+    "insample_brier": 0.06045357510447502,
+    "crossfit_brier": 0.05757797881960869,
+    "matched_size_insample_brier": 0.056071476389964424,
+    "crossfit_postloss": 0.06057753786444664,
+    "insample_ce": 0.06115072841445605,
+    "split_brier": 0.059902706493934,
+    "random": 0.10928087681531906,
+    "static": 0.05530155077576637
+  }
+}

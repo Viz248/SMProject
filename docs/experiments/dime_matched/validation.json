@@ -1,0 +1,12 @@
+{
+  "unit_tests_run": 27,
+  "unit_tests_passed": 25,
+  "optional_tabnet_skips": 2,
+  "saved_prediction_brier_checks": 192,
+  "seed_runs_complete": 6,
+  "partition_disjointness_checked": true,
+  "source_hash_matches_executed_protocol": true,
+  "scope": "software/data-integrity checks, not scientific validation",
+  "final_test_accessed": false,
+  "brfss2025_accessed": false
+}

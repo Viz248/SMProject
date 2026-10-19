@@ -1,0 +1,12 @@
+{
+  "official_2024": "https://www.cdc.gov/brfss/annual_data/annual_2024.html",
+  "official_2025": "https://www.cdc.gov/brfss/annual_data/annual_2025.html",
+  "xpt2024": "7d53cf088f858e02bcc029a51cf0408cc68f40a0ebeb02a3c0f73058aab36b1c",
+  "xpt2025": "d99262f8854f018a600c3538ee78e4308569af700abe6b92b36180336c24dec2",
+  "codebook2025": "https://www.cdc.gov/brfss/annual_data/2025/zip/codebook25_llcp-v2-508.zip",
+  "codebook2025_zip_sha256": "70d920a440fd651a12f9dc62c100626a15ca2503774128ba2cbe62b056f861f3",
+  "zip2025_sha256": "d26a8b391aa2966b58dc2a3ffddf8da050e9f38eb143d0f5ca7b3d21ece08f98",
+  "scope": "independently downloaded official CDC records, not byte-verified against original Drive copy",
+  "protocol_commit": "4772823",
+  "historical_first_fit_failure": "Dropped ColumnTransformer remainder was treated as a transformer; fixed before 2025 prediction, same scientific settings, preserved failed output directory"
+}

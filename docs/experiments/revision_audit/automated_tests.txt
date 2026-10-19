@@ -1,0 +1,55 @@
+test_domain_retains_outside_psus (test_availability_study.AvailabilityStudyTests.test_domain_retains_outside_psus) ... ok
+test_group_mask_hides_original_values_and_missingness (test_availability_study.AvailabilityStudyTests.test_group_mask_hides_original_values_and_missingness) ... ok
+test_posthoc_average_singleton_sensitivity_hand_calculation (test_availability_study.AvailabilityStudyTests.test_posthoc_average_singleton_sensitivity_hand_calculation) ... ok
+test_singleton_stratum_does_not_receive_confident_interval (test_availability_study.AvailabilityStudyTests.test_singleton_stratum_does_not_receive_confident_interval) ... ok
+test_stratified_psu_linearization_hand_calculation (test_availability_study.AvailabilityStudyTests.test_stratified_psu_linearization_hand_calculation) ... ok
+test_subset_encoder_does_not_use_removed_variables (test_availability_study.AvailabilityStudyTests.test_subset_encoder_does_not_use_removed_variables) ... ok
+test_bootstrap_repeatable (test_baseline.BaselineTests.test_bootstrap_repeatable) ... ok
+test_cleaning_and_target_exclusion (test_baseline.BaselineTests.test_cleaning_and_target_exclusion) ... ok
+test_metrics_edge_cases (test_baseline.BaselineTests.test_metrics_edge_cases) ... ok
+test_partition_is_disjoint_and_reproducible (test_baseline.BaselineTests.test_partition_is_disjoint_and_reproducible) ... ok
+test_test_values_cannot_change_fitted_preprocessing (test_baseline.BaselineTests.test_test_values_cannot_change_fitted_preprocessing) ... ok
+test_binary_brier_reductions_and_gradient (test_dime_matched.MatchedDimeTests.test_binary_brier_reductions_and_gradient) ... ok
+test_logits_shift_preserves_probability_loss (test_dime_matched.MatchedDimeTests.test_logits_shift_preserves_probability_loss) ... ok
+test_saved_predictor_and_value_reproduce_predictions (test_dime_matched.MatchedDimeTests.test_saved_predictor_and_value_reproduce_predictions) ... ok
+test_brier_improvement_sign (test_dime_pilot.DimePilotTests.test_brier_improvement_sign) ... ok
+test_initial_features_and_available_candidates (test_dime_pilot.DimePilotTests.test_initial_features_and_available_candidates) ... ok
+test_unobserved_values_cannot_enter_network (test_dime_pilot.DimePilotTests.test_unobserved_values_cannot_enter_network) ... ok
+test_bottleneck_roundtrip_and_shape (test_optimize.OptimizationTests.test_bottleneck_roundtrip_and_shape) ... ok
+test_default_search_does_not_predict_on_test (test_optimize.OptimizationTests.test_default_search_does_not_predict_on_test) ... lr: selection AP=0.25454, Brier=0.11128
+ok
+test_five_partitions_cover_records_once (test_optimize.OptimizationTests.test_five_partitions_cover_records_once) ... ok
+test_logit_finite_at_endpoints (test_optimize.OptimizationTests.test_logit_finite_at_endpoints) ... ok
+test_refuse_overwriting_test_result (test_optimize.OptimizationTests.test_refuse_overwriting_test_result) ... ok
+test_refuse_tuning_after_test_access (test_optimize.OptimizationTests.test_refuse_tuning_after_test_access) ... ok
+test_subset_retraining_cannot_use_removed_features (test_optimize.OptimizationTests.test_subset_retraining_cannot_use_removed_features) ... ok
+test_weighted_metrics (test_optimize.OptimizationTests.test_weighted_metrics) ... ok
+test_known_relation (test_revision_audit.CalibrationTests.test_known_relation) ... ok
+test_perfect_calibration_weight_scaling (test_revision_audit.CalibrationTests.test_perfect_calibration_weight_scaling) ... ok
+test_native_checkpoint_reloads_in_fresh_process (test_tabnet.TabNetTests.test_native_checkpoint_reloads_in_fresh_process) ... /root/.local/lib/python3.12/site-packages/pytorch_tabnet/multiclass_utils.py:13: DeprecationWarning: Please import `spmatrix` from the `scipy.sparse` namespace; the `scipy.sparse.base` namespace is deprecated and will be removed in SciPy 2.0.0.
+  from scipy.sparse.base import spmatrix
+/root/.local/lib/python3.12/site-packages/pytorch_tabnet/abstract_model.py:82: UserWarning: Device used : cpu
+  warnings.warn(f"Device used : {self.device}")
+/root/.local/lib/python3.12/site-packages/pytorch_tabnet/callbacks.py:172: UserWarning: Best weights from best epoch are automatically used!
+  warnings.warn(wrn_msg)
+ok
+test_train_vocabulary_unknowns_and_numeric_isolation (test_tabnet.TabNetTests.test_train_vocabulary_unknowns_and_numeric_isolation) ... ok
+test_conditional_acquisition_respects_known_values (test_trust.TrustTests.test_conditional_acquisition_respects_known_values) ... ok
+test_confidence_mean_interval_reproducible (test_trust.TrustTests.test_confidence_mean_interval_reproducible) ... ok
+test_entropy_and_decomposition (test_trust.TrustTests.test_entropy_and_decomposition) ... ok
+test_resource_edges (test_trust.TrustTests.test_resource_edges) ... ok
+test_shapley_linear_exactness_and_efficiency (test_trust.TrustTests.test_shapley_linear_exactness_and_efficiency) ... ok
+test_stability_sign_scale_and_zeros (test_trust.TrustTests.test_stability_sign_scale_and_zeros) ... ok
+
+----------------------------------------------------------------------
+Ran 35 tests in 5.443s
+
+OK
+{
+  "status": "SYNTHETIC_SMOKE_ONLY",
+  "winner": "lr",
+  "test_accessed": false
+}
+epoch 0  | loss: 1.72649 | stopping_average_precision: 0.18569 |  0:00:00s
+Stop training because you reached max_epochs = 1 with best_epoch = 0 and best_stopping_average_precision = 0.18569
+Successfully saved model at /tmp/tmp6fu58vf8/network.zip

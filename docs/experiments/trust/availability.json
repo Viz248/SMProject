@@ -1,0 +1,440 @@
+{
+  "status": "DEVELOPMENT_AVAILABILITY_RETRAINING_ABLATION",
+  "dataset_sha256": "7d53cf088f858e02bcc029a51cf0408cc68f40a0ebeb02a3c0f73058aab36b1c",
+  "final_test_accessed": false,
+  "records": 2048,
+  "family": "histogram boosted trees",
+  "scenarios": [
+    {
+      "scenario": "full",
+      "features": [
+        "SEXVAR",
+        "_AGEG5YR",
+        "GENHLTH",
+        "EXERANY2",
+        "_SMOKER3",
+        "DIABETE4",
+        "CVDINFR4",
+        "CVDCRHD4",
+        "CHCKDNY2",
+        "HAVARTH4",
+        "EDUCA",
+        "INCOME3",
+        "PHYSHLTH",
+        "MENTHLTH",
+        "_BMI5"
+      ],
+      "retrained": {
+        "n": 2048,
+        "prevalence": 0.0341796875,
+        "threshold": 0.14,
+        "auroc": 0.839191824353604,
+        "average_precision": 0.19182819534724865,
+        "brier": 0.03051512421582619,
+        "ece": 0.010829820206803297,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 1808,
+            "probability": 0.025937529300079788,
+            "observed": 0.02157079646017699
+          },
+          {
+            "bin": 1,
+            "count": 175,
+            "probability": 0.13650671764632677,
+            "observed": 0.08571428571428572
+          },
+          {
+            "bin": 2,
+            "count": 41,
+            "probability": 0.23965047421727492,
+            "observed": 0.14634146341463414
+          },
+          {
+            "bin": 3,
+            "count": 22,
+            "probability": 0.3416390168187744,
+            "observed": 0.4090909090909091
+          },
+          {
+            "bin": 4,
+            "count": 2,
+            "probability": 0.4569339260067634,
+            "observed": 0.5
+          }
+        ],
+        "precision": 0.1865671641791045,
+        "sensitivity": 0.35714285714285715,
+        "specificity": 0.9448938321536906,
+        "f1": 0.24509803921568626,
+        "confusion_matrix": [
+          [
+            1869,
+            109
+          ],
+          [
+            45,
+            25
+          ]
+        ]
+      },
+      "fixed_mask": {
+        "n": 2048,
+        "prevalence": 0.0341796875,
+        "threshold": 0.14,
+        "auroc": 0.839191824353604,
+        "average_precision": 0.19182819534724865,
+        "brier": 0.03051512421582619,
+        "ece": 0.010829820206803297,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 1808,
+            "probability": 0.025937529300079788,
+            "observed": 0.02157079646017699
+          },
+          {
+            "bin": 1,
+            "count": 175,
+            "probability": 0.13650671764632677,
+            "observed": 0.08571428571428572
+          },
+          {
+            "bin": 2,
+            "count": 41,
+            "probability": 0.23965047421727492,
+            "observed": 0.14634146341463414
+          },
+          {
+            "bin": 3,
+            "count": 22,
+            "probability": 0.3416390168187744,
+            "observed": 0.4090909090909091
+          },
+          {
+            "bin": 4,
+            "count": 2,
+            "probability": 0.4569339260067634,
+            "observed": 0.5
+          }
+        ],
+        "precision": 0.1865671641791045,
+        "sensitivity": 0.35714285714285715,
+        "specificity": 0.9448938321536906,
+        "f1": 0.24509803921568626,
+        "confusion_matrix": [
+          [
+            1869,
+            109
+          ],
+          [
+            45,
+            25
+          ]
+        ]
+      }
+    },
+    {
+      "scenario": "demographics",
+      "features": [
+        "SEXVAR",
+        "_AGEG5YR"
+      ],
+      "retrained": {
+        "n": 2048,
+        "prevalence": 0.0341796875,
+        "threshold": 0.14,
+        "auroc": 0.7356131734797053,
+        "average_precision": 0.08296751140581385,
+        "brier": 0.03229975531895705,
+        "ece": 0.012091302849011144,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 1979,
+            "probability": 0.042534367584807026,
+            "observed": 0.030823648307225872
+          },
+          {
+            "bin": 1,
+            "count": 69,
+            "probability": 0.10742790167475764,
+            "observed": 0.13043478260869565
+          }
+        ],
+        "precision": 0.0,
+        "sensitivity": 0.0,
+        "specificity": 1.0,
+        "f1": 0.0,
+        "confusion_matrix": [
+          [
+            1978,
+            0
+          ],
+          [
+            70,
+            0
+          ]
+        ]
+      },
+      "fixed_mask": {
+        "n": 2048,
+        "prevalence": 0.0341796875,
+        "threshold": 0.14,
+        "auroc": 0.7379748663874043,
+        "average_precision": 0.08330104963850288,
+        "brier": 0.03233719854822202,
+        "ece": 0.008872580280444069,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 2048,
+            "probability": 0.02530710721955593,
+            "observed": 0.0341796875
+          }
+        ],
+        "precision": 0.0,
+        "sensitivity": 0.0,
+        "specificity": 1.0,
+        "f1": 0.0,
+        "confusion_matrix": [
+          [
+            1978,
+            0
+          ],
+          [
+            70,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "scenario": "demographics_history",
+      "features": [
+        "SEXVAR",
+        "_AGEG5YR",
+        "DIABETE4",
+        "CVDINFR4",
+        "CVDCRHD4",
+        "CHCKDNY2",
+        "HAVARTH4"
+      ],
+      "retrained": {
+        "n": 2048,
+        "prevalence": 0.0341796875,
+        "threshold": 0.14,
+        "auroc": 0.8140762675140836,
+        "average_precision": 0.18342937878310617,
+        "brier": 0.03088630527493674,
+        "ece": 0.010704560668755053,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 1859,
+            "probability": 0.031021994570539075,
+            "observed": 0.023130715438407747
+          },
+          {
+            "bin": 1,
+            "count": 119,
+            "probability": 0.14097200882245692,
+            "observed": 0.08403361344537816
+          },
+          {
+            "bin": 2,
+            "count": 57,
+            "probability": 0.2348231115383746,
+            "observed": 0.22807017543859648
+          },
+          {
+            "bin": 3,
+            "count": 13,
+            "probability": 0.31480507195526813,
+            "observed": 0.3076923076923077
+          }
+        ],
+        "precision": 0.19834710743801653,
+        "sensitivity": 0.34285714285714286,
+        "specificity": 0.9509605662285137,
+        "f1": 0.2513089005235602,
+        "confusion_matrix": [
+          [
+            1881,
+            97
+          ],
+          [
+            46,
+            24
+          ]
+        ]
+      },
+      "fixed_mask": {
+        "n": 2048,
+        "prevalence": 0.0341796875,
+        "threshold": 0.14,
+        "auroc": 0.807363137368193,
+        "average_precision": 0.15956032743309442,
+        "brier": 0.03090022785295831,
+        "ece": 0.007665964986561605,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 1890,
+            "probability": 0.029852313690838645,
+            "observed": 0.02328042328042328
+          },
+          {
+            "bin": 1,
+            "count": 134,
+            "probability": 0.14185430296413987,
+            "observed": 0.15671641791044777
+          },
+          {
+            "bin": 2,
+            "count": 19,
+            "probability": 0.2494738670658401,
+            "observed": 0.21052631578947367
+          },
+          {
+            "bin": 3,
+            "count": 5,
+            "probability": 0.3094993079473811,
+            "observed": 0.2
+          }
+        ],
+        "precision": 0.2625,
+        "sensitivity": 0.3,
+        "specificity": 0.9701718907987866,
+        "f1": 0.28,
+        "confusion_matrix": [
+          [
+            1919,
+            59
+          ],
+          [
+            49,
+            21
+          ]
+        ]
+      }
+    },
+    {
+      "scenario": "without_health_state",
+      "features": [
+        "SEXVAR",
+        "_AGEG5YR",
+        "EXERANY2",
+        "_SMOKER3",
+        "DIABETE4",
+        "CVDINFR4",
+        "CVDCRHD4",
+        "CHCKDNY2",
+        "HAVARTH4",
+        "EDUCA",
+        "INCOME3",
+        "_BMI5"
+      ],
+      "retrained": {
+        "n": 2048,
+        "prevalence": 0.0341796875,
+        "threshold": 0.14,
+        "auroc": 0.8379531994799941,
+        "average_precision": 0.20675700671666067,
+        "brier": 0.030391320025236424,
+        "ece": 0.010403833571965122,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 1844,
+            "probability": 0.02868563902009658,
+            "observed": 0.020607375271149676
+          },
+          {
+            "bin": 1,
+            "count": 139,
+            "probability": 0.1378840141961584,
+            "observed": 0.1079136690647482
+          },
+          {
+            "bin": 2,
+            "count": 50,
+            "probability": 0.24562698872707667,
+            "observed": 0.22
+          },
+          {
+            "bin": 3,
+            "count": 15,
+            "probability": 0.3357663071528914,
+            "observed": 0.4
+          }
+        ],
+        "precision": 0.1935483870967742,
+        "sensitivity": 0.34285714285714286,
+        "specificity": 0.9494438827098078,
+        "f1": 0.24742268041237114,
+        "confusion_matrix": [
+          [
+            1878,
+            100
+          ],
+          [
+            46,
+            24
+          ]
+        ]
+      },
+      "fixed_mask": {
+        "n": 2048,
+        "prevalence": 0.0341796875,
+        "threshold": 0.14,
+        "auroc": 0.8189802108912322,
+        "average_precision": 0.16908689035930985,
+        "brier": 0.031201081565880914,
+        "ece": 0.020673064363299288,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 1759,
+            "probability": 0.03557058020178078,
+            "observed": 0.022171688459351906
+          },
+          {
+            "bin": 1,
+            "count": 235,
+            "probability": 0.13377284748102614,
+            "observed": 0.06382978723404255
+          },
+          {
+            "bin": 2,
+            "count": 46,
+            "probability": 0.24002232955041092,
+            "observed": 0.2608695652173913
+          },
+          {
+            "bin": 3,
+            "count": 8,
+            "probability": 0.3282258447022104,
+            "observed": 0.5
+          }
+        ],
+        "precision": 0.15827338129496402,
+        "sensitivity": 0.3142857142857143,
+        "specificity": 0.9408493427704753,
+        "f1": 0.21052631578947367,
+        "confusion_matrix": [
+          [
+            1861,
+            117
+          ],
+          [
+            48,
+            22
+          ]
+        ]
+      }
+    }
+  ],
+  "note": "Each subset refitted with identical declared hyperparameters/seed, train-only preprocessing and separate calibration; no hyperparameter retuning"
+}

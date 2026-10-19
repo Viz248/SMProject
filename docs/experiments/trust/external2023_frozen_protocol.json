@@ -1,0 +1,17 @@
+{
+  "status": "FROZEN_BEFORE_EXTERNAL_EVALUATION",
+  "selection_rule": "higher 2024 selection AP",
+  "selected_model": "original_blend",
+  "development_average_precision": {
+    "original_blend": 0.1938360329251249,
+    "tabnet": 0.16754008066594384
+  },
+  "model_artifact_sha256": {
+    "original_blend": "4bb67aa94992df34d39c10386cd793557e384597976b2edac60f037324fb2c2f",
+    "tabnet": "9190692a9e200423fa3064b4f4486643309635a3760904e0bb0a46180637bd2c"
+  },
+  "training_year": 2024,
+  "evaluation_year": 2023,
+  "threshold": 0.14,
+  "limitation": "Reverse-calendar survey-year transport; NOT prospective validation or incident stroke prediction"
+}

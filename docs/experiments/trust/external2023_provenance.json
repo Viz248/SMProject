@@ -1,0 +1,13 @@
+{
+  "source": "https://www.cdc.gov/brfss/annual_data/2023/files/LLCP2023XPT.zip",
+  "codebook_source": "https://www.cdc.gov/brfss/annual_data/2023/zip/codebook23_llcp-v2-508.zip",
+  "xpt_sha256": "3d3bf8ef5195bde227828ddc4c90745b76e8b304f8f5b9a043b6d99895fd1615",
+  "zip_sha256": "d1ab80e4806a1d07bd3e40ec78c971ad9ff920f3ea5f6049780aeaa41ff31f43",
+  "codebook_sha256": "948cb7cd58bddde96eab61ab11a93e69ef4440ff3b62f9382895a7403407df4a",
+  "raw_records": 433323,
+  "labeled_records": 431849,
+  "positive_records": 18350,
+  "harmonization": "All original 15 predictors and CVDSTRK3 inspected in 2023 codebook; response codes and BMI scaling compatible with the 2024 cleaner",
+  "population_coverage": "2023 has 48 states plus DC and territories; 2024 has 49 states plus DC and territories. Coverage differs.",
+  "interpretation": "Separate-year survey transport, 2024-trained models evaluated in earlier 2023; no prospective incident-stroke or external clinical validation"
+}

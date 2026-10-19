@@ -1,0 +1,2565 @@
+{
+  "status": "POST_HOC_DIAGNOSTICS_NEVER_DEPLOYED",
+  "metrics": {
+    "hist_gradient_boosting|full|fixed_global_calibration": {
+      "citl": 0.01806240861149356,
+      "intercept": 0.10281204987889107,
+      "slope": 1.0325966955463557,
+      "mean_prediction": 0.03594787009833199,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.0027058713277744607,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 20594,
+          "weight_fraction": 0.09999808002200283,
+          "probability": 0.0029660798552132383,
+          "observed": 0.0013693472729075903
+        },
+        {
+          "bin": 1,
+          "count": 23206,
+          "weight_fraction": 0.10000459867338687,
+          "probability": 0.004461211779219898,
+          "observed": 0.0032163947987355465
+        },
+        {
+          "bin": 2,
+          "count": 26104,
+          "weight_fraction": 0.09999627148030014,
+          "probability": 0.006433502819702704,
+          "observed": 0.0043704323837931245
+        },
+        {
+          "bin": 3,
+          "count": 28984,
+          "weight_fraction": 0.10000062883610439,
+          "probability": 0.008744474983686626,
+          "observed": 0.006068498920959811
+        },
+        {
+          "bin": 4,
+          "count": 32571,
+          "weight_fraction": 0.0999994009933417,
+          "probability": 0.011986956023606027,
+          "observed": 0.008929072317518182
+        },
+        {
+          "bin": 5,
+          "count": 35416,
+          "weight_fraction": 0.09999747595936227,
+          "probability": 0.017376824317531805,
+          "observed": 0.019691034041425245
+        },
+        {
+          "bin": 6,
+          "count": 41526,
+          "weight_fraction": 0.10000044261477735,
+          "probability": 0.02709628187391927,
+          "observed": 0.03144945833580103
+        },
+        {
+          "bin": 7,
+          "count": 45623,
+          "weight_fraction": 0.09999813890549206,
+          "probability": 0.04318958764739799,
+          "observed": 0.04621295055654451
+        },
+        {
+          "bin": 8,
+          "count": 48100,
+          "weight_fraction": 0.10000459408100673,
+          "probability": 0.0712077511673568,
+          "observed": 0.07621362140200531
+        },
+        {
+          "bin": 9,
+          "count": 47117,
+          "weight_fraction": 0.10000036843422563,
+          "probability": 0.16601337846900244,
+          "observed": 0.16773690356056326
+        }
+      ]
+    },
+    "hist_gradient_boosting|full|fixed_scenario_calibration": {
+      "citl": 0.01806240861149356,
+      "intercept": 0.10281204987889107,
+      "slope": 1.0325966955463557,
+      "mean_prediction": 0.03594787009833199,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.0027058713277744607,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 20594,
+          "weight_fraction": 0.09999808002200283,
+          "probability": 0.0029660798552132383,
+          "observed": 0.0013693472729075903
+        },
+        {
+          "bin": 1,
+          "count": 23206,
+          "weight_fraction": 0.10000459867338687,
+          "probability": 0.004461211779219898,
+          "observed": 0.0032163947987355465
+        },
+        {
+          "bin": 2,
+          "count": 26104,
+          "weight_fraction": 0.09999627148030014,
+          "probability": 0.006433502819702704,
+          "observed": 0.0043704323837931245
+        },
+        {
+          "bin": 3,
+          "count": 28984,
+          "weight_fraction": 0.10000062883610439,
+          "probability": 0.008744474983686626,
+          "observed": 0.006068498920959811
+        },
+        {
+          "bin": 4,
+          "count": 32571,
+          "weight_fraction": 0.0999994009933417,
+          "probability": 0.011986956023606027,
+          "observed": 0.008929072317518182
+        },
+        {
+          "bin": 5,
+          "count": 35416,
+          "weight_fraction": 0.09999747595936227,
+          "probability": 0.017376824317531805,
+          "observed": 0.019691034041425245
+        },
+        {
+          "bin": 6,
+          "count": 41526,
+          "weight_fraction": 0.10000044261477735,
+          "probability": 0.02709628187391927,
+          "observed": 0.03144945833580103
+        },
+        {
+          "bin": 7,
+          "count": 45623,
+          "weight_fraction": 0.09999813890549206,
+          "probability": 0.04318958764739799,
+          "observed": 0.04621295055654451
+        },
+        {
+          "bin": 8,
+          "count": 48100,
+          "weight_fraction": 0.10000459408100673,
+          "probability": 0.0712077511673568,
+          "observed": 0.07621362140200531
+        },
+        {
+          "bin": 9,
+          "count": 47117,
+          "weight_fraction": 0.10000036843422563,
+          "probability": 0.16601337846900244,
+          "observed": 0.16773690356056326
+        }
+      ]
+    },
+    "hist_gradient_boosting|full|mask_trained": {
+      "citl": 0.012674017050271135,
+      "intercept": 0.0966221928637781,
+      "slope": 1.0322070573389652,
+      "mean_prediction": 0.03611981373209262,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.0027433990567290304,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 21198,
+          "weight_fraction": 0.1000026405095973,
+          "probability": 0.0036378331465804566,
+          "observed": 0.0021625745676630524
+        },
+        {
+          "bin": 1,
+          "count": 21765,
+          "weight_fraction": 0.10000344677416327,
+          "probability": 0.004702321707317107,
+          "observed": 0.002700309393785689
+        },
+        {
+          "bin": 2,
+          "count": 25603,
+          "weight_fraction": 0.09999479731564159,
+          "probability": 0.006638916998497615,
+          "observed": 0.004961947533544213
+        },
+        {
+          "bin": 3,
+          "count": 28346,
+          "weight_fraction": 0.10000179319305756,
+          "probability": 0.009054044000440504,
+          "observed": 0.006029776932417906
+        },
+        {
+          "bin": 4,
+          "count": 33415,
+          "weight_fraction": 0.10000803958425122,
+          "probability": 0.012246261663829394,
+          "observed": 0.008797600169406339
+        },
+        {
+          "bin": 5,
+          "count": 37896,
+          "weight_fraction": 0.0999825059428079,
+          "probability": 0.01751237038076847,
+          "observed": 0.019536922095251333
+        },
+        {
+          "bin": 6,
+          "count": 40361,
+          "weight_fraction": 0.10000879095443656,
+          "probability": 0.02680965288877715,
+          "observed": 0.03159940836731128
+        },
+        {
+          "bin": 7,
+          "count": 45757,
+          "weight_fraction": 0.09999804015963004,
+          "probability": 0.042906166570019194,
+          "observed": 0.04506965041949856
+        },
+        {
+          "bin": 8,
+          "count": 47921,
+          "weight_fraction": 0.0999988005449537,
+          "probability": 0.07121271889340836,
+          "observed": 0.07798319038097498
+        },
+        {
+          "bin": 9,
+          "count": 46979,
+          "weight_fraction": 0.10000114502146087,
+          "probability": 0.16647728708840803,
+          "observed": 0.1664190241183002
+        }
+      ]
+    },
+    "hist_gradient_boosting|full|subset_retrained": {
+      "citl": 0.01806240861149356,
+      "intercept": 0.10281204987889107,
+      "slope": 1.0325966955463557,
+      "mean_prediction": 0.03594787009833199,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.0027058713277744607,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 20594,
+          "weight_fraction": 0.09999808002200283,
+          "probability": 0.0029660798552132383,
+          "observed": 0.0013693472729075903
+        },
+        {
+          "bin": 1,
+          "count": 23206,
+          "weight_fraction": 0.10000459867338687,
+          "probability": 0.004461211779219898,
+          "observed": 0.0032163947987355465
+        },
+        {
+          "bin": 2,
+          "count": 26104,
+          "weight_fraction": 0.09999627148030014,
+          "probability": 0.006433502819702704,
+          "observed": 0.0043704323837931245
+        },
+        {
+          "bin": 3,
+          "count": 28984,
+          "weight_fraction": 0.10000062883610439,
+          "probability": 0.008744474983686626,
+          "observed": 0.006068498920959811
+        },
+        {
+          "bin": 4,
+          "count": 32571,
+          "weight_fraction": 0.0999994009933417,
+          "probability": 0.011986956023606027,
+          "observed": 0.008929072317518182
+        },
+        {
+          "bin": 5,
+          "count": 35416,
+          "weight_fraction": 0.09999747595936227,
+          "probability": 0.017376824317531805,
+          "observed": 0.019691034041425245
+        },
+        {
+          "bin": 6,
+          "count": 41526,
+          "weight_fraction": 0.10000044261477735,
+          "probability": 0.02709628187391927,
+          "observed": 0.03144945833580103
+        },
+        {
+          "bin": 7,
+          "count": 45623,
+          "weight_fraction": 0.09999813890549206,
+          "probability": 0.04318958764739799,
+          "observed": 0.04621295055654451
+        },
+        {
+          "bin": 8,
+          "count": 48100,
+          "weight_fraction": 0.10000459408100673,
+          "probability": 0.0712077511673568,
+          "observed": 0.07621362140200531
+        },
+        {
+          "bin": 9,
+          "count": 47117,
+          "weight_fraction": 0.10000036843422563,
+          "probability": 0.16601337846900244,
+          "observed": 0.16773690356056326
+        }
+      ]
+    },
+    "hist_gradient_boosting|without_health_state|fixed_global_calibration": {
+      "citl": -0.021589864981765003,
+      "intercept": 0.25039198410154545,
+      "slope": 1.1023279028246449,
+      "mean_prediction": 0.03724912812658549,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.0028898764485765466,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 19877,
+          "weight_fraction": 0.09993187301656707,
+          "probability": 0.0034533489136186904,
+          "observed": 0.001657361718109341
+        },
+        {
+          "bin": 1,
+          "count": 23055,
+          "weight_fraction": 0.09996103608672618,
+          "probability": 0.005250554606842684,
+          "observed": 0.005307800273872741
+        },
+        {
+          "bin": 2,
+          "count": 24866,
+          "weight_fraction": 0.10011089624154554,
+          "probability": 0.0075451252651226606,
+          "observed": 0.005612522432893871
+        },
+        {
+          "bin": 3,
+          "count": 25935,
+          "weight_fraction": 0.10000296970167767,
+          "probability": 0.011015896125111882,
+          "observed": 0.008095829941328021
+        },
+        {
+          "bin": 4,
+          "count": 33700,
+          "weight_fraction": 0.09999571160342861,
+          "probability": 0.016251930581423657,
+          "observed": 0.012157369266119
+        },
+        {
+          "bin": 5,
+          "count": 35926,
+          "weight_fraction": 0.10000196758392374,
+          "probability": 0.022781854029603046,
+          "observed": 0.01760995391690769
+        },
+        {
+          "bin": 6,
+          "count": 40575,
+          "weight_fraction": 0.09999522577443687,
+          "probability": 0.03274279243202808,
+          "observed": 0.03690557600201566
+        },
+        {
+          "bin": 7,
+          "count": 45641,
+          "weight_fraction": 0.10000256953179179,
+          "probability": 0.04944353624283619,
+          "observed": 0.049981827896157925
+        },
+        {
+          "bin": 8,
+          "count": 48304,
+          "weight_fraction": 0.0999941708477925,
+          "probability": 0.07763263380175445,
+          "observed": 0.07548381501353288
+        },
+        {
+          "bin": 9,
+          "count": 51362,
+          "weight_fraction": 0.10000357961211002,
+          "probability": 0.1463691406713305,
+          "observed": 0.1524448303053548
+        }
+      ]
+    },
+    "hist_gradient_boosting|without_health_state|fixed_scenario_calibration": {
+      "citl": 0.04914599656870248,
+      "intercept": 0.11948604088997326,
+      "slope": 1.0260968555327425,
+      "mean_prediction": 0.0349418291632416,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.0027254703334955803,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 19877,
+          "weight_fraction": 0.09993187301656707,
+          "probability": 0.0025786813753606434,
+          "observed": 0.001657361718109341
+        },
+        {
+          "bin": 1,
+          "count": 23055,
+          "weight_fraction": 0.09996103608672618,
+          "probability": 0.0040474674695223966,
+          "observed": 0.005307800273872741
+        },
+        {
+          "bin": 2,
+          "count": 24866,
+          "weight_fraction": 0.10011089624154554,
+          "probability": 0.005977137441075475,
+          "observed": 0.005612522432893871
+        },
+        {
+          "bin": 3,
+          "count": 25935,
+          "weight_fraction": 0.10000296970167767,
+          "probability": 0.008984139973962305,
+          "observed": 0.008095829941328021
+        },
+        {
+          "bin": 4,
+          "count": 33700,
+          "weight_fraction": 0.09999571160342861,
+          "probability": 0.013654450856342704,
+          "observed": 0.012157369266119
+        },
+        {
+          "bin": 5,
+          "count": 35926,
+          "weight_fraction": 0.10000196758392374,
+          "probability": 0.01964506702705595,
+          "observed": 0.01760995391690769
+        },
+        {
+          "bin": 6,
+          "count": 40575,
+          "weight_fraction": 0.09999522577443687,
+          "probability": 0.029055551554233953,
+          "observed": 0.03690557600201566
+        },
+        {
+          "bin": 7,
+          "count": 45641,
+          "weight_fraction": 0.10000256953179179,
+          "probability": 0.0453228121427131,
+          "observed": 0.049981827896157925
+        },
+        {
+          "bin": 8,
+          "count": 48304,
+          "weight_fraction": 0.0999941708477925,
+          "probability": 0.07374638442429429,
+          "observed": 0.07548381501353288
+        },
+        {
+          "bin": 9,
+          "count": 51362,
+          "weight_fraction": 0.10000357961211002,
+          "probability": 0.14640251773853932,
+          "observed": 0.1524448303053548
+        }
+      ]
+    },
+    "hist_gradient_boosting|without_health_state|mask_trained": {
+      "citl": 0.029485296247474042,
+      "intercept": 0.12598142809923543,
+      "slope": 1.0360596544374663,
+      "mean_prediction": 0.03557535915066147,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.002371732470038855,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 21146,
+          "weight_fraction": 0.09999918122884957,
+          "probability": 0.003711064013779564,
+          "observed": 0.0025127716856988584
+        },
+        {
+          "bin": 1,
+          "count": 21194,
+          "weight_fraction": 0.1000048229360675,
+          "probability": 0.004583676031209472,
+          "observed": 0.0039122559227169895
+        },
+        {
+          "bin": 2,
+          "count": 24888,
+          "weight_fraction": 0.09998023491871857,
+          "probability": 0.006652858773348238,
+          "observed": 0.006176757306603479
+        },
+        {
+          "bin": 3,
+          "count": 27842,
+          "weight_fraction": 0.10002019123099248,
+          "probability": 0.00965317164130414,
+          "observed": 0.006603819068113484
+        },
+        {
+          "bin": 4,
+          "count": 32022,
+          "weight_fraction": 0.1000142343109289,
+          "probability": 0.013536168014754728,
+          "observed": 0.011826943041305648
+        },
+        {
+          "bin": 5,
+          "count": 39121,
+          "weight_fraction": 0.0999815393813688,
+          "probability": 0.01949914028318289,
+          "observed": 0.02003060875198271
+        },
+        {
+          "bin": 6,
+          "count": 40442,
+          "weight_fraction": 0.09999354244998682,
+          "probability": 0.029251696802214216,
+          "observed": 0.03153810212216623
+        },
+        {
+          "bin": 7,
+          "count": 44452,
+          "weight_fraction": 0.10000519674433667,
+          "probability": 0.04479266487757853,
+          "observed": 0.04885261636909813
+        },
+        {
+          "bin": 8,
+          "count": 49663,
+          "weight_fraction": 0.10000121614558725,
+          "probability": 0.06993479741918016,
+          "observed": 0.07556140182589455
+        },
+        {
+          "bin": 9,
+          "count": 48471,
+          "weight_fraction": 0.09999984065316345,
+          "probability": 0.15413815798586192,
+          "observed": 0.15824584697264538
+        }
+      ]
+    },
+    "hist_gradient_boosting|without_health_state|subset_retrained": {
+      "citl": 0.02810152461828129,
+      "intercept": 0.15358561793261036,
+      "slope": 1.0469691176860807,
+      "mean_prediction": 0.035617229451656594,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.002708815480067971,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 20741,
+          "weight_fraction": 0.10000528880735743,
+          "probability": 0.0033780759164602787,
+          "observed": 0.0018403034584253074
+        },
+        {
+          "bin": 1,
+          "count": 22255,
+          "weight_fraction": 0.09995593244740121,
+          "probability": 0.004601736421666027,
+          "observed": 0.0043345327100937315
+        },
+        {
+          "bin": 2,
+          "count": 25258,
+          "weight_fraction": 0.10004827793178542,
+          "probability": 0.006907815522669813,
+          "observed": 0.005037721379747279
+        },
+        {
+          "bin": 3,
+          "count": 28600,
+          "weight_fraction": 0.09998581674601935,
+          "probability": 0.009933657667685466,
+          "observed": 0.007720258017245923
+        },
+        {
+          "bin": 4,
+          "count": 33601,
+          "weight_fraction": 0.10000595558318195,
+          "probability": 0.013857526637584999,
+          "observed": 0.012196893314202723
+        },
+        {
+          "bin": 5,
+          "count": 37376,
+          "weight_fraction": 0.10000241635388787,
+          "probability": 0.019706467626628414,
+          "observed": 0.01825631187229451
+        },
+        {
+          "bin": 6,
+          "count": 40262,
+          "weight_fraction": 0.09999839690803732,
+          "probability": 0.02929047003257707,
+          "observed": 0.033608607395771255
+        },
+        {
+          "bin": 7,
+          "count": 44316,
+          "weight_fraction": 0.09999250405990005,
+          "probability": 0.0452183395081248,
+          "observed": 0.051294350436698624
+        },
+        {
+          "bin": 8,
+          "count": 49117,
+          "weight_fraction": 0.10000536722536407,
+          "probability": 0.06902317376970707,
+          "observed": 0.07368394702416413
+        },
+        {
+          "bin": 9,
+          "count": 47715,
+          "weight_fraction": 0.10000004393706535,
+          "probability": 0.15425373980601917,
+          "observed": 0.15728730077891778
+        }
+      ]
+    },
+    "hist_gradient_boosting|demographics_history|fixed_global_calibration": {
+      "citl": -0.3325134892973118,
+      "intercept": 0.48540047315527274,
+      "slope": 1.332991877970052,
+      "mean_prediction": 0.049582618513833776,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.013056562676578566,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 20835,
+          "weight_fraction": 0.1112882539815397,
+          "probability": 0.008015928789973257,
+          "observed": 0.0018679722911555232
+        },
+        {
+          "bin": 1,
+          "count": 25695,
+          "weight_fraction": 0.0996531686039442,
+          "probability": 0.011281466428745406,
+          "observed": 0.006881327873022797
+        },
+        {
+          "bin": 2,
+          "count": 25008,
+          "weight_fraction": 0.0996836376764431,
+          "probability": 0.014564234667849594,
+          "observed": 0.008216800229005488
+        },
+        {
+          "bin": 3,
+          "count": 19712,
+          "weight_fraction": 0.08937955020038507,
+          "probability": 0.015630968411968253,
+          "observed": 0.006343074232043968
+        },
+        {
+          "bin": 4,
+          "count": 22333,
+          "weight_fraction": 0.07704625326265971,
+          "probability": 0.02953547310774544,
+          "observed": 0.013075541532356795
+        },
+        {
+          "bin": 5,
+          "count": 45958,
+          "weight_fraction": 0.13471731490779926,
+          "probability": 0.038552790725244236,
+          "observed": 0.02024934265368765
+        },
+        {
+          "bin": 6,
+          "count": 43745,
+          "weight_fraction": 0.09650830634647363,
+          "probability": 0.058505701577583544,
+          "observed": 0.037718014234029665
+        },
+        {
+          "bin": 7,
+          "count": 39726,
+          "weight_fraction": 0.09060746082296577,
+          "probability": 0.07198964916351784,
+          "observed": 0.05189313693197717
+        },
+        {
+          "bin": 8,
+          "count": 55970,
+          "weight_fraction": 0.10338479718422625,
+          "probability": 0.09655300189521913,
+          "observed": 0.07052017891219796
+        },
+        {
+          "bin": 9,
+          "count": 50259,
+          "weight_fraction": 0.09773125701356335,
+          "probability": 0.15447337491468144,
+          "observed": 0.15223711572009527
+        }
+      ]
+    },
+    "hist_gradient_boosting|demographics_history|fixed_scenario_calibration": {
+      "citl": 0.07888453069925852,
+      "intercept": 0.08736630604990132,
+      "slope": 1.0030826529143142,
+      "mean_prediction": 0.03399813328790443,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.0029474771296933593,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 20835,
+          "weight_fraction": 0.1112882539815397,
+          "probability": 0.0024574410635977983,
+          "observed": 0.0018679722911555232
+        },
+        {
+          "bin": 1,
+          "count": 25695,
+          "weight_fraction": 0.0996531686039442,
+          "probability": 0.003882336270790997,
+          "observed": 0.006881327873022797
+        },
+        {
+          "bin": 2,
+          "count": 25008,
+          "weight_fraction": 0.0996836376764431,
+          "probability": 0.005467552498235167,
+          "observed": 0.008216800229005488
+        },
+        {
+          "bin": 3,
+          "count": 19712,
+          "weight_fraction": 0.08937955020038507,
+          "probability": 0.006018085936657705,
+          "observed": 0.006343074232043968
+        },
+        {
+          "bin": 4,
+          "count": 22333,
+          "weight_fraction": 0.07704625326265971,
+          "probability": 0.014196879144960886,
+          "observed": 0.013075541532356795
+        },
+        {
+          "bin": 5,
+          "count": 45958,
+          "weight_fraction": 0.13471731490779926,
+          "probability": 0.020402018757933887,
+          "observed": 0.02024934265368765
+        },
+        {
+          "bin": 6,
+          "count": 43745,
+          "weight_fraction": 0.09650830634647363,
+          "probability": 0.035753840538241814,
+          "observed": 0.037718014234029665
+        },
+        {
+          "bin": 7,
+          "count": 39726,
+          "weight_fraction": 0.09060746082296577,
+          "probability": 0.04749169915250146,
+          "observed": 0.05189313693197717
+        },
+        {
+          "bin": 8,
+          "count": 55970,
+          "weight_fraction": 0.10338479718422625,
+          "probability": 0.07088012896496011,
+          "observed": 0.07052017891219796
+        },
+        {
+          "bin": 9,
+          "count": 50259,
+          "weight_fraction": 0.09773125701356335,
+          "probability": 0.13640414302774512,
+          "observed": 0.15223711572009527
+        }
+      ]
+    },
+    "hist_gradient_boosting|demographics_history|mask_trained": {
+      "citl": 0.054659685671544576,
+      "intercept": 0.11872775155481696,
+      "slope": 1.0234235760279413,
+      "mean_prediction": 0.03477428286070261,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.003007456969538142,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 20835,
+          "weight_fraction": 0.1112882539815397,
+          "probability": 0.0031198030337691307,
+          "observed": 0.0018679722911555232
+        },
+        {
+          "bin": 1,
+          "count": 17922,
+          "weight_fraction": 0.078743576770963,
+          "probability": 0.005088511143918711,
+          "observed": 0.005162079440427655
+        },
+        {
+          "bin": 2,
+          "count": 24837,
+          "weight_fraction": 0.10612030687741837,
+          "probability": 0.007140612326152064,
+          "observed": 0.006199971503010784
+        },
+        {
+          "bin": 3,
+          "count": 27003,
+          "weight_fraction": 0.10348516613698536,
+          "probability": 0.00891538451931378,
+          "observed": 0.009339714676764704
+        },
+        {
+          "bin": 4,
+          "count": 27708,
+          "weight_fraction": 0.0912090335111223,
+          "probability": 0.014296852597631892,
+          "observed": 0.01127026998553556
+        },
+        {
+          "bin": 5,
+          "count": 40470,
+          "weight_fraction": 0.11627971765923227,
+          "probability": 0.020880012264615996,
+          "observed": 0.019911183190804725
+        },
+        {
+          "bin": 6,
+          "count": 42109,
+          "weight_fraction": 0.09680691514435646,
+          "probability": 0.03057435571959705,
+          "observed": 0.03810340797585067
+        },
+        {
+          "bin": 7,
+          "count": 45034,
+          "weight_fraction": 0.0931664548900607,
+          "probability": 0.04526773688745873,
+          "observed": 0.04753153289951124
+        },
+        {
+          "bin": 8,
+          "count": 47908,
+          "weight_fraction": 0.09751275326447637,
+          "probability": 0.06498830848741487,
+          "observed": 0.06855695983405613
+        },
+        {
+          "bin": 9,
+          "count": 55415,
+          "weight_fraction": 0.10538782176384551,
+          "probability": 0.14327715510764255,
+          "observed": 0.15316583918689128
+        }
+      ]
+    },
+    "hist_gradient_boosting|demographics_history|subset_retrained": {
+      "citl": 0.045865541198719925,
+      "intercept": 0.1283056379445034,
+      "slope": 1.030308771035682,
+      "mean_prediction": 0.0350486837059015,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.00286240818005163,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 20835,
+          "weight_fraction": 0.1112882539815397,
+          "probability": 0.0030282373778746092,
+          "observed": 0.0018679722911555232
+        },
+        {
+          "bin": 1,
+          "count": 17740,
+          "weight_fraction": 0.07772675824748478,
+          "probability": 0.004622956303276238,
+          "observed": 0.00522974547069803
+        },
+        {
+          "bin": 2,
+          "count": 23683,
+          "weight_fraction": 0.10063409859953729,
+          "probability": 0.006742889176670632,
+          "observed": 0.006496356179647173
+        },
+        {
+          "bin": 3,
+          "count": 28954,
+          "weight_fraction": 0.1103282966447577,
+          "probability": 0.009271679794707912,
+          "observed": 0.008888978743429855
+        },
+        {
+          "bin": 4,
+          "count": 30251,
+          "weight_fraction": 0.0986193080422948,
+          "probability": 0.013757088556910924,
+          "observed": 0.010039664371472112
+        },
+        {
+          "bin": 5,
+          "count": 35453,
+          "weight_fraction": 0.09779929723833143,
+          "probability": 0.022521210100349125,
+          "observed": 0.021194493340143564
+        },
+        {
+          "bin": 6,
+          "count": 42861,
+          "weight_fraction": 0.10240570467499352,
+          "probability": 0.03225427380791605,
+          "observed": 0.03602775368135106
+        },
+        {
+          "bin": 7,
+          "count": 50362,
+          "weight_fraction": 0.10607723791592946,
+          "probability": 0.044843994201022065,
+          "observed": 0.05029795633846985
+        },
+        {
+          "bin": 8,
+          "count": 51841,
+          "weight_fraction": 0.09876363426050633,
+          "probability": 0.06590762258970748,
+          "observed": 0.07053426610389942
+        },
+        {
+          "bin": 9,
+          "count": 47261,
+          "weight_fraction": 0.09635741039462503,
+          "probability": 0.1507134499421399,
+          "observed": 0.15798653008475905
+        }
+      ]
+    },
+    "hist_gradient_boosting|demographics|fixed_global_calibration": {
+      "citl": -1.7472421934362599,
+      "intercept": -1.901485259629735,
+      "slope": 0.8943245569463631,
+      "mean_prediction": 0.1755297887237227,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.1390037328864675,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 30410,
+          "weight_fraction": 0.11676896247756391,
+          "probability": 0.08870747061367999,
+          "observed": 0.011410345483326714
+        },
+        {
+          "bin": 1,
+          "count": 18917,
+          "weight_fraction": 0.08823393288013484,
+          "probability": 0.10575456917285919,
+          "observed": 0.008668608697652173
+        },
+        {
+          "bin": 2,
+          "count": 30793,
+          "weight_fraction": 0.12243116764187686,
+          "probability": 0.11834037979781863,
+          "observed": 0.016016511364462315
+        },
+        {
+          "bin": 3,
+          "count": 31992,
+          "weight_fraction": 0.08332714543768718,
+          "probability": 0.17687927186489105,
+          "observed": 0.056361369836630065
+        },
+        {
+          "bin": 4,
+          "count": 21617,
+          "weight_fraction": 0.06734855423613216,
+          "probability": 0.18320751190185547,
+          "observed": 0.02298604887699727
+        },
+        {
+          "bin": 5,
+          "count": 29149,
+          "weight_fraction": 0.09433574216397557,
+          "probability": 0.19082005321979523,
+          "observed": 0.03631023341319801
+        },
+        {
+          "bin": 6,
+          "count": 60542,
+          "weight_fraction": 0.1321718716365761,
+          "probability": 0.19605413502829305,
+          "observed": 0.05809650713010079
+        },
+        {
+          "bin": 7,
+          "count": 36457,
+          "weight_fraction": 0.0718981605057136,
+          "probability": 0.20333164930343625,
+          "observed": 0.06563443404413204
+        },
+        {
+          "bin": 8,
+          "count": 66681,
+          "weight_fraction": 0.10285786896753929,
+          "probability": 0.21903274720792684,
+          "observed": 0.0960654962373318
+        },
+        {
+          "bin": 9,
+          "count": 22683,
+          "weight_fraction": 0.12062659405280053,
+          "probability": 0.2753273844718933,
+          "observed": 0.004304379087607462
+        }
+      ]
+    },
+    "hist_gradient_boosting|demographics|fixed_scenario_calibration": {
+      "citl": -0.1909440972011424,
+      "intercept": -1.035088118896135,
+      "slope": 0.7187649191172042,
+      "mean_prediction": 0.043804163257838855,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.02175113311637411,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 30410,
+          "weight_fraction": 0.11676896247756391,
+          "probability": 0.01625034791226764,
+          "observed": 0.011410345483326714
+        },
+        {
+          "bin": 1,
+          "count": 18917,
+          "weight_fraction": 0.08823393288013484,
+          "probability": 0.020598981529474255,
+          "observed": 0.008668608697652173
+        },
+        {
+          "bin": 2,
+          "count": 30793,
+          "weight_fraction": 0.12243116764187686,
+          "probability": 0.024031728903835904,
+          "observed": 0.016016511364462315
+        },
+        {
+          "bin": 3,
+          "count": 31992,
+          "weight_fraction": 0.08332714543768718,
+          "probability": 0.042346399277448654,
+          "observed": 0.056361369836630065
+        },
+        {
+          "bin": 4,
+          "count": 21617,
+          "weight_fraction": 0.06734855423613216,
+          "probability": 0.04456312581896781,
+          "observed": 0.02298604887699727
+        },
+        {
+          "bin": 5,
+          "count": 29149,
+          "weight_fraction": 0.09433574216397557,
+          "probability": 0.047292519360780716,
+          "observed": 0.03631023341319801
+        },
+        {
+          "bin": 6,
+          "count": 60542,
+          "weight_fraction": 0.1321718716365761,
+          "probability": 0.049221710652029536,
+          "observed": 0.05809650713010079
+        },
+        {
+          "bin": 7,
+          "count": 36457,
+          "weight_fraction": 0.0718981605057136,
+          "probability": 0.05192922055721283,
+          "observed": 0.06563443404413204
+        },
+        {
+          "bin": 8,
+          "count": 66681,
+          "weight_fraction": 0.10285786896753929,
+          "probability": 0.058048888493965944,
+          "observed": 0.0960654962373318
+        },
+        {
+          "bin": 9,
+          "count": 22683,
+          "weight_fraction": 0.12062659405280053,
+          "probability": 0.08244863152503967,
+          "observed": 0.004304379087607462
+        }
+      ]
+    },
+    "hist_gradient_boosting|demographics|mask_trained": {
+      "citl": 0.031491488812927744,
+      "intercept": 0.18006799243664667,
+      "slope": 1.0497925849886898,
+      "mean_prediction": 0.03545869614707715,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.0030136441728728157,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 32039,
+          "weight_fraction": 0.15982345867018652,
+          "probability": 0.006059988171387465,
+          "observed": 0.0056396649891880405
+        },
+        {
+          "bin": 1,
+          "count": 8238,
+          "weight_fraction": 0.035873265335755244,
+          "probability": 0.009365016284088291,
+          "observed": 0.005579191596241798
+        },
+        {
+          "bin": 2,
+          "count": 18917,
+          "weight_fraction": 0.08823393288013484,
+          "probability": 0.010009407566540592,
+          "observed": 0.008668608697652173
+        },
+        {
+          "bin": 3,
+          "count": 21054,
+          "weight_fraction": 0.07757209786017792,
+          "probability": 0.012033844457674648,
+          "observed": 0.012249843105293002
+        },
+        {
+          "bin": 4,
+          "count": 44172,
+          "weight_fraction": 0.15390645654225377,
+          "probability": 0.023045923849934574,
+          "observed": 0.021499120967468508
+        },
+        {
+          "bin": 5,
+          "count": 22717,
+          "weight_fraction": 0.07498103127972058,
+          "probability": 0.03577727230282093,
+          "observed": 0.036905952823820844
+        },
+        {
+          "bin": 6,
+          "count": 31904,
+          "weight_fraction": 0.08636385200970738,
+          "probability": 0.04637310186247498,
+          "observed": 0.041581885104244196
+        },
+        {
+          "bin": 7,
+          "count": 68449,
+          "weight_fraction": 0.15522530594340078,
+          "probability": 0.050679104675091305,
+          "observed": 0.06065652167877795
+        },
+        {
+          "bin": 8,
+          "count": 35070,
+          "weight_fraction": 0.0651627305111237,
+          "probability": 0.07131846000750859,
+          "observed": 0.07282780645273618
+        },
+        {
+          "bin": 9,
+          "count": 66681,
+          "weight_fraction": 0.10285786896753929,
+          "probability": 0.09322647094742868,
+          "observed": 0.0960654962373318
+        }
+      ]
+    },
+    "hist_gradient_boosting|demographics|subset_retrained": {
+      "citl": 0.032818126580693975,
+      "intercept": 0.15534559655714714,
+      "slope": 1.0410717844792785,
+      "mean_prediction": 0.03541461688188714,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.0025245283725865817,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 22407,
+          "weight_fraction": 0.10093883918663678,
+          "probability": 0.005495024071611398,
+          "observed": 0.00704501997488793
+        },
+        {
+          "bin": 1,
+          "count": 19144,
+          "weight_fraction": 0.10242865845016513,
+          "probability": 0.006985379497025923,
+          "observed": 0.004505111398197209
+        },
+        {
+          "bin": 2,
+          "count": 18613,
+          "weight_fraction": 0.07501901508796228,
+          "probability": 0.010909673930161361,
+          "observed": 0.009764941347185259
+        },
+        {
+          "bin": 3,
+          "count": 30963,
+          "weight_fraction": 0.12619287194564854,
+          "probability": 0.013956789823637421,
+          "observed": 0.014743157684732798
+        },
+        {
+          "bin": 4,
+          "count": 33293,
+          "weight_fraction": 0.11082982661809557,
+          "probability": 0.02460051393836627,
+          "observed": 0.021292582536480798
+        },
+        {
+          "bin": 5,
+          "count": 29149,
+          "weight_fraction": 0.09433574216397557,
+          "probability": 0.03482922865430908,
+          "observed": 0.03631023341319801
+        },
+        {
+          "bin": 6,
+          "count": 28878,
+          "weight_fraction": 0.07481965763527548,
+          "probability": 0.04646445834888231,
+          "observed": 0.047865723441740164
+        },
+        {
+          "bin": 7,
+          "count": 48158,
+          "weight_fraction": 0.11312604607090387,
+          "probability": 0.05277691621658494,
+          "observed": 0.05593166488863399
+        },
+        {
+          "bin": 8,
+          "count": 51955,
+          "weight_fraction": 0.09945147387379752,
+          "probability": 0.06603310524285944,
+          "observed": 0.07225157957651307
+        },
+        {
+          "bin": 9,
+          "count": 66681,
+          "weight_fraction": 0.10285786896753929,
+          "probability": 0.09273643330350219,
+          "observed": 0.0960654962373318
+        }
+      ]
+    },
+    "mlp|full|fixed_global_calibration": {
+      "citl": 0.032822916185328094,
+      "intercept": 0.12083551918114627,
+      "slope": 1.0339591022157937,
+      "mean_prediction": 0.03547986291716883,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.00264200399054579,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 22266,
+          "weight_fraction": 0.10000024788173098,
+          "probability": 0.002280719329875038,
+          "observed": 0.001141827190376282
+        },
+        {
+          "bin": 1,
+          "count": 23796,
+          "weight_fraction": 0.09999950287854563,
+          "probability": 0.0037606446349389973,
+          "observed": 0.0029516962824825705
+        },
+        {
+          "bin": 2,
+          "count": 24677,
+          "weight_fraction": 0.09999811294424768,
+          "probability": 0.005682766608766262,
+          "observed": 0.004436511664685093
+        },
+        {
+          "bin": 3,
+          "count": 28690,
+          "weight_fraction": 0.10000555054311609,
+          "probability": 0.00837319823945239,
+          "observed": 0.006012021864370811
+        },
+        {
+          "bin": 4,
+          "count": 32383,
+          "weight_fraction": 0.09998708469156473,
+          "probability": 0.012102368341649728,
+          "observed": 0.010282569959243214
+        },
+        {
+          "bin": 5,
+          "count": 36161,
+          "weight_fraction": 0.10004756868097886,
+          "probability": 0.017664565764424066,
+          "observed": 0.017060739147671356
+        },
+        {
+          "bin": 6,
+          "count": 40021,
+          "weight_fraction": 0.09996232733500637,
+          "probability": 0.026513155355038277,
+          "observed": 0.032021109089307526
+        },
+        {
+          "bin": 7,
+          "count": 45281,
+          "weight_fraction": 0.09999382182396777,
+          "probability": 0.041780510097324024,
+          "observed": 0.04611106504213755
+        },
+        {
+          "bin": 8,
+          "count": 47393,
+          "weight_fraction": 0.10000230087471741,
+          "probability": 0.07072817262851393,
+          "observed": 0.07737781285047729
+        },
+        {
+          "bin": 9,
+          "count": 48573,
+          "weight_fraction": 0.10000348234612448,
+          "probability": 0.16591050849030303,
+          "observed": 0.1678654656064197
+        }
+      ]
+    },
+    "mlp|full|fixed_scenario_calibration": {
+      "citl": 0.032822916185328094,
+      "intercept": 0.12083551918114627,
+      "slope": 1.0339591022157937,
+      "mean_prediction": 0.03547986291716883,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.00264200399054579,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 22266,
+          "weight_fraction": 0.10000024788173098,
+          "probability": 0.002280719329875038,
+          "observed": 0.001141827190376282
+        },
+        {
+          "bin": 1,
+          "count": 23796,
+          "weight_fraction": 0.09999950287854563,
+          "probability": 0.0037606446349389973,
+          "observed": 0.0029516962824825705
+        },
+        {
+          "bin": 2,
+          "count": 24677,
+          "weight_fraction": 0.09999811294424768,
+          "probability": 0.005682766608766262,
+          "observed": 0.004436511664685093
+        },
+        {
+          "bin": 3,
+          "count": 28690,
+          "weight_fraction": 0.10000555054311609,
+          "probability": 0.00837319823945239,
+          "observed": 0.006012021864370811
+        },
+        {
+          "bin": 4,
+          "count": 32383,
+          "weight_fraction": 0.09998708469156473,
+          "probability": 0.012102368341649728,
+          "observed": 0.010282569959243214
+        },
+        {
+          "bin": 5,
+          "count": 36161,
+          "weight_fraction": 0.10004756868097886,
+          "probability": 0.017664565764424066,
+          "observed": 0.017060739147671356
+        },
+        {
+          "bin": 6,
+          "count": 40021,
+          "weight_fraction": 0.09996232733500637,
+          "probability": 0.026513155355038277,
+          "observed": 0.032021109089307526
+        },
+        {
+          "bin": 7,
+          "count": 45281,
+          "weight_fraction": 0.09999382182396777,
+          "probability": 0.041780510097324024,
+          "observed": 0.04611106504213755
+        },
+        {
+          "bin": 8,
+          "count": 47393,
+          "weight_fraction": 0.10000230087471741,
+          "probability": 0.07072817262851393,
+          "observed": 0.07737781285047729
+        },
+        {
+          "bin": 9,
+          "count": 48573,
+          "weight_fraction": 0.10000348234612448,
+          "probability": 0.16591050849030303,
+          "observed": 0.1678654656064197
+        }
+      ]
+    },
+    "mlp|full|mask_trained": {
+      "citl": 0.01483375678767994,
+      "intercept": 0.11041843632047783,
+      "slope": 1.0372407674330357,
+      "mean_prediction": 0.036049037709874825,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.001804988197133428,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 22486,
+          "weight_fraction": 0.10000046300812825,
+          "probability": 0.0019682200993658932,
+          "observed": 0.0012090509851935454
+        },
+        {
+          "bin": 1,
+          "count": 23983,
+          "weight_fraction": 0.10000066897548829,
+          "probability": 0.003513955601377537,
+          "observed": 0.0026535824636125067
+        },
+        {
+          "bin": 2,
+          "count": 25550,
+          "weight_fraction": 0.09998861232698694,
+          "probability": 0.005483760384493283,
+          "observed": 0.004409799616484945
+        },
+        {
+          "bin": 3,
+          "count": 29085,
+          "weight_fraction": 0.10004778085054924,
+          "probability": 0.008208340582375465,
+          "observed": 0.0062810756788501294
+        },
+        {
+          "bin": 4,
+          "count": 33302,
+          "weight_fraction": 0.09996563501077677,
+          "probability": 0.012143749582211845,
+          "observed": 0.010124781173764509
+        },
+        {
+          "bin": 5,
+          "count": 36482,
+          "weight_fraction": 0.09999541273934826,
+          "probability": 0.018085963330994857,
+          "observed": 0.018509229162740455
+        },
+        {
+          "bin": 6,
+          "count": 40337,
+          "weight_fraction": 0.100000857597606,
+          "probability": 0.02751648456370351,
+          "observed": 0.027730042425274423
+        },
+        {
+          "bin": 7,
+          "count": 44424,
+          "weight_fraction": 0.1000004260832012,
+          "probability": 0.04352154994921445,
+          "observed": 0.05001962043943711
+        },
+        {
+          "bin": 8,
+          "count": 46390,
+          "weight_fraction": 0.10001080501759985,
+          "probability": 0.07320089370748359,
+          "observed": 0.07669564283643152
+        },
+        {
+          "bin": 9,
+          "count": 47202,
+          "weight_fraction": 0.09998933839031524,
+          "probability": 0.1668585910068011,
+          "observed": 0.16763867477576436
+        }
+      ]
+    },
+    "mlp|full|subset_retrained": {
+      "citl": 0.032822916185328094,
+      "intercept": 0.12083551918114627,
+      "slope": 1.0339591022157937,
+      "mean_prediction": 0.03547986291716883,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.00264200399054579,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 22266,
+          "weight_fraction": 0.10000024788173098,
+          "probability": 0.002280719329875038,
+          "observed": 0.001141827190376282
+        },
+        {
+          "bin": 1,
+          "count": 23796,
+          "weight_fraction": 0.09999950287854563,
+          "probability": 0.0037606446349389973,
+          "observed": 0.0029516962824825705
+        },
+        {
+          "bin": 2,
+          "count": 24677,
+          "weight_fraction": 0.09999811294424768,
+          "probability": 0.005682766608766262,
+          "observed": 0.004436511664685093
+        },
+        {
+          "bin": 3,
+          "count": 28690,
+          "weight_fraction": 0.10000555054311609,
+          "probability": 0.00837319823945239,
+          "observed": 0.006012021864370811
+        },
+        {
+          "bin": 4,
+          "count": 32383,
+          "weight_fraction": 0.09998708469156473,
+          "probability": 0.012102368341649728,
+          "observed": 0.010282569959243214
+        },
+        {
+          "bin": 5,
+          "count": 36161,
+          "weight_fraction": 0.10004756868097886,
+          "probability": 0.017664565764424066,
+          "observed": 0.017060739147671356
+        },
+        {
+          "bin": 6,
+          "count": 40021,
+          "weight_fraction": 0.09996232733500637,
+          "probability": 0.026513155355038277,
+          "observed": 0.032021109089307526
+        },
+        {
+          "bin": 7,
+          "count": 45281,
+          "weight_fraction": 0.09999382182396777,
+          "probability": 0.041780510097324024,
+          "observed": 0.04611106504213755
+        },
+        {
+          "bin": 8,
+          "count": 47393,
+          "weight_fraction": 0.10000230087471741,
+          "probability": 0.07072817262851393,
+          "observed": 0.07737781285047729
+        },
+        {
+          "bin": 9,
+          "count": 48573,
+          "weight_fraction": 0.10000348234612448,
+          "probability": 0.16591050849030303,
+          "observed": 0.1678654656064197
+        }
+      ]
+    },
+    "mlp|without_health_state|fixed_global_calibration": {
+      "citl": -0.24415719237417424,
+      "intercept": 0.07140247931680839,
+      "slope": 1.1293951542446348,
+      "mean_prediction": 0.04549036504932956,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.008964309212074341,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 21507,
+          "weight_fraction": 0.10000188706573704,
+          "probability": 0.005167219719887037,
+          "observed": 0.002032983101894479
+        },
+        {
+          "bin": 1,
+          "count": 23179,
+          "weight_fraction": 0.09999744015978705,
+          "probability": 0.007296529804852773,
+          "observed": 0.003039910002604131
+        },
+        {
+          "bin": 2,
+          "count": 23390,
+          "weight_fraction": 0.10000079731274311,
+          "probability": 0.009939635807018283,
+          "observed": 0.00513089190432186
+        },
+        {
+          "bin": 3,
+          "count": 25817,
+          "weight_fraction": 0.09999780384731066,
+          "probability": 0.01420252039526801,
+          "observed": 0.008179017002803355
+        },
+        {
+          "bin": 4,
+          "count": 30562,
+          "weight_fraction": 0.1000034369816436,
+          "probability": 0.020721599892136126,
+          "observed": 0.013369822773316498
+        },
+        {
+          "bin": 5,
+          "count": 36120,
+          "weight_fraction": 0.09999963208837655,
+          "probability": 0.029263427920849284,
+          "observed": 0.0197963009922888
+        },
+        {
+          "bin": 6,
+          "count": 39743,
+          "weight_fraction": 0.09999992593621357,
+          "probability": 0.041009642139366705,
+          "observed": 0.031584987362584915
+        },
+        {
+          "bin": 7,
+          "count": 45857,
+          "weight_fraction": 0.09999900805600231,
+          "probability": 0.05939590030402526,
+          "observed": 0.050419632986451204
+        },
+        {
+          "bin": 8,
+          "count": 51392,
+          "weight_fraction": 0.09999915741399232,
+          "probability": 0.0896022538285217,
+          "observed": 0.07545420516006106
+        },
+        {
+          "bin": 9,
+          "count": 51674,
+          "weight_fraction": 0.1000009111381938,
+          "probability": 0.17830438800109522,
+          "observed": 0.15625233418776177
+        }
+      ]
+    },
+    "mlp|without_health_state|fixed_scenario_calibration": {
+      "citl": 0.0726460673877658,
+      "intercept": 0.18048494371086837,
+      "slope": 1.0397084690808973,
+      "mean_prediction": 0.03421268436258926,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.0031079478575352457,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 21514,
+          "weight_fraction": 0.09999989110795723,
+          "probability": 0.002966336558794113,
+          "observed": 0.002033023679423049
+        },
+        {
+          "bin": 1,
+          "count": 23190,
+          "weight_fraction": 0.10000083171664,
+          "probability": 0.004316408475218262,
+          "observed": 0.003140620571949209
+        },
+        {
+          "bin": 2,
+          "count": 23375,
+          "weight_fraction": 0.09999710516351962,
+          "probability": 0.00604585336303008,
+          "observed": 0.005030263924244329
+        },
+        {
+          "bin": 3,
+          "count": 25806,
+          "weight_fraction": 0.10000323352038748,
+          "probability": 0.008927273315132406,
+          "observed": 0.008133431215252989
+        },
+        {
+          "bin": 4,
+          "count": 30619,
+          "weight_fraction": 0.10000115126157598,
+          "probability": 0.013491598827575816,
+          "observed": 0.013437254892488263
+        },
+        {
+          "bin": 5,
+          "count": 36060,
+          "weight_fraction": 0.09999599565617766,
+          "probability": 0.019682920641117006,
+          "observed": 0.019778313042455968
+        },
+        {
+          "bin": 6,
+          "count": 39749,
+          "weight_fraction": 0.10000197953158328,
+          "probability": 0.028515591624468685,
+          "observed": 0.03152700000793989
+        },
+        {
+          "bin": 7,
+          "count": 45854,
+          "weight_fraction": 0.10000009862294579,
+          "probability": 0.04290535077460076,
+          "observed": 0.050393683497538644
+        },
+        {
+          "bin": 8,
+          "count": 51395,
+          "weight_fraction": 0.10000078788333805,
+          "probability": 0.06771491867741039,
+          "observed": 0.07550856357441046
+        },
+        {
+          "bin": 9,
+          "count": 51679,
+          "weight_fraction": 0.09999892553587493,
+          "probability": 0.1475615230903546,
+          "observed": 0.1562793104341258
+        }
+      ]
+    },
+    "mlp|without_health_state|mask_trained": {
+      "citl": 0.04531472228676747,
+      "intercept": 0.14712635209339084,
+      "slope": 1.0383479593441747,
+      "mean_prediction": 0.03507171002374209,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.002452879220160176,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 21658,
+          "weight_fraction": 0.10000305675556158,
+          "probability": 0.002434603220785974,
+          "observed": 0.0019747691879050465
+        },
+        {
+          "bin": 1,
+          "count": 23634,
+          "weight_fraction": 0.0999942672252282,
+          "probability": 0.003908736028636682,
+          "observed": 0.003010677604899998
+        },
+        {
+          "bin": 2,
+          "count": 24174,
+          "weight_fraction": 0.09992248075191623,
+          "probability": 0.005810398102551508,
+          "observed": 0.005626052395591741
+        },
+        {
+          "bin": 3,
+          "count": 27177,
+          "weight_fraction": 0.10009128785734882,
+          "probability": 0.008647771420062523,
+          "observed": 0.00707295855938912
+        },
+        {
+          "bin": 4,
+          "count": 31623,
+          "weight_fraction": 0.09998928333547044,
+          "probability": 0.012943868932878721,
+          "observed": 0.01146772974205372
+        },
+        {
+          "bin": 5,
+          "count": 36945,
+          "weight_fraction": 0.09999936008899023,
+          "probability": 0.019095940795537836,
+          "observed": 0.01869756051706147
+        },
+        {
+          "bin": 6,
+          "count": 40901,
+          "weight_fraction": 0.09999185817618528,
+          "probability": 0.028764354532580007,
+          "observed": 0.031591000820161405
+        },
+        {
+          "bin": 7,
+          "count": 45357,
+          "weight_fraction": 0.10000042624199415,
+          "probability": 0.04411139918188566,
+          "observed": 0.0509133741256086
+        },
+        {
+          "bin": 8,
+          "count": 48606,
+          "weight_fraction": 0.10000805803773707,
+          "probability": 0.07083305767719934,
+          "observed": 0.07572037574169006
+        },
+        {
+          "bin": 9,
+          "count": 49166,
+          "weight_fraction": 0.09999992152956805,
+          "probability": 0.15416180630286386,
+          "observed": 0.1591818034404017
+        }
+      ]
+    },
+    "mlp|without_health_state|subset_retrained": {
+      "citl": 0.03974454187949642,
+      "intercept": 0.13995725746031798,
+      "slope": 1.0377573046321729,
+      "mean_prediction": 0.03524890791026597,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.0022957022063941823,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 21974,
+          "weight_fraction": 0.10000665537819081,
+          "probability": 0.0025589815666045637,
+          "observed": 0.00200844356482559
+        },
+        {
+          "bin": 1,
+          "count": 23796,
+          "weight_fraction": 0.09999401234240715,
+          "probability": 0.004029114857116025,
+          "observed": 0.0033630934837422513
+        },
+        {
+          "bin": 2,
+          "count": 24076,
+          "weight_fraction": 0.09995111435644323,
+          "probability": 0.006031534018373303,
+          "observed": 0.004755221508663849
+        },
+        {
+          "bin": 3,
+          "count": 26917,
+          "weight_fraction": 0.10004807094819856,
+          "probability": 0.009013600487716442,
+          "observed": 0.007732125318728
+        },
+        {
+          "bin": 4,
+          "count": 32244,
+          "weight_fraction": 0.10000645769207,
+          "probability": 0.013214047950173329,
+          "observed": 0.011895697586993428
+        },
+        {
+          "bin": 5,
+          "count": 36971,
+          "weight_fraction": 0.09998913681908905,
+          "probability": 0.019234311195624302,
+          "observed": 0.019535336167663182
+        },
+        {
+          "bin": 6,
+          "count": 40743,
+          "weight_fraction": 0.10000508331601823,
+          "probability": 0.028712275942874097,
+          "observed": 0.03137633624566661
+        },
+        {
+          "bin": 7,
+          "count": 44832,
+          "weight_fraction": 0.09999962376836147,
+          "probability": 0.04386001378363727,
+          "observed": 0.048979436685394485
+        },
+        {
+          "bin": 8,
+          "count": 48972,
+          "weight_fraction": 0.1000007946681693,
+          "probability": 0.07049774251988788,
+          "observed": 0.07612265391313876
+        },
+        {
+          "bin": 9,
+          "count": 48716,
+          "weight_fraction": 0.0999990507110522,
+          "probability": 0.15533699934022155,
+          "observed": 0.1594917417176009
+        }
+      ]
+    },
+    "mlp|demographics_history|fixed_global_calibration": {
+      "citl": -1.0202519330875712,
+      "intercept": -0.5339496912235422,
+      "slope": 1.276243904330627,
+      "mean_prediction": 0.09019859218930926,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.053672536352054045,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 20919,
+          "weight_fraction": 0.11175567141974718,
+          "probability": 0.016346802853817368,
+          "observed": 0.0019069192819929966
+        },
+        {
+          "bin": 1,
+          "count": 17008,
+          "weight_fraction": 0.07304366766678347,
+          "probability": 0.020416150806012362,
+          "observed": 0.0062136208368702844
+        },
+        {
+          "bin": 2,
+          "count": 25993,
+          "weight_fraction": 0.11293737667829312,
+          "probability": 0.026514208273643133,
+          "observed": 0.005714733894400212
+        },
+        {
+          "bin": 3,
+          "count": 26901,
+          "weight_fraction": 0.10261041065212627,
+          "probability": 0.034180593852488186,
+          "observed": 0.008791495324918915
+        },
+        {
+          "bin": 4,
+          "count": 30130,
+          "weight_fraction": 0.10317885741684604,
+          "probability": 0.0544747257470853,
+          "observed": 0.013916801349302274
+        },
+        {
+          "bin": 5,
+          "count": 32774,
+          "weight_fraction": 0.09732996525397758,
+          "probability": 0.07652776289502038,
+          "observed": 0.022799561890142657
+        },
+        {
+          "bin": 6,
+          "count": 39429,
+          "weight_fraction": 0.09704519827294457,
+          "probability": 0.09785347714770701,
+          "observed": 0.03559693418481726
+        },
+        {
+          "bin": 7,
+          "count": 44679,
+          "weight_fraction": 0.10182822055238056,
+          "probability": 0.12567627247044733,
+          "observed": 0.05122510739755765
+        },
+        {
+          "bin": 8,
+          "count": 54926,
+          "weight_fraction": 0.09873256025427507,
+          "probability": 0.17289782265478112,
+          "observed": 0.0687566162385819
+        },
+        {
+          "bin": 9,
+          "count": 56482,
+          "weight_fraction": 0.10153807183262616,
+          "probability": 0.27522103663317715,
+          "observed": 0.14967179116897095
+        }
+      ]
+    },
+    "mlp|demographics_history|fixed_scenario_calibration": {
+      "citl": 0.09336330509993744,
+      "intercept": 0.16948102742187335,
+      "slope": 1.027360336501686,
+      "mean_prediction": 0.03355059819187724,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.0033453319282921064,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 20919,
+          "weight_fraction": 0.11175567141974718,
+          "probability": 0.0030859860044519607,
+          "observed": 0.0019069192819929966
+        },
+        {
+          "bin": 1,
+          "count": 17008,
+          "weight_fraction": 0.07304366766678347,
+          "probability": 0.0040908849275594315,
+          "observed": 0.0062136208368702844
+        },
+        {
+          "bin": 2,
+          "count": 25993,
+          "weight_fraction": 0.11293737667829312,
+          "probability": 0.0057111614996470765,
+          "observed": 0.005714733894400212
+        },
+        {
+          "bin": 3,
+          "count": 26901,
+          "weight_fraction": 0.10261041065212627,
+          "probability": 0.00789542829450395,
+          "observed": 0.008791495324918915
+        },
+        {
+          "bin": 4,
+          "count": 30130,
+          "weight_fraction": 0.10317885741684604,
+          "probability": 0.014432117660910338,
+          "observed": 0.013916801349302274
+        },
+        {
+          "bin": 5,
+          "count": 32774,
+          "weight_fraction": 0.09732996525397758,
+          "probability": 0.02243267321132817,
+          "observed": 0.022799561890142657
+        },
+        {
+          "bin": 6,
+          "count": 39429,
+          "weight_fraction": 0.09704519827294457,
+          "probability": 0.03099961031477506,
+          "observed": 0.03559693418481726
+        },
+        {
+          "bin": 7,
+          "count": 44555,
+          "weight_fraction": 0.10152136414695416,
+          "probability": 0.04343123113375042,
+          "observed": 0.05080472357406949
+        },
+        {
+          "bin": 8,
+          "count": 55048,
+          "weight_fraction": 0.09903850280143532,
+          "probability": 0.0673808537574147,
+          "observed": 0.06913053833952758
+        },
+        {
+          "bin": 9,
+          "count": 56484,
+          "weight_fraction": 0.10153898569089234,
+          "probability": 0.13480960968566555,
+          "observed": 0.14967367865481068
+        }
+      ]
+    },
+    "mlp|demographics_history|mask_trained": {
+      "citl": 0.0710147525104923,
+      "intercept": 0.1491488210155385,
+      "slope": 1.0286121103561974,
+      "mean_prediction": 0.03425734607428291,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.003315858981183005,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 20835,
+          "weight_fraction": 0.1112882539815397,
+          "probability": 0.002772535014053999,
+          "observed": 0.0018679722911555232
+        },
+        {
+          "bin": 1,
+          "count": 24463,
+          "weight_fraction": 0.10639964694926873,
+          "probability": 0.004286056727079796,
+          "observed": 0.004855673769050059
+        },
+        {
+          "bin": 2,
+          "count": 17616,
+          "weight_fraction": 0.075725942533503,
+          "probability": 0.005963717591589381,
+          "observed": 0.006859109655656235
+        },
+        {
+          "bin": 3,
+          "count": 27763,
+          "weight_fraction": 0.1061962150346363,
+          "probability": 0.007903701450196338,
+          "observed": 0.008808185982026234
+        },
+        {
+          "bin": 4,
+          "count": 27382,
+          "weight_fraction": 0.09216092215396868,
+          "probability": 0.014023168781423097,
+          "observed": 0.012292809847279172
+        },
+        {
+          "bin": 5,
+          "count": 37255,
+          "weight_fraction": 0.10852961508491533,
+          "probability": 0.021496929990227866,
+          "observed": 0.01906961162350362
+        },
+        {
+          "bin": 6,
+          "count": 41485,
+          "weight_fraction": 0.09444446636102809,
+          "probability": 0.031231517502626798,
+          "observed": 0.03726141764732828
+        },
+        {
+          "bin": 7,
+          "count": 48172,
+          "weight_fraction": 0.10525136741662242,
+          "probability": 0.04413331873484518,
+          "observed": 0.04687372641251477
+        },
+        {
+          "bin": 8,
+          "count": 53902,
+          "weight_fraction": 0.10003249756771337,
+          "probability": 0.06532563168869124,
+          "observed": 0.06996039423991639
+        },
+        {
+          "bin": 9,
+          "count": 50368,
+          "weight_fraction": 0.0999710729168044,
+          "probability": 0.14451125599195108,
+          "observed": 0.1569775706104205
+        }
+      ]
+    },
+    "mlp|demographics_history|subset_retrained": {
+      "citl": 0.06328660950856883,
+      "intercept": 0.14489079745303488,
+      "slope": 1.0299660438618585,
+      "mean_prediction": 0.034499199504451517,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.0029071520992237235,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 20835,
+          "weight_fraction": 0.1112882539815397,
+          "probability": 0.0032168210832117907,
+          "observed": 0.0018679722911555232
+        },
+        {
+          "bin": 1,
+          "count": 24430,
+          "weight_fraction": 0.10625049250079663,
+          "probability": 0.004768912580126175,
+          "observed": 0.004862490164211501
+        },
+        {
+          "bin": 2,
+          "count": 17277,
+          "weight_fraction": 0.07362315237735054,
+          "probability": 0.00641177680107705,
+          "observed": 0.007319669306505704
+        },
+        {
+          "bin": 3,
+          "count": 27015,
+          "weight_fraction": 0.10304797192729537,
+          "probability": 0.008225519951136597,
+          "observed": 0.008265681055176865
+        },
+        {
+          "bin": 4,
+          "count": 32031,
+          "weight_fraction": 0.10609140098664518,
+          "probability": 0.012976143864938597,
+          "observed": 0.010242304424987468
+        },
+        {
+          "bin": 5,
+          "count": 35717,
+          "weight_fraction": 0.10000209099086486,
+          "probability": 0.02091531542098912,
+          "observed": 0.024389766469306455
+        },
+        {
+          "bin": 6,
+          "count": 41461,
+          "weight_fraction": 0.10010001018882503,
+          "probability": 0.030647654125250237,
+          "observed": 0.03638118044962086
+        },
+        {
+          "bin": 7,
+          "count": 46569,
+          "weight_fraction": 0.09957980825116,
+          "probability": 0.045064337289517385,
+          "observed": 0.046580520028630674
+        },
+        {
+          "bin": 8,
+          "count": 56362,
+          "weight_fraction": 0.10494939203848097,
+          "probability": 0.06767111654594017,
+          "observed": 0.06924143017094106
+        },
+        {
+          "bin": 9,
+          "count": 47544,
+          "weight_fraction": 0.09506742675704169,
+          "probability": 0.14925431614791604,
+          "observed": 0.16133961289114185
+        }
+      ]
+    },
+    "mlp|demographics|fixed_global_calibration": {
+      "citl": -2.220047641536107,
+      "intercept": -1.716135364476308,
+      "slope": 1.6132408357538777,
+      "mean_prediction": 0.2450472476751655,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.20852119183791026,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 22683,
+          "weight_fraction": 0.12062659405280053,
+          "probability": 0.09411296375956028,
+          "observed": 0.004304379087607462
+        },
+        {
+          "bin": 1,
+          "count": 17594,
+          "weight_fraction": 0.07507012995314125,
+          "probability": 0.1136298551612086,
+          "observed": 0.007756373890886497
+        },
+        {
+          "bin": 2,
+          "count": 18917,
+          "weight_fraction": 0.08823393288013484,
+          "probability": 0.13882619813251804,
+          "observed": 0.008668608697652173
+        },
+        {
+          "bin": 3,
+          "count": 32730,
+          "weight_fraction": 0.12105337024214134,
+          "probability": 0.17032586148784293,
+          "observed": 0.014555745915325512
+        },
+        {
+          "bin": 4,
+          "count": 32496,
+          "weight_fraction": 0.11042518416029037,
+          "probability": 0.22722904083238693,
+          "observed": 0.022613296727210654
+        },
+        {
+          "bin": 5,
+          "count": 25630,
+          "weight_fraction": 0.0844877481924036,
+          "probability": 0.27896497265430953,
+          "observed": 0.03607577327885961
+        },
+        {
+          "bin": 6,
+          "count": 30509,
+          "weight_fraction": 0.08384056748689353,
+          "probability": 0.3138973726418801,
+          "observed": 0.05157340418921915
+        },
+        {
+          "bin": 7,
+          "count": 47359,
+          "weight_fraction": 0.11063245641049184,
+          "probability": 0.329681141060072,
+          "observed": 0.05534373423977022
+        },
+        {
+          "bin": 8,
+          "count": 54642,
+          "weight_fraction": 0.10277214765416347,
+          "probability": 0.37230866732538276,
+          "observed": 0.068353017880324
+        },
+        {
+          "bin": 9,
+          "count": 66681,
+          "weight_fraction": 0.10285786896753929,
+          "probability": 0.41399021888658016,
+          "observed": 0.0960654962373318
+        }
+      ]
+    },
+    "mlp|demographics|fixed_scenario_calibration": {
+      "citl": 0.03459160880791641,
+      "intercept": 0.14654944556461408,
+      "slope": 1.0375574645738752,
+      "mean_prediction": 0.035354693898497644,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.002142147026458359,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 22683,
+          "weight_fraction": 0.12062659405280053,
+          "probability": 0.004819610493935555,
+          "observed": 0.004304379087607462
+        },
+        {
+          "bin": 1,
+          "count": 17594,
+          "weight_fraction": 0.07507012995314125,
+          "probability": 0.00671303017829942,
+          "observed": 0.007756373890886497
+        },
+        {
+          "bin": 2,
+          "count": 18917,
+          "weight_fraction": 0.08823393288013484,
+          "probability": 0.009606782959093929,
+          "observed": 0.008668608697652173
+        },
+        {
+          "bin": 3,
+          "count": 32730,
+          "weight_fraction": 0.12105337024214134,
+          "probability": 0.014064811157501817,
+          "observed": 0.014555745915325512
+        },
+        {
+          "bin": 4,
+          "count": 32496,
+          "weight_fraction": 0.11042518416029037,
+          "probability": 0.024747494456038334,
+          "observed": 0.022613296727210654
+        },
+        {
+          "bin": 5,
+          "count": 25630,
+          "weight_fraction": 0.0844877481924036,
+          "probability": 0.036736018276469155,
+          "observed": 0.03607577327885961
+        },
+        {
+          "bin": 6,
+          "count": 30509,
+          "weight_fraction": 0.08384056748689353,
+          "probability": 0.04693152487955339,
+          "observed": 0.05157340418921915
+        },
+        {
+          "bin": 7,
+          "count": 47359,
+          "weight_fraction": 0.11063245641049184,
+          "probability": 0.052522818563420816,
+          "observed": 0.05534373423977022
+        },
+        {
+          "bin": 8,
+          "count": 54642,
+          "weight_fraction": 0.10277214765416347,
+          "probability": 0.06882991108648145,
+          "observed": 0.068353017880324
+        },
+        {
+          "bin": 9,
+          "count": 66681,
+          "weight_fraction": 0.10285786896753929,
+          "probability": 0.08811531595853063,
+          "observed": 0.0960654962373318
+        }
+      ]
+    },
+    "mlp|demographics|mask_trained": {
+      "citl": 0.03423818121824279,
+      "intercept": 0.2080133425757149,
+      "slope": 1.058240522604304,
+      "mean_prediction": 0.03536736970801359,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.0025491320331121775,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 22683,
+          "weight_fraction": 0.12062659405280053,
+          "probability": 0.006226016112822688,
+          "observed": 0.004304379087607462
+        },
+        {
+          "bin": 1,
+          "count": 17594,
+          "weight_fraction": 0.07507012995314125,
+          "probability": 0.007645939308675101,
+          "observed": 0.007756373890886497
+        },
+        {
+          "bin": 2,
+          "count": 18917,
+          "weight_fraction": 0.08823393288013484,
+          "probability": 0.010614309165936198,
+          "observed": 0.008668608697652173
+        },
+        {
+          "bin": 3,
+          "count": 31933,
+          "weight_fraction": 0.12064872778433612,
+          "probability": 0.013997647700487347,
+          "observed": 0.015741950695387995
+        },
+        {
+          "bin": 4,
+          "count": 33293,
+          "weight_fraction": 0.11082982661809557,
+          "probability": 0.023756332462395884,
+          "observed": 0.021292582536480798
+        },
+        {
+          "bin": 5,
+          "count": 29149,
+          "weight_fraction": 0.09433574216397557,
+          "probability": 0.034125648827607484,
+          "observed": 0.03631023341319801
+        },
+        {
+          "bin": 6,
+          "count": 42412,
+          "weight_fraction": 0.10908625590427294,
+          "probability": 0.046910976582792266,
+          "observed": 0.046739656733376295
+        },
+        {
+          "bin": 7,
+          "count": 34624,
+          "weight_fraction": 0.0788594478019064,
+          "probability": 0.054268319713033315,
+          "observed": 0.06099422603335178
+        },
+        {
+          "bin": 8,
+          "count": 51955,
+          "weight_fraction": 0.09945147387379752,
+          "probability": 0.06644581017565622,
+          "observed": 0.07225157957651307
+        },
+        {
+          "bin": 9,
+          "count": 66681,
+          "weight_fraction": 0.10285786896753929,
+          "probability": 0.09294183814210856,
+          "observed": 0.0960654962373318
+        }
+      ]
+    },
+    "mlp|demographics|subset_retrained": {
+      "citl": 0.03409548829157671,
+      "intercept": 0.17264435831785352,
+      "slope": 1.046441745957063,
+      "mean_prediction": 0.035372053197223204,
+      "prevalence": 0.03652605583725521,
+      "weighted_ece": 0.0025380363924512677,
+      "curve": [
+        {
+          "bin": 0,
+          "count": 22407,
+          "weight_fraction": 0.10093883918663678,
+          "probability": 0.005739118719329878,
+          "observed": 0.00704501997488793
+        },
+        {
+          "bin": 1,
+          "count": 19144,
+          "weight_fraction": 0.10242865845016513,
+          "probability": 0.007549626456508826,
+          "observed": 0.004505111398197209
+        },
+        {
+          "bin": 2,
+          "count": 18613,
+          "weight_fraction": 0.07501901508796228,
+          "probability": 0.010364540508409684,
+          "observed": 0.009764941347185259
+        },
+        {
+          "bin": 3,
+          "count": 30963,
+          "weight_fraction": 0.12619287194564854,
+          "probability": 0.013355019933052175,
+          "observed": 0.014743157684732798
+        },
+        {
+          "bin": 4,
+          "count": 33293,
+          "weight_fraction": 0.11082982661809557,
+          "probability": 0.02431694840315168,
+          "observed": 0.021292582536480798
+        },
+        {
+          "bin": 5,
+          "count": 29149,
+          "weight_fraction": 0.09433574216397557,
+          "probability": 0.03466544665258471,
+          "observed": 0.03631023341319801
+        },
+        {
+          "bin": 6,
+          "count": 28878,
+          "weight_fraction": 0.07481965763527548,
+          "probability": 0.04704987812200533,
+          "observed": 0.047865723441740164
+        },
+        {
+          "bin": 7,
+          "count": 48158,
+          "weight_fraction": 0.11312604607090387,
+          "probability": 0.053049188466698496,
+          "observed": 0.05593166488863399
+        },
+        {
+          "bin": 8,
+          "count": 51955,
+          "weight_fraction": 0.09945147387379752,
+          "probability": 0.06529513034435003,
+          "observed": 0.07225157957651307
+        },
+        {
+          "bin": 9,
+          "count": 66681,
+          "weight_fraction": 0.10285786896753929,
+          "probability": 0.09310107031552078,
+          "observed": 0.0960654962373318
+        }
+      ]
+    }
+  }
+}

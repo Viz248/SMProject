@@ -1,0 +1,84 @@
+{
+  "status": "RECONSTRUCTED_POST_HOC_NOT_FRESH_CONFIRMATION",
+  "protocol_sha256": "f165ec57262ee1bf0deb428ff0b7fa471d6cb19909a80471e63c0c0297a4b161",
+  "rows": [
+    {
+      "fitting_subsample_seed": 2027,
+      "MT_brier": 0.032834717607463475,
+      "SC_brier": 0.03299741003936098,
+      "contrast": -0.00016269243189750307,
+      "seed_contrasts": [
+        {
+          "seed": 42,
+          "contrast": -0.00015494444881682036
+        },
+        {
+          "seed": 43,
+          "contrast": -0.00016404421352708568
+        },
+        {
+          "seed": 44,
+          "contrast": -0.0001644711993563986
+        }
+      ]
+    },
+    {
+      "fitting_subsample_seed": 2028,
+      "MT_brier": 0.032833099568971146,
+      "SC_brier": 0.032873003400158404,
+      "contrast": -3.990383118725929e-05,
+      "seed_contrasts": [
+        {
+          "seed": 42,
+          "contrast": -4.774294910778185e-05
+        },
+        {
+          "seed": 43,
+          "contrast": -3.0615903481592855e-05
+        },
+        {
+          "seed": 44,
+          "contrast": -3.747009993886395e-05
+        }
+      ]
+    },
+    {
+      "fitting_subsample_seed": 2029,
+      "MT_brier": 0.03285596687440117,
+      "SC_brier": 0.033030891270929105,
+      "contrast": -0.00017492439652793646,
+      "seed_contrasts": [
+        {
+          "seed": 42,
+          "contrast": -0.00016809150811491105
+        },
+        {
+          "seed": 43,
+          "contrast": -0.00017403978827415907
+        },
+        {
+          "seed": 44,
+          "contrast": -0.00017718493706234432
+        }
+      ]
+    }
+  ],
+  "complete": true,
+  "pairwise_overlap": [
+    {
+      "a": 2027,
+      "b": 2028,
+      "shared": 14299
+    },
+    {
+      "a": 2027,
+      "b": 2029,
+      "shared": 14402
+    },
+    {
+      "a": 2028,
+      "b": 2029,
+      "shared": 14355
+    }
+  ]
+}

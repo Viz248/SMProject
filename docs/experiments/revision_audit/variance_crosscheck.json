@@ -1,0 +1,17 @@
+{
+  "checks": [
+    {
+      "method": "adjust",
+      "python_se": 4.9686822548918055e-05,
+      "r_se": 4.96868225489181e-05,
+      "agreement": true
+    },
+    {
+      "method": "average",
+      "python_se": 5.0862640957867845e-05,
+      "r_se": 5.08626409578679e-05,
+      "agreement": true
+    }
+  ],
+  "df": 348393
+}

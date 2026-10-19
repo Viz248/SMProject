@@ -1,0 +1,37 @@
+{
+  "status": "POST_HOC_FULL_DESIGN_DOMAIN",
+  "full": {
+    "rows": 350427,
+    "strata": 2034,
+    "psus": 350427,
+    "singleton_strata": 93
+  },
+  "valid_outcome": {
+    "rows": 349241,
+    "strata": 2034,
+    "psus": 349241,
+    "singleton_strata": 93
+  },
+  "domain_taylor": {
+    "estimate": -0.00015656598130562793,
+    "standard_error": null,
+    "ci95": null,
+    "psus": 350427,
+    "strata": 2034,
+    "singleton_strata": 93,
+    "degrees_freedom": 348393,
+    "method": "stratified-PSU Taylor ratio mean; with-replacement; no FPC; conditional on fitted models"
+  },
+  "frozen_primary": {
+    "estimate": -0.00015656598130562793,
+    "standard_error": null,
+    "ci95": null,
+    "psus": 349241,
+    "strata": 2034,
+    "singleton_strata": 93,
+    "degrees_freedom": 347207,
+    "method": "stratified-PSU Taylor ratio mean; with-replacement; no FPC; conditional on fitted models"
+  },
+  "predictions_sha256": "12091c31768637bc6ca655d66da7fc3e94aea1d76fb49093e265b2df73016c07",
+  "raw2025_sha256": "d99262f8854f018a600c3538ee78e4308569af700abe6b92b36180336c24dec2"
+}

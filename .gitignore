@@ -17,12 +17,9 @@ __pycache__/
 .coverage.*
 htmlcov/
 .ipynb_checkpoints/
-
-# Jupyter / notebooks
 *.ipynb_checkpoints/
-*.ipynb
 
-# IDE / editor files
+# IDE and OS files
 .vscode/
 .idea/
 *.swp
@@ -30,7 +27,7 @@ htmlcov/
 .DS_Store
 Thumbs.db
 
-# Environment / secrets / credentials
+# Secrets and environment credentials
 .env
 .env.*
 *.pem
@@ -42,29 +39,37 @@ secrets/
 credentials/
 *.secret
 
-# ML / data science artifacts
-*.csv
+# Raw BRFSS datasets
+LLCP*.XPT
 *.XPT
-*.npy
-*.npz
+*.xpt
+/data/
+
+# Model weights, arrays, checkpoints
+*.joblib
 *.pkl
 *.pickle
-*.joblib
-*.h5
-*.hdf5
-*.parquet
-*.feather
-*.arrow
+*.npy
+*.npz
 *.pt
 *.pth
 *.ckpt
+*.h5
+*.hdf5
 *.onnx
 *.keras
-*.tflite
 *.model
 *.bin
 
-# Experiment tracking / local outputs
+# Root-level generated data files (preserve neural_feature_names.csv and docs/ experiments)
+/*.csv
+!/neural_feature_names.csv
+
+# Experiment outputs and tracking
+results/*/
+!results/smoke/
+!results/smoke/metrics.json
+research-baseline.patch
 mlruns/
 wandb/
 logs/
@@ -72,7 +77,14 @@ artifacts/
 checkpoints/
 models/
 
-# Temporary and generated files
+# Paper build intermediates
+/paper/*.aux
+/paper/*.log
+/paper/*.out
+/paper/*.toc
+/delivery/
+
+# Temporary and archive files
 *.log
 *.tmp
 *.temp

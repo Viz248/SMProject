@@ -1,0 +1,12 @@
+{
+  "source_sha256": "a8843ee80d8353fb02b4a1abde0f62bc222921b9062617df0cceb93bd6e7cdda",
+  "versions": {
+    "torch": "2.14.1+cpu",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8"
+  },
+  "checks": "24 unit tests ran: 22 passed; two optional TabNet tests skipped because pytorch-tabnet absent in refreshed environment"
+}

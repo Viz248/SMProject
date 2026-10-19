@@ -1,0 +1,172 @@
+{
+  "status": "SYNTHETIC_SMOKE_ONLY",
+  "task": "self-reported stroke-history classification",
+  "model": "logistic",
+  "seed": 42,
+  "dataset_sha256": null,
+  "python": "3.12.14",
+  "sklearn": "1.8.0",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "split_sizes": [
+    600,
+    200,
+    200
+  ],
+  "survey_fields_present": [],
+  "threshold_selection": "maximum validation F1; smallest threshold on ties",
+  "validation": {
+    "n": 200,
+    "prevalence": 0.135,
+    "threshold": 0.15000000000000002,
+    "auroc": 0.6270605865981588,
+    "average_precision": 0.21552705184029702,
+    "brier": 0.11666800627434651,
+    "ece": 0.034275273199977946,
+    "calibration": [
+      {
+        "bin": 0,
+        "count": 98,
+        "probability": 0.051574687344493074,
+        "observed": 0.09183673469387756
+      },
+      {
+        "bin": 1,
+        "count": 63,
+        "probability": 0.1458417381344677,
+        "observed": 0.14285714285714285
+      },
+      {
+        "bin": 2,
+        "count": 25,
+        "probability": 0.253502966779641,
+        "observed": 0.2
+      },
+      {
+        "bin": 3,
+        "count": 10,
+        "probability": 0.34457379218575224,
+        "observed": 0.3
+      },
+      {
+        "bin": 4,
+        "count": 3,
+        "probability": 0.4762016104460393,
+        "observed": 0.3333333333333333
+      },
+      {
+        "bin": 5,
+        "count": 1,
+        "probability": 0.5094275745977779,
+        "observed": 0.0
+      }
+    ],
+    "precision": 0.20588235294117646,
+    "sensitivity": 0.5185185185185185,
+    "specificity": 0.6878612716763006,
+    "f1": 0.29473684210526313,
+    "confusion_matrix": [
+      [
+        119,
+        54
+      ],
+      [
+        13,
+        14
+      ]
+    ]
+  },
+  "test": {
+    "n": 200,
+    "prevalence": 0.13,
+    "threshold": 0.15000000000000002,
+    "auroc": 0.6973916887709991,
+    "average_precision": 0.22822557900685952,
+    "brier": 0.11004781813752039,
+    "ece": 0.04422226656140353,
+    "calibration": [
+      {
+        "bin": 0,
+        "count": 100,
+        "probability": 0.052151156018289256,
+        "observed": 0.06
+      },
+      {
+        "bin": 1,
+        "count": 59,
+        "probability": 0.14152845171517972,
+        "observed": 0.2033898305084746
+      },
+      {
+        "bin": 2,
+        "count": 23,
+        "probability": 0.24437579884661462,
+        "observed": 0.17391304347826086
+      },
+      {
+        "bin": 3,
+        "count": 14,
+        "probability": 0.35378368047875475,
+        "observed": 0.21428571428571427
+      },
+      {
+        "bin": 4,
+        "count": 4,
+        "probability": 0.45903316628263297,
+        "observed": 0.25
+      }
+    ],
+    "precision": 0.21212121212121213,
+    "sensitivity": 0.5384615384615384,
+    "specificity": 0.7011494252873564,
+    "f1": 0.30434782608695654,
+    "confusion_matrix": [
+      [
+        122,
+        52
+      ],
+      [
+        12,
+        14
+      ]
+    ]
+  },
+  "iid_test_ci": {
+    "auroc": {
+      "low": 0.6112936773322494,
+      "high": 0.7708830680813439,
+      "valid_replicates": 50
+    },
+    "average_precision": {
+      "low": 0.17198320521638588,
+      "high": 0.3668496708415171,
+      "valid_replicates": 50
+    },
+    "brier": {
+      "low": 0.08653727929192544,
+      "high": 0.14427455646036033,
+      "valid_replicates": 50
+    },
+    "sensitivity": {
+      "low": 0.380625,
+      "high": 0.7110714285714286,
+      "valid_replicates": 50
+    },
+    "specificity": {
+      "low": 0.6483633175293888,
+      "high": 0.7635632183908047,
+      "valid_replicates": 50
+    },
+    "f1": {
+      "low": 0.21195307545973366,
+      "high": 0.39814432989690723,
+      "valid_replicates": 50
+    }
+  },
+  "limitations": [
+    "No external validation",
+    "No complex-survey variance estimation",
+    "Predictor recodes require complete official codebook verification",
+    "No calibration fit or hyperparameter search in this first baseline"
+  ]
+}

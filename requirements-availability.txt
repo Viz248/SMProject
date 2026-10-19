@@ -1,0 +1,5 @@
+-r requirements-research.txt
+# Install a CPU torch wheel from https://download.pytorch.org/whl/cpu or retain
+# Colab's supported torch build; recorded experiment used torch 2.14.1+cpu.
+torch==2.14.1
+matplotlib==3.10.8

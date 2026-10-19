@@ -1,0 +1,2235 @@
+{
+  "status": "FROZEN_INTERNAL_TEST_COMPLETED",
+  "task": "self-reported stroke-history classification",
+  "seed": 42,
+  "dataset_sha256": "7d53cf088f858e02bcc029a51cf0408cc68f40a0ebeb02a3c0f73058aab36b1c",
+  "python": "3.12.14",
+  "sklearn": "1.8.0",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "source": "/workspace/scratch/fe5bdd3008be/data/LLCP2024.XPT",
+  "input_records": 457670,
+  "labeled_records": 456218,
+  "excluded_target_records": 1452,
+  "prevalence": 0.045287559894611785,
+  "split_counts": {
+    "fit": 250919,
+    "stop": 45622,
+    "select": 68433,
+    "calibrate": 45622,
+    "test": 45622
+  },
+  "fit_limit": 0,
+  "epochs": 30,
+  "threads": 2,
+  "selection_rule": "maximum selection average precision; tie: minimum Brier then candidate order",
+  "design_columns": [
+    "_LLCPWT",
+    "_STSTR",
+    "_PSU",
+    "_STATE"
+  ],
+  "candidates": [
+    {
+      "specification": {
+        "name": "logistic_C0.1",
+        "family": "logistic",
+        "C": 0.1
+      },
+      "seconds": 1.7991439699999319,
+      "selection": {
+        "n": 68433,
+        "prevalence": 0.045285169435798515,
+        "threshold": 0.5,
+        "auroc": 0.8122743981325121,
+        "average_precision": 0.1867492430812727,
+        "brier": 0.03987828266974588,
+        "ece": 0.0020610689054776513,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 61228,
+            "probability": 0.02839330200073646,
+            "observed": 0.029087998954726597
+          },
+          {
+            "bin": 1,
+            "count": 5019,
+            "probability": 0.1366137808518136,
+            "observed": 0.14425184299661287
+          },
+          {
+            "bin": 2,
+            "count": 1350,
+            "probability": 0.24128024776817444,
+            "observed": 0.2325925925925926
+          },
+          {
+            "bin": 3,
+            "count": 515,
+            "probability": 0.3455784966851369,
+            "observed": 0.28932038834951457
+          },
+          {
+            "bin": 4,
+            "count": 241,
+            "probability": 0.44233988767164595,
+            "observed": 0.3900414937759336
+          },
+          {
+            "bin": 5,
+            "count": 70,
+            "probability": 0.5369006592557557,
+            "observed": 0.45714285714285713
+          },
+          {
+            "bin": 6,
+            "count": 10,
+            "probability": 0.6286570048246075,
+            "observed": 0.5
+          }
+        ],
+        "precision": 0.4625,
+        "sensitivity": 0.011939335269441756,
+        "specificity": 0.9993418434505771,
+        "f1": 0.023277760301981754,
+        "confusion_matrix": [
+          [
+            65291,
+            43
+          ],
+          [
+            3062,
+            37
+          ]
+        ]
+      },
+      "stopping_history": [],
+      "selected_encoded_inputs": [
+        "categorical__SEXVAR_1.0",
+        "categorical__SEXVAR_2.0",
+        "categorical___AGEG5YR_1.0",
+        "categorical___AGEG5YR_2.0",
+        "categorical___AGEG5YR_3.0",
+        "categorical___AGEG5YR_4.0",
+        "categorical___AGEG5YR_5.0",
+        "categorical___AGEG5YR_6.0",
+        "categorical___AGEG5YR_7.0",
+        "categorical___AGEG5YR_8.0",
+        "categorical___AGEG5YR_9.0",
+        "categorical___AGEG5YR_10.0",
+        "categorical___AGEG5YR_11.0",
+        "categorical___AGEG5YR_12.0",
+        "categorical___AGEG5YR_13.0",
+        "categorical__GENHLTH_1.0",
+        "categorical__GENHLTH_2.0",
+        "categorical__GENHLTH_3.0",
+        "categorical__GENHLTH_4.0",
+        "categorical__GENHLTH_5.0",
+        "categorical__EXERANY2_1.0",
+        "categorical__EXERANY2_2.0",
+        "categorical___SMOKER3_1.0",
+        "categorical___SMOKER3_2.0",
+        "categorical___SMOKER3_3.0",
+        "categorical___SMOKER3_4.0",
+        "categorical__DIABETE4_1.0",
+        "categorical__DIABETE4_2.0",
+        "categorical__DIABETE4_3.0",
+        "categorical__DIABETE4_4.0",
+        "categorical__CVDINFR4_1.0",
+        "categorical__CVDINFR4_2.0",
+        "categorical__CVDCRHD4_1.0",
+        "categorical__CVDCRHD4_2.0",
+        "categorical__CHCKDNY2_1.0",
+        "categorical__CHCKDNY2_2.0",
+        "categorical__HAVARTH4_1.0",
+        "categorical__HAVARTH4_2.0",
+        "categorical__EDUCA_1.0",
+        "categorical__EDUCA_2.0",
+        "categorical__EDUCA_3.0",
+        "categorical__EDUCA_4.0",
+        "categorical__EDUCA_5.0",
+        "categorical__EDUCA_6.0",
+        "categorical__INCOME3_1.0",
+        "categorical__INCOME3_2.0",
+        "categorical__INCOME3_3.0",
+        "categorical__INCOME3_4.0",
+        "categorical__INCOME3_5.0",
+        "categorical__INCOME3_6.0",
+        "categorical__INCOME3_7.0",
+        "categorical__INCOME3_8.0",
+        "categorical__INCOME3_9.0",
+        "categorical__INCOME3_10.0",
+        "categorical__INCOME3_11.0",
+        "numeric__PHYSHLTH",
+        "numeric__MENTHLTH",
+        "numeric___BMI5",
+        "numeric__missingindicator_PHYSHLTH",
+        "numeric__missingindicator_MENTHLTH",
+        "numeric__missingindicator__BMI5"
+      ]
+    },
+    {
+      "specification": {
+        "name": "logistic_C1",
+        "family": "logistic",
+        "C": 1
+      },
+      "seconds": 1.8984285480000835,
+      "selection": {
+        "n": 68433,
+        "prevalence": 0.045285169435798515,
+        "threshold": 0.5,
+        "auroc": 0.8118797965917589,
+        "average_precision": 0.1865676907109229,
+        "brier": 0.03987619747180201,
+        "ece": 0.002091494759599483,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 61153,
+            "probability": 0.028246242724064625,
+            "observed": 0.029074616126764017
+          },
+          {
+            "bin": 1,
+            "count": 5095,
+            "probability": 0.1365444393621901,
+            "observed": 0.14308145240431797
+          },
+          {
+            "bin": 2,
+            "count": 1356,
+            "probability": 0.24102809176671344,
+            "observed": 0.2323008849557522
+          },
+          {
+            "bin": 3,
+            "count": 515,
+            "probability": 0.34477963995498473,
+            "observed": 0.287378640776699
+          },
+          {
+            "bin": 4,
+            "count": 239,
+            "probability": 0.4421495666308607,
+            "observed": 0.38493723849372385
+          },
+          {
+            "bin": 5,
+            "count": 68,
+            "probability": 0.5387234820456446,
+            "observed": 0.4852941176470588
+          },
+          {
+            "bin": 6,
+            "count": 7,
+            "probability": 0.6373015031991301,
+            "observed": 0.5714285714285714
+          }
+        ],
+        "precision": 0.49333333333333335,
+        "sensitivity": 0.011939335269441756,
+        "specificity": 0.9994183732819053,
+        "f1": 0.023314429741650915,
+        "confusion_matrix": [
+          [
+            65296,
+            38
+          ],
+          [
+            3062,
+            37
+          ]
+        ]
+      },
+      "stopping_history": [],
+      "selected_encoded_inputs": [
+        "categorical__SEXVAR_1.0",
+        "categorical__SEXVAR_2.0",
+        "categorical___AGEG5YR_1.0",
+        "categorical___AGEG5YR_2.0",
+        "categorical___AGEG5YR_3.0",
+        "categorical___AGEG5YR_4.0",
+        "categorical___AGEG5YR_5.0",
+        "categorical___AGEG5YR_6.0",
+        "categorical___AGEG5YR_7.0",
+        "categorical___AGEG5YR_8.0",
+        "categorical___AGEG5YR_9.0",
+        "categorical___AGEG5YR_10.0",
+        "categorical___AGEG5YR_11.0",
+        "categorical___AGEG5YR_12.0",
+        "categorical___AGEG5YR_13.0",
+        "categorical__GENHLTH_1.0",
+        "categorical__GENHLTH_2.0",
+        "categorical__GENHLTH_3.0",
+        "categorical__GENHLTH_4.0",
+        "categorical__GENHLTH_5.0",
+        "categorical__EXERANY2_1.0",
+        "categorical__EXERANY2_2.0",
+        "categorical___SMOKER3_1.0",
+        "categorical___SMOKER3_2.0",
+        "categorical___SMOKER3_3.0",
+        "categorical___SMOKER3_4.0",
+        "categorical__DIABETE4_1.0",
+        "categorical__DIABETE4_2.0",
+        "categorical__DIABETE4_3.0",
+        "categorical__DIABETE4_4.0",
+        "categorical__CVDINFR4_1.0",
+        "categorical__CVDINFR4_2.0",
+        "categorical__CVDCRHD4_1.0",
+        "categorical__CVDCRHD4_2.0",
+        "categorical__CHCKDNY2_1.0",
+        "categorical__CHCKDNY2_2.0",
+        "categorical__HAVARTH4_1.0",
+        "categorical__HAVARTH4_2.0",
+        "categorical__EDUCA_1.0",
+        "categorical__EDUCA_2.0",
+        "categorical__EDUCA_3.0",
+        "categorical__EDUCA_4.0",
+        "categorical__EDUCA_5.0",
+        "categorical__EDUCA_6.0",
+        "categorical__INCOME3_1.0",
+        "categorical__INCOME3_2.0",
+        "categorical__INCOME3_3.0",
+        "categorical__INCOME3_4.0",
+        "categorical__INCOME3_5.0",
+        "categorical__INCOME3_6.0",
+        "categorical__INCOME3_7.0",
+        "categorical__INCOME3_8.0",
+        "categorical__INCOME3_9.0",
+        "categorical__INCOME3_10.0",
+        "categorical__INCOME3_11.0",
+        "numeric__PHYSHLTH",
+        "numeric__MENTHLTH",
+        "numeric___BMI5",
+        "numeric__missingindicator_PHYSHLTH",
+        "numeric__missingindicator_MENTHLTH",
+        "numeric__missingindicator__BMI5"
+      ]
+    },
+    {
+      "specification": {
+        "name": "logistic_balanced",
+        "family": "logistic",
+        "C": 1,
+        "weighted": true
+      },
+      "seconds": 2.0616006420000303,
+      "selection": {
+        "n": 68433,
+        "prevalence": 0.045285169435798515,
+        "threshold": 0.5,
+        "auroc": 0.8130843598381601,
+        "average_precision": 0.18604811207543426,
+        "brier": 0.17940137282048976,
+        "ece": 0.32262967081317684,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 9538,
+            "probability": 0.06807322705633921,
+            "observed": 0.0024114070035646884
+          },
+          {
+            "bin": 1,
+            "count": 11525,
+            "probability": 0.14854659544254906,
+            "observed": 0.0052928416485900215
+          },
+          {
+            "bin": 2,
+            "count": 10514,
+            "probability": 0.24898566121021426,
+            "observed": 0.012649800266311585
+          },
+          {
+            "bin": 3,
+            "count": 9280,
+            "probability": 0.34803777678660724,
+            "observed": 0.029741379310344828
+          },
+          {
+            "bin": 4,
+            "count": 7866,
+            "probability": 0.4482802774008891,
+            "observed": 0.04258835494533435
+          },
+          {
+            "bin": 5,
+            "count": 6434,
+            "probability": 0.5480916226876636,
+            "observed": 0.06154802611128381
+          },
+          {
+            "bin": 6,
+            "count": 5252,
+            "probability": 0.6475296535878605,
+            "observed": 0.0873952779893374
+          },
+          {
+            "bin": 7,
+            "count": 3975,
+            "probability": 0.7475396575216673,
+            "observed": 0.13056603773584904
+          },
+          {
+            "bin": 8,
+            "count": 2766,
+            "probability": 0.8480236839148568,
+            "observed": 0.18510484454085321
+          },
+          {
+            "bin": 9,
+            "count": 1283,
+            "probability": 0.9338152366851862,
+            "observed": 0.3000779423226812
+          }
+        ],
+        "precision": 0.115220700152207,
+        "sensitivity": 0.7328170377541142,
+        "specificity": 0.7330792542933235,
+        "f1": 0.19913192160989082,
+        "confusion_matrix": [
+          [
+            47895,
+            17439
+          ],
+          [
+            828,
+            2271
+          ]
+        ]
+      },
+      "stopping_history": [],
+      "selected_encoded_inputs": [
+        "categorical__SEXVAR_1.0",
+        "categorical__SEXVAR_2.0",
+        "categorical___AGEG5YR_1.0",
+        "categorical___AGEG5YR_2.0",
+        "categorical___AGEG5YR_3.0",
+        "categorical___AGEG5YR_4.0",
+        "categorical___AGEG5YR_5.0",
+        "categorical___AGEG5YR_6.0",
+        "categorical___AGEG5YR_7.0",
+        "categorical___AGEG5YR_8.0",
+        "categorical___AGEG5YR_9.0",
+        "categorical___AGEG5YR_10.0",
+        "categorical___AGEG5YR_11.0",
+        "categorical___AGEG5YR_12.0",
+        "categorical___AGEG5YR_13.0",
+        "categorical__GENHLTH_1.0",
+        "categorical__GENHLTH_2.0",
+        "categorical__GENHLTH_3.0",
+        "categorical__GENHLTH_4.0",
+        "categorical__GENHLTH_5.0",
+        "categorical__EXERANY2_1.0",
+        "categorical__EXERANY2_2.0",
+        "categorical___SMOKER3_1.0",
+        "categorical___SMOKER3_2.0",
+        "categorical___SMOKER3_3.0",
+        "categorical___SMOKER3_4.0",
+        "categorical__DIABETE4_1.0",
+        "categorical__DIABETE4_2.0",
+        "categorical__DIABETE4_3.0",
+        "categorical__DIABETE4_4.0",
+        "categorical__CVDINFR4_1.0",
+        "categorical__CVDINFR4_2.0",
+        "categorical__CVDCRHD4_1.0",
+        "categorical__CVDCRHD4_2.0",
+        "categorical__CHCKDNY2_1.0",
+        "categorical__CHCKDNY2_2.0",
+        "categorical__HAVARTH4_1.0",
+        "categorical__HAVARTH4_2.0",
+        "categorical__EDUCA_1.0",
+        "categorical__EDUCA_2.0",
+        "categorical__EDUCA_3.0",
+        "categorical__EDUCA_4.0",
+        "categorical__EDUCA_5.0",
+        "categorical__EDUCA_6.0",
+        "categorical__INCOME3_1.0",
+        "categorical__INCOME3_2.0",
+        "categorical__INCOME3_3.0",
+        "categorical__INCOME3_4.0",
+        "categorical__INCOME3_5.0",
+        "categorical__INCOME3_6.0",
+        "categorical__INCOME3_7.0",
+        "categorical__INCOME3_8.0",
+        "categorical__INCOME3_9.0",
+        "categorical__INCOME3_10.0",
+        "categorical__INCOME3_11.0",
+        "numeric__PHYSHLTH",
+        "numeric__MENTHLTH",
+        "numeric___BMI5",
+        "numeric__missingindicator_PHYSHLTH",
+        "numeric__missingindicator_MENTHLTH",
+        "numeric__missingindicator__BMI5"
+      ]
+    },
+    {
+      "specification": {
+        "name": "l1_selected_logistic",
+        "family": "selected_logistic",
+        "C": 1
+      },
+      "seconds": 19.040458002999912,
+      "selection": {
+        "n": 68433,
+        "prevalence": 0.045285169435798515,
+        "threshold": 0.5,
+        "auroc": 0.8119832316348433,
+        "average_precision": 0.18683477042838711,
+        "brier": 0.039874970092568754,
+        "ece": 0.0022405192738031445,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 61196,
+            "probability": 0.028264619665566038,
+            "observed": 0.029201254983985882
+          },
+          {
+            "bin": 1,
+            "count": 5063,
+            "probability": 0.1365028202725045,
+            "observed": 0.1433932451115939
+          },
+          {
+            "bin": 2,
+            "count": 1349,
+            "probability": 0.2405358119338821,
+            "observed": 0.22609340252038548
+          },
+          {
+            "bin": 3,
+            "count": 509,
+            "probability": 0.34413622409889083,
+            "observed": 0.29862475442043224
+          },
+          {
+            "bin": 4,
+            "count": 243,
+            "probability": 0.4415005861936072,
+            "observed": 0.39094650205761317
+          },
+          {
+            "bin": 5,
+            "count": 63,
+            "probability": 0.538108340025869,
+            "observed": 0.4444444444444444
+          },
+          {
+            "bin": 6,
+            "count": 10,
+            "probability": 0.6287283326021444,
+            "observed": 0.6
+          }
+        ],
+        "precision": 0.4657534246575342,
+        "sensitivity": 0.010971281058405937,
+        "specificity": 0.9994030673156397,
+        "f1": 0.021437578814627996,
+        "confusion_matrix": [
+          [
+            65295,
+            39
+          ],
+          [
+            3065,
+            34
+          ]
+        ]
+      },
+      "stopping_history": [],
+      "selected_encoded_inputs": [
+        "categorical__SEXVAR_2.0",
+        "categorical___AGEG5YR_1.0",
+        "categorical___AGEG5YR_2.0",
+        "categorical___AGEG5YR_3.0",
+        "categorical___AGEG5YR_4.0",
+        "categorical___AGEG5YR_5.0",
+        "categorical___AGEG5YR_6.0",
+        "categorical___AGEG5YR_7.0",
+        "categorical___AGEG5YR_9.0",
+        "categorical___AGEG5YR_10.0",
+        "categorical___AGEG5YR_11.0",
+        "categorical___AGEG5YR_12.0",
+        "categorical___AGEG5YR_13.0",
+        "categorical__GENHLTH_1.0",
+        "categorical__GENHLTH_2.0",
+        "categorical__GENHLTH_3.0",
+        "categorical__GENHLTH_4.0",
+        "categorical__GENHLTH_5.0",
+        "categorical__EXERANY2_1.0",
+        "categorical___SMOKER3_2.0",
+        "categorical___SMOKER3_3.0",
+        "categorical___SMOKER3_4.0",
+        "categorical__DIABETE4_3.0",
+        "categorical__DIABETE4_4.0",
+        "categorical__CVDINFR4_2.0",
+        "categorical__CVDCRHD4_2.0",
+        "categorical__CHCKDNY2_2.0",
+        "categorical__HAVARTH4_2.0",
+        "categorical__EDUCA_2.0",
+        "categorical__EDUCA_3.0",
+        "categorical__EDUCA_4.0",
+        "categorical__EDUCA_6.0",
+        "categorical__INCOME3_1.0",
+        "categorical__INCOME3_2.0",
+        "categorical__INCOME3_3.0",
+        "categorical__INCOME3_4.0",
+        "categorical__INCOME3_6.0",
+        "categorical__INCOME3_7.0",
+        "categorical__INCOME3_8.0",
+        "categorical__INCOME3_9.0",
+        "categorical__INCOME3_10.0",
+        "categorical__INCOME3_11.0",
+        "numeric__PHYSHLTH",
+        "numeric__MENTHLTH",
+        "numeric___BMI5",
+        "numeric__missingindicator_PHYSHLTH",
+        "numeric__missingindicator_MENTHLTH",
+        "numeric__missingindicator__BMI5"
+      ]
+    },
+    {
+      "specification": {
+        "name": "boosted_15",
+        "family": "boosted",
+        "leaves": 15,
+        "l2": 10.0
+      },
+      "seconds": 11.903895835000185,
+      "selection": {
+        "n": 68433,
+        "prevalence": 0.045285169435798515,
+        "threshold": 0.5,
+        "auroc": 0.815678242037023,
+        "average_precision": 0.1926504500434701,
+        "brier": 0.0396270176605007,
+        "ece": 0.0005041000413438967,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 60107,
+            "probability": 0.0274717343828161,
+            "observed": 0.027401134643219593
+          },
+          {
+            "bin": 1,
+            "count": 6221,
+            "probability": 0.13699640749709172,
+            "observed": 0.13743771097894228
+          },
+          {
+            "bin": 2,
+            "count": 1510,
+            "probability": 0.23940388414848043,
+            "observed": 0.2456953642384106
+          },
+          {
+            "bin": 3,
+            "count": 514,
+            "probability": 0.33957565348612107,
+            "observed": 0.3657587548638132
+          },
+          {
+            "bin": 4,
+            "count": 80,
+            "probability": 0.4244111082043725,
+            "observed": 0.475
+          },
+          {
+            "bin": 5,
+            "count": 1,
+            "probability": 0.5028302331887975,
+            "observed": 0.0
+          }
+        ],
+        "precision": 0.0,
+        "sensitivity": 0.0,
+        "specificity": 0.9999846940337344,
+        "f1": 0.0,
+        "confusion_matrix": [
+          [
+            65333,
+            1
+          ],
+          [
+            3099,
+            0
+          ]
+        ]
+      },
+      "stopping_history": [],
+      "selected_encoded_inputs": [
+        "categorical__SEXVAR_1.0",
+        "categorical__SEXVAR_2.0",
+        "categorical___AGEG5YR_1.0",
+        "categorical___AGEG5YR_2.0",
+        "categorical___AGEG5YR_3.0",
+        "categorical___AGEG5YR_4.0",
+        "categorical___AGEG5YR_5.0",
+        "categorical___AGEG5YR_6.0",
+        "categorical___AGEG5YR_7.0",
+        "categorical___AGEG5YR_8.0",
+        "categorical___AGEG5YR_9.0",
+        "categorical___AGEG5YR_10.0",
+        "categorical___AGEG5YR_11.0",
+        "categorical___AGEG5YR_12.0",
+        "categorical___AGEG5YR_13.0",
+        "categorical__GENHLTH_1.0",
+        "categorical__GENHLTH_2.0",
+        "categorical__GENHLTH_3.0",
+        "categorical__GENHLTH_4.0",
+        "categorical__GENHLTH_5.0",
+        "categorical__EXERANY2_1.0",
+        "categorical__EXERANY2_2.0",
+        "categorical___SMOKER3_1.0",
+        "categorical___SMOKER3_2.0",
+        "categorical___SMOKER3_3.0",
+        "categorical___SMOKER3_4.0",
+        "categorical__DIABETE4_1.0",
+        "categorical__DIABETE4_2.0",
+        "categorical__DIABETE4_3.0",
+        "categorical__DIABETE4_4.0",
+        "categorical__CVDINFR4_1.0",
+        "categorical__CVDINFR4_2.0",
+        "categorical__CVDCRHD4_1.0",
+        "categorical__CVDCRHD4_2.0",
+        "categorical__CHCKDNY2_1.0",
+        "categorical__CHCKDNY2_2.0",
+        "categorical__HAVARTH4_1.0",
+        "categorical__HAVARTH4_2.0",
+        "categorical__EDUCA_1.0",
+        "categorical__EDUCA_2.0",
+        "categorical__EDUCA_3.0",
+        "categorical__EDUCA_4.0",
+        "categorical__EDUCA_5.0",
+        "categorical__EDUCA_6.0",
+        "categorical__INCOME3_1.0",
+        "categorical__INCOME3_2.0",
+        "categorical__INCOME3_3.0",
+        "categorical__INCOME3_4.0",
+        "categorical__INCOME3_5.0",
+        "categorical__INCOME3_6.0",
+        "categorical__INCOME3_7.0",
+        "categorical__INCOME3_8.0",
+        "categorical__INCOME3_9.0",
+        "categorical__INCOME3_10.0",
+        "categorical__INCOME3_11.0",
+        "numeric__PHYSHLTH",
+        "numeric__MENTHLTH",
+        "numeric___BMI5",
+        "numeric__missingindicator_PHYSHLTH",
+        "numeric__missingindicator_MENTHLTH",
+        "numeric__missingindicator__BMI5"
+      ]
+    },
+    {
+      "specification": {
+        "name": "boosted_31",
+        "family": "boosted",
+        "leaves": 31,
+        "l2": 1.0
+      },
+      "seconds": 13.321683741000015,
+      "selection": {
+        "n": 68433,
+        "prevalence": 0.045285169435798515,
+        "threshold": 0.5,
+        "auroc": 0.8155328551135061,
+        "average_precision": 0.19309655039444326,
+        "brier": 0.03961410899700093,
+        "ece": 0.0008876640437699989,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 60144,
+            "probability": 0.027526706424223054,
+            "observed": 0.0272512636339452
+          },
+          {
+            "bin": 1,
+            "count": 6196,
+            "probability": 0.1367025467779084,
+            "observed": 0.13976759199483538
+          },
+          {
+            "bin": 2,
+            "count": 1491,
+            "probability": 0.24003124175166413,
+            "observed": 0.2461435278336687
+          },
+          {
+            "bin": 3,
+            "count": 535,
+            "probability": 0.3409449787450078,
+            "observed": 0.36822429906542054
+          },
+          {
+            "bin": 4,
+            "count": 67,
+            "probability": 0.4256655635063885,
+            "observed": 0.44776119402985076
+          }
+        ],
+        "precision": 0.0,
+        "sensitivity": 0.0,
+        "specificity": 1.0,
+        "f1": 0.0,
+        "confusion_matrix": [
+          [
+            65334,
+            0
+          ],
+          [
+            3099,
+            0
+          ]
+        ]
+      },
+      "stopping_history": [],
+      "selected_encoded_inputs": [
+        "categorical__SEXVAR_1.0",
+        "categorical__SEXVAR_2.0",
+        "categorical___AGEG5YR_1.0",
+        "categorical___AGEG5YR_2.0",
+        "categorical___AGEG5YR_3.0",
+        "categorical___AGEG5YR_4.0",
+        "categorical___AGEG5YR_5.0",
+        "categorical___AGEG5YR_6.0",
+        "categorical___AGEG5YR_7.0",
+        "categorical___AGEG5YR_8.0",
+        "categorical___AGEG5YR_9.0",
+        "categorical___AGEG5YR_10.0",
+        "categorical___AGEG5YR_11.0",
+        "categorical___AGEG5YR_12.0",
+        "categorical___AGEG5YR_13.0",
+        "categorical__GENHLTH_1.0",
+        "categorical__GENHLTH_2.0",
+        "categorical__GENHLTH_3.0",
+        "categorical__GENHLTH_4.0",
+        "categorical__GENHLTH_5.0",
+        "categorical__EXERANY2_1.0",
+        "categorical__EXERANY2_2.0",
+        "categorical___SMOKER3_1.0",
+        "categorical___SMOKER3_2.0",
+        "categorical___SMOKER3_3.0",
+        "categorical___SMOKER3_4.0",
+        "categorical__DIABETE4_1.0",
+        "categorical__DIABETE4_2.0",
+        "categorical__DIABETE4_3.0",
+        "categorical__DIABETE4_4.0",
+        "categorical__CVDINFR4_1.0",
+        "categorical__CVDINFR4_2.0",
+        "categorical__CVDCRHD4_1.0",
+        "categorical__CVDCRHD4_2.0",
+        "categorical__CHCKDNY2_1.0",
+        "categorical__CHCKDNY2_2.0",
+        "categorical__HAVARTH4_1.0",
+        "categorical__HAVARTH4_2.0",
+        "categorical__EDUCA_1.0",
+        "categorical__EDUCA_2.0",
+        "categorical__EDUCA_3.0",
+        "categorical__EDUCA_4.0",
+        "categorical__EDUCA_5.0",
+        "categorical__EDUCA_6.0",
+        "categorical__INCOME3_1.0",
+        "categorical__INCOME3_2.0",
+        "categorical__INCOME3_3.0",
+        "categorical__INCOME3_4.0",
+        "categorical__INCOME3_5.0",
+        "categorical__INCOME3_6.0",
+        "categorical__INCOME3_7.0",
+        "categorical__INCOME3_8.0",
+        "categorical__INCOME3_9.0",
+        "categorical__INCOME3_10.0",
+        "categorical__INCOME3_11.0",
+        "numeric__PHYSHLTH",
+        "numeric__MENTHLTH",
+        "numeric___BMI5",
+        "numeric__missingindicator_PHYSHLTH",
+        "numeric__missingindicator_MENTHLTH",
+        "numeric__missingindicator__BMI5"
+      ]
+    },
+    {
+      "specification": {
+        "name": "mlp_shallow",
+        "family": "mlp",
+        "widths": [
+          64,
+          32
+        ],
+        "alpha": 0.01
+      },
+      "seconds": 25.246911547999844,
+      "selection": {
+        "n": 68433,
+        "prevalence": 0.045285169435798515,
+        "threshold": 0.5,
+        "auroc": 0.8137981147297102,
+        "average_precision": 0.188918133318328,
+        "brier": 0.0397670641541481,
+        "ece": 0.00433968048914924,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 60792,
+            "probability": 0.024332046508789062,
+            "observed": 0.02881958152388472
+          },
+          {
+            "bin": 1,
+            "count": 5605,
+            "probability": 0.13756439089775085,
+            "observed": 0.1400535236396075
+          },
+          {
+            "bin": 2,
+            "count": 1430,
+            "probability": 0.241107776761055,
+            "observed": 0.23706293706293707
+          },
+          {
+            "bin": 3,
+            "count": 485,
+            "probability": 0.3398742377758026,
+            "observed": 0.3422680412371134
+          },
+          {
+            "bin": 4,
+            "count": 110,
+            "probability": 0.43472743034362793,
+            "observed": 0.45454545454545453
+          },
+          {
+            "bin": 5,
+            "count": 11,
+            "probability": 0.5368691682815552,
+            "observed": 0.6363636363636364
+          }
+        ],
+        "precision": 0.6363636363636364,
+        "sensitivity": 0.002258793159083575,
+        "specificity": 0.9999387761349374,
+        "f1": 0.0045016077170418,
+        "confusion_matrix": [
+          [
+            65330,
+            4
+          ],
+          [
+            3092,
+            7
+          ]
+        ]
+      },
+      "stopping_history": [
+        {
+          "epoch": 1,
+          "stopping_ap": 0.16842642541954267,
+          "stopping_log_loss": 0.1568068967640961
+        },
+        {
+          "epoch": 2,
+          "stopping_ap": 0.17313850111266088,
+          "stopping_log_loss": 0.15594571137761853
+        },
+        {
+          "epoch": 3,
+          "stopping_ap": 0.1743353985615112,
+          "stopping_log_loss": 0.15580130612032073
+        },
+        {
+          "epoch": 4,
+          "stopping_ap": 0.17463148160906924,
+          "stopping_log_loss": 0.15574305272544223
+        },
+        {
+          "epoch": 5,
+          "stopping_ap": 0.17461474015672362,
+          "stopping_log_loss": 0.15580530737817622
+        },
+        {
+          "epoch": 6,
+          "stopping_ap": 0.17518829456543272,
+          "stopping_log_loss": 0.15577797453899497
+        },
+        {
+          "epoch": 7,
+          "stopping_ap": 0.17578191464312887,
+          "stopping_log_loss": 0.15579653374799923
+        },
+        {
+          "epoch": 8,
+          "stopping_ap": 0.1759230174784648,
+          "stopping_log_loss": 0.15586640252085704
+        },
+        {
+          "epoch": 9,
+          "stopping_ap": 0.17604455774888855,
+          "stopping_log_loss": 0.15596978242721485
+        },
+        {
+          "epoch": 10,
+          "stopping_ap": 0.17607197517361164,
+          "stopping_log_loss": 0.1560025437534026
+        },
+        {
+          "epoch": 11,
+          "stopping_ap": 0.17612383379400262,
+          "stopping_log_loss": 0.15608817711235615
+        },
+        {
+          "epoch": 12,
+          "stopping_ap": 0.17613524022566973,
+          "stopping_log_loss": 0.15619357449991703
+        },
+        {
+          "epoch": 13,
+          "stopping_ap": 0.17595565055739762,
+          "stopping_log_loss": 0.15618631143884146
+        },
+        {
+          "epoch": 14,
+          "stopping_ap": 0.17578535789667996,
+          "stopping_log_loss": 0.1562995527144493
+        },
+        {
+          "epoch": 15,
+          "stopping_ap": 0.175457259419804,
+          "stopping_log_loss": 0.15632831328582542
+        },
+        {
+          "epoch": 16,
+          "stopping_ap": 0.17478350879756718,
+          "stopping_log_loss": 0.15643707146400934
+        },
+        {
+          "epoch": 17,
+          "stopping_ap": 0.17477345528068003,
+          "stopping_log_loss": 0.1565414834093349
+        },
+        {
+          "epoch": 18,
+          "stopping_ap": 0.1739606269781642,
+          "stopping_log_loss": 0.15666716755711324
+        },
+        {
+          "epoch": 19,
+          "stopping_ap": 0.17371251909967442,
+          "stopping_log_loss": 0.1567239711727237
+        },
+        {
+          "epoch": 20,
+          "stopping_ap": 0.17281750661778322,
+          "stopping_log_loss": 0.15683730408759694
+        }
+      ],
+      "selected_encoded_inputs": [
+        "categorical__SEXVAR_1.0",
+        "categorical__SEXVAR_2.0",
+        "categorical___AGEG5YR_1.0",
+        "categorical___AGEG5YR_2.0",
+        "categorical___AGEG5YR_3.0",
+        "categorical___AGEG5YR_4.0",
+        "categorical___AGEG5YR_5.0",
+        "categorical___AGEG5YR_6.0",
+        "categorical___AGEG5YR_7.0",
+        "categorical___AGEG5YR_8.0",
+        "categorical___AGEG5YR_9.0",
+        "categorical___AGEG5YR_10.0",
+        "categorical___AGEG5YR_11.0",
+        "categorical___AGEG5YR_12.0",
+        "categorical___AGEG5YR_13.0",
+        "categorical__GENHLTH_1.0",
+        "categorical__GENHLTH_2.0",
+        "categorical__GENHLTH_3.0",
+        "categorical__GENHLTH_4.0",
+        "categorical__GENHLTH_5.0",
+        "categorical__EXERANY2_1.0",
+        "categorical__EXERANY2_2.0",
+        "categorical___SMOKER3_1.0",
+        "categorical___SMOKER3_2.0",
+        "categorical___SMOKER3_3.0",
+        "categorical___SMOKER3_4.0",
+        "categorical__DIABETE4_1.0",
+        "categorical__DIABETE4_2.0",
+        "categorical__DIABETE4_3.0",
+        "categorical__DIABETE4_4.0",
+        "categorical__CVDINFR4_1.0",
+        "categorical__CVDINFR4_2.0",
+        "categorical__CVDCRHD4_1.0",
+        "categorical__CVDCRHD4_2.0",
+        "categorical__CHCKDNY2_1.0",
+        "categorical__CHCKDNY2_2.0",
+        "categorical__HAVARTH4_1.0",
+        "categorical__HAVARTH4_2.0",
+        "categorical__EDUCA_1.0",
+        "categorical__EDUCA_2.0",
+        "categorical__EDUCA_3.0",
+        "categorical__EDUCA_4.0",
+        "categorical__EDUCA_5.0",
+        "categorical__EDUCA_6.0",
+        "categorical__INCOME3_1.0",
+        "categorical__INCOME3_2.0",
+        "categorical__INCOME3_3.0",
+        "categorical__INCOME3_4.0",
+        "categorical__INCOME3_5.0",
+        "categorical__INCOME3_6.0",
+        "categorical__INCOME3_7.0",
+        "categorical__INCOME3_8.0",
+        "categorical__INCOME3_9.0",
+        "categorical__INCOME3_10.0",
+        "categorical__INCOME3_11.0",
+        "numeric__PHYSHLTH",
+        "numeric__MENTHLTH",
+        "numeric___BMI5",
+        "numeric__missingindicator_PHYSHLTH",
+        "numeric__missingindicator_MENTHLTH",
+        "numeric__missingindicator__BMI5"
+      ]
+    },
+    {
+      "specification": {
+        "name": "mlp_deep",
+        "family": "mlp",
+        "widths": [
+          128,
+          64,
+          32
+        ],
+        "alpha": 0.01
+      },
+      "seconds": 33.19333892800023,
+      "selection": {
+        "n": 68433,
+        "prevalence": 0.045285169435798515,
+        "threshold": 0.5,
+        "auroc": 0.814347235408122,
+        "average_precision": 0.18639111390319762,
+        "brier": 0.03978005424141884,
+        "ece": 0.004898280104803764,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 61099,
+            "probability": 0.024498680606484413,
+            "observed": 0.02908394572742598
+          },
+          {
+            "bin": 1,
+            "count": 5336,
+            "probability": 0.13644155859947205,
+            "observed": 0.14074212893553223
+          },
+          {
+            "bin": 2,
+            "count": 1429,
+            "probability": 0.24234719574451447,
+            "observed": 0.25332400279916023
+          },
+          {
+            "bin": 3,
+            "count": 547,
+            "probability": 0.34311604499816895,
+            "observed": 0.3692870201096892
+          },
+          {
+            "bin": 4,
+            "count": 22,
+            "probability": 0.41362112760543823,
+            "observed": 0.3181818181818182
+          }
+        ],
+        "precision": 0.0,
+        "sensitivity": 0.0,
+        "specificity": 1.0,
+        "f1": 0.0,
+        "confusion_matrix": [
+          [
+            65334,
+            0
+          ],
+          [
+            3099,
+            0
+          ]
+        ]
+      },
+      "stopping_history": [
+        {
+          "epoch": 1,
+          "stopping_ap": 0.17202039561144256,
+          "stopping_log_loss": 0.15647153077558373
+        },
+        {
+          "epoch": 2,
+          "stopping_ap": 0.1747448953768816,
+          "stopping_log_loss": 0.15590433641475013
+        },
+        {
+          "epoch": 3,
+          "stopping_ap": 0.17562993995199458,
+          "stopping_log_loss": 0.15580145760471012
+        },
+        {
+          "epoch": 4,
+          "stopping_ap": 0.17664404798377464,
+          "stopping_log_loss": 0.1557628616698454
+        },
+        {
+          "epoch": 5,
+          "stopping_ap": 0.17727588861947197,
+          "stopping_log_loss": 0.15585618754624947
+        },
+        {
+          "epoch": 6,
+          "stopping_ap": 0.1781737887094244,
+          "stopping_log_loss": 0.15597812130578712
+        },
+        {
+          "epoch": 7,
+          "stopping_ap": 0.1787142959563496,
+          "stopping_log_loss": 0.1560625161553968
+        },
+        {
+          "epoch": 8,
+          "stopping_ap": 0.17787123003245042,
+          "stopping_log_loss": 0.15623426510778862
+        },
+        {
+          "epoch": 9,
+          "stopping_ap": 0.17723944642450565,
+          "stopping_log_loss": 0.15642321687963023
+        },
+        {
+          "epoch": 10,
+          "stopping_ap": 0.1772162431451894,
+          "stopping_log_loss": 0.15649944359180415
+        },
+        {
+          "epoch": 11,
+          "stopping_ap": 0.1772083757309315,
+          "stopping_log_loss": 0.15673040473527386
+        },
+        {
+          "epoch": 12,
+          "stopping_ap": 0.17603811711408984,
+          "stopping_log_loss": 0.15708685909222106
+        },
+        {
+          "epoch": 13,
+          "stopping_ap": 0.175238531503136,
+          "stopping_log_loss": 0.15746763679794648
+        },
+        {
+          "epoch": 14,
+          "stopping_ap": 0.1728369361877514,
+          "stopping_log_loss": 0.15783346079159244
+        },
+        {
+          "epoch": 15,
+          "stopping_ap": 0.1717561213670158,
+          "stopping_log_loss": 0.15825021534581482
+        }
+      ],
+      "selected_encoded_inputs": [
+        "categorical__SEXVAR_1.0",
+        "categorical__SEXVAR_2.0",
+        "categorical___AGEG5YR_1.0",
+        "categorical___AGEG5YR_2.0",
+        "categorical___AGEG5YR_3.0",
+        "categorical___AGEG5YR_4.0",
+        "categorical___AGEG5YR_5.0",
+        "categorical___AGEG5YR_6.0",
+        "categorical___AGEG5YR_7.0",
+        "categorical___AGEG5YR_8.0",
+        "categorical___AGEG5YR_9.0",
+        "categorical___AGEG5YR_10.0",
+        "categorical___AGEG5YR_11.0",
+        "categorical___AGEG5YR_12.0",
+        "categorical___AGEG5YR_13.0",
+        "categorical__GENHLTH_1.0",
+        "categorical__GENHLTH_2.0",
+        "categorical__GENHLTH_3.0",
+        "categorical__GENHLTH_4.0",
+        "categorical__GENHLTH_5.0",
+        "categorical__EXERANY2_1.0",
+        "categorical__EXERANY2_2.0",
+        "categorical___SMOKER3_1.0",
+        "categorical___SMOKER3_2.0",
+        "categorical___SMOKER3_3.0",
+        "categorical___SMOKER3_4.0",
+        "categorical__DIABETE4_1.0",
+        "categorical__DIABETE4_2.0",
+        "categorical__DIABETE4_3.0",
+        "categorical__DIABETE4_4.0",
+        "categorical__CVDINFR4_1.0",
+        "categorical__CVDINFR4_2.0",
+        "categorical__CVDCRHD4_1.0",
+        "categorical__CVDCRHD4_2.0",
+        "categorical__CHCKDNY2_1.0",
+        "categorical__CHCKDNY2_2.0",
+        "categorical__HAVARTH4_1.0",
+        "categorical__HAVARTH4_2.0",
+        "categorical__EDUCA_1.0",
+        "categorical__EDUCA_2.0",
+        "categorical__EDUCA_3.0",
+        "categorical__EDUCA_4.0",
+        "categorical__EDUCA_5.0",
+        "categorical__EDUCA_6.0",
+        "categorical__INCOME3_1.0",
+        "categorical__INCOME3_2.0",
+        "categorical__INCOME3_3.0",
+        "categorical__INCOME3_4.0",
+        "categorical__INCOME3_5.0",
+        "categorical__INCOME3_6.0",
+        "categorical__INCOME3_7.0",
+        "categorical__INCOME3_8.0",
+        "categorical__INCOME3_9.0",
+        "categorical__INCOME3_10.0",
+        "categorical__INCOME3_11.0",
+        "numeric__PHYSHLTH",
+        "numeric__MENTHLTH",
+        "numeric___BMI5",
+        "numeric__missingindicator_PHYSHLTH",
+        "numeric__missingindicator_MENTHLTH",
+        "numeric__missingindicator__BMI5"
+      ]
+    },
+    {
+      "specification": {
+        "name": "mlp_regularized",
+        "family": "mlp",
+        "widths": [
+          128,
+          64,
+          32
+        ],
+        "alpha": 0.1
+      },
+      "seconds": 45.365423917000044,
+      "selection": {
+        "n": 68433,
+        "prevalence": 0.045285169435798515,
+        "threshold": 0.5,
+        "auroc": 0.8157001242840509,
+        "average_precision": 0.19150432048474642,
+        "brier": 0.039696138352155685,
+        "ece": 0.0034898390923170488,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 60577,
+            "probability": 0.025006409734487534,
+            "observed": 0.028261551413902967
+          },
+          {
+            "bin": 1,
+            "count": 5801,
+            "probability": 0.13770586252212524,
+            "observed": 0.1391139458714015
+          },
+          {
+            "bin": 2,
+            "count": 1552,
+            "probability": 0.24161480367183685,
+            "observed": 0.24484536082474226
+          },
+          {
+            "bin": 3,
+            "count": 491,
+            "probability": 0.33946043252944946,
+            "observed": 0.39307535641547864
+          },
+          {
+            "bin": 4,
+            "count": 12,
+            "probability": 0.4061335623264313,
+            "observed": 0.5833333333333334
+          }
+        ],
+        "precision": 0.0,
+        "sensitivity": 0.0,
+        "specificity": 1.0,
+        "f1": 0.0,
+        "confusion_matrix": [
+          [
+            65334,
+            0
+          ],
+          [
+            3099,
+            0
+          ]
+        ]
+      },
+      "stopping_history": [
+        {
+          "epoch": 1,
+          "stopping_ap": 0.17136130051033344,
+          "stopping_log_loss": 0.15651945964928016
+        },
+        {
+          "epoch": 2,
+          "stopping_ap": 0.17316040311794983,
+          "stopping_log_loss": 0.1560048023392809
+        },
+        {
+          "epoch": 3,
+          "stopping_ap": 0.17530472725853016,
+          "stopping_log_loss": 0.15575422463269184
+        },
+        {
+          "epoch": 4,
+          "stopping_ap": 0.1764134525863498,
+          "stopping_log_loss": 0.1556954100350688
+        },
+        {
+          "epoch": 5,
+          "stopping_ap": 0.17576366650877354,
+          "stopping_log_loss": 0.1556427710878911
+        },
+        {
+          "epoch": 6,
+          "stopping_ap": 0.1762304286768501,
+          "stopping_log_loss": 0.15563056799140823
+        },
+        {
+          "epoch": 7,
+          "stopping_ap": 0.17577086128751818,
+          "stopping_log_loss": 0.1556525454294527
+        },
+        {
+          "epoch": 8,
+          "stopping_ap": 0.1755285833953646,
+          "stopping_log_loss": 0.15561300651200832
+        },
+        {
+          "epoch": 9,
+          "stopping_ap": 0.17569598764360858,
+          "stopping_log_loss": 0.15561151537473863
+        },
+        {
+          "epoch": 10,
+          "stopping_ap": 0.17579663351086933,
+          "stopping_log_loss": 0.15564407173378456
+        },
+        {
+          "epoch": 11,
+          "stopping_ap": 0.17618454260857314,
+          "stopping_log_loss": 0.1556755025550158
+        },
+        {
+          "epoch": 12,
+          "stopping_ap": 0.1759286829309589,
+          "stopping_log_loss": 0.15565502020732228
+        }
+      ],
+      "selected_encoded_inputs": [
+        "categorical__SEXVAR_1.0",
+        "categorical__SEXVAR_2.0",
+        "categorical___AGEG5YR_1.0",
+        "categorical___AGEG5YR_2.0",
+        "categorical___AGEG5YR_3.0",
+        "categorical___AGEG5YR_4.0",
+        "categorical___AGEG5YR_5.0",
+        "categorical___AGEG5YR_6.0",
+        "categorical___AGEG5YR_7.0",
+        "categorical___AGEG5YR_8.0",
+        "categorical___AGEG5YR_9.0",
+        "categorical___AGEG5YR_10.0",
+        "categorical___AGEG5YR_11.0",
+        "categorical___AGEG5YR_12.0",
+        "categorical___AGEG5YR_13.0",
+        "categorical__GENHLTH_1.0",
+        "categorical__GENHLTH_2.0",
+        "categorical__GENHLTH_3.0",
+        "categorical__GENHLTH_4.0",
+        "categorical__GENHLTH_5.0",
+        "categorical__EXERANY2_1.0",
+        "categorical__EXERANY2_2.0",
+        "categorical___SMOKER3_1.0",
+        "categorical___SMOKER3_2.0",
+        "categorical___SMOKER3_3.0",
+        "categorical___SMOKER3_4.0",
+        "categorical__DIABETE4_1.0",
+        "categorical__DIABETE4_2.0",
+        "categorical__DIABETE4_3.0",
+        "categorical__DIABETE4_4.0",
+        "categorical__CVDINFR4_1.0",
+        "categorical__CVDINFR4_2.0",
+        "categorical__CVDCRHD4_1.0",
+        "categorical__CVDCRHD4_2.0",
+        "categorical__CHCKDNY2_1.0",
+        "categorical__CHCKDNY2_2.0",
+        "categorical__HAVARTH4_1.0",
+        "categorical__HAVARTH4_2.0",
+        "categorical__EDUCA_1.0",
+        "categorical__EDUCA_2.0",
+        "categorical__EDUCA_3.0",
+        "categorical__EDUCA_4.0",
+        "categorical__EDUCA_5.0",
+        "categorical__EDUCA_6.0",
+        "categorical__INCOME3_1.0",
+        "categorical__INCOME3_2.0",
+        "categorical__INCOME3_3.0",
+        "categorical__INCOME3_4.0",
+        "categorical__INCOME3_5.0",
+        "categorical__INCOME3_6.0",
+        "categorical__INCOME3_7.0",
+        "categorical__INCOME3_8.0",
+        "categorical__INCOME3_9.0",
+        "categorical__INCOME3_10.0",
+        "categorical__INCOME3_11.0",
+        "numeric__PHYSHLTH",
+        "numeric__MENTHLTH",
+        "numeric___BMI5",
+        "numeric__missingindicator_PHYSHLTH",
+        "numeric__missingindicator_MENTHLTH",
+        "numeric__missingindicator__BMI5"
+      ]
+    },
+    {
+      "specification": {
+        "name": "mlp_balanced",
+        "family": "mlp",
+        "widths": [
+          64,
+          32
+        ],
+        "alpha": 0.01,
+        "weighted": true
+      },
+      "seconds": 15.072202584000024,
+      "selection": {
+        "n": 68433,
+        "prevalence": 0.045285169435798515,
+        "threshold": 0.5,
+        "auroc": 0.8138823469341883,
+        "average_precision": 0.19032667073915244,
+        "brier": 0.1777888685464859,
+        "ece": 0.3104032123566402,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 14139,
+            "probability": 0.05677960813045502,
+            "observed": 0.002404696230285027
+          },
+          {
+            "bin": 1,
+            "count": 11222,
+            "probability": 0.14679056406021118,
+            "observed": 0.008109071466761718
+          },
+          {
+            "bin": 2,
+            "count": 8058,
+            "probability": 0.24858832359313965,
+            "observed": 0.017994539587987093
+          },
+          {
+            "bin": 3,
+            "count": 6926,
+            "probability": 0.3496525287628174,
+            "observed": 0.027866012128212533
+          },
+          {
+            "bin": 4,
+            "count": 6434,
+            "probability": 0.4498995244503021,
+            "observed": 0.040254895865713396
+          },
+          {
+            "bin": 5,
+            "count": 6728,
+            "probability": 0.5500812530517578,
+            "observed": 0.05514268727705113
+          },
+          {
+            "bin": 6,
+            "count": 6422,
+            "probability": 0.6490043997764587,
+            "observed": 0.08486452818436624
+          },
+          {
+            "bin": 7,
+            "count": 5263,
+            "probability": 0.746554970741272,
+            "observed": 0.13015390461713852
+          },
+          {
+            "bin": 8,
+            "count": 2714,
+            "probability": 0.8431961536407471,
+            "observed": 0.21223286661753868
+          },
+          {
+            "bin": 9,
+            "count": 527,
+            "probability": 0.9200278520584106,
+            "observed": 0.3795066413662239
+          }
+        ],
+        "precision": 0.10977186662972199,
+        "sensitivity": 0.7670216198773798,
+        "specificity": 0.7049468882970582,
+        "f1": 0.19205752838039833,
+        "confusion_matrix": [
+          [
+            46057,
+            19277
+          ],
+          [
+            722,
+            2377
+          ]
+        ]
+      },
+      "stopping_history": [
+        {
+          "epoch": 1,
+          "stopping_ap": 0.17144630413434625,
+          "stopping_log_loss": 0.5691337394842998
+        },
+        {
+          "epoch": 2,
+          "stopping_ap": 0.17203195237344682,
+          "stopping_log_loss": 0.5126406550486099
+        },
+        {
+          "epoch": 3,
+          "stopping_ap": 0.17305982773535147,
+          "stopping_log_loss": 0.5192112774287357
+        },
+        {
+          "epoch": 4,
+          "stopping_ap": 0.17383859498190282,
+          "stopping_log_loss": 0.5210478582907935
+        },
+        {
+          "epoch": 5,
+          "stopping_ap": 0.17450074465290794,
+          "stopping_log_loss": 0.5219399908337559
+        },
+        {
+          "epoch": 6,
+          "stopping_ap": 0.1747700744386933,
+          "stopping_log_loss": 0.5223835142366218
+        },
+        {
+          "epoch": 7,
+          "stopping_ap": 0.17500850189005845,
+          "stopping_log_loss": 0.5227955923232399
+        },
+        {
+          "epoch": 8,
+          "stopping_ap": 0.1750961043187254,
+          "stopping_log_loss": 0.5237738799981061
+        },
+        {
+          "epoch": 9,
+          "stopping_ap": 0.174862863018879,
+          "stopping_log_loss": 0.5242094424826486
+        },
+        {
+          "epoch": 10,
+          "stopping_ap": 0.17491050923257973,
+          "stopping_log_loss": 0.5226452900019418
+        },
+        {
+          "epoch": 11,
+          "stopping_ap": 0.17441986948666058,
+          "stopping_log_loss": 0.5222256393401378
+        },
+        {
+          "epoch": 12,
+          "stopping_ap": 0.17439677062626144,
+          "stopping_log_loss": 0.5187612904183798
+        },
+        {
+          "epoch": 13,
+          "stopping_ap": 0.17419533529867787,
+          "stopping_log_loss": 0.519390427025651
+        },
+        {
+          "epoch": 14,
+          "stopping_ap": 0.1738640699025091,
+          "stopping_log_loss": 0.5198424520990568
+        },
+        {
+          "epoch": 15,
+          "stopping_ap": 0.1734844764341001,
+          "stopping_log_loss": 0.5244524592655385
+        },
+        {
+          "epoch": 16,
+          "stopping_ap": 0.17311234444625515,
+          "stopping_log_loss": 0.5221412423522218
+        }
+      ],
+      "selected_encoded_inputs": [
+        "categorical__SEXVAR_1.0",
+        "categorical__SEXVAR_2.0",
+        "categorical___AGEG5YR_1.0",
+        "categorical___AGEG5YR_2.0",
+        "categorical___AGEG5YR_3.0",
+        "categorical___AGEG5YR_4.0",
+        "categorical___AGEG5YR_5.0",
+        "categorical___AGEG5YR_6.0",
+        "categorical___AGEG5YR_7.0",
+        "categorical___AGEG5YR_8.0",
+        "categorical___AGEG5YR_9.0",
+        "categorical___AGEG5YR_10.0",
+        "categorical___AGEG5YR_11.0",
+        "categorical___AGEG5YR_12.0",
+        "categorical___AGEG5YR_13.0",
+        "categorical__GENHLTH_1.0",
+        "categorical__GENHLTH_2.0",
+        "categorical__GENHLTH_3.0",
+        "categorical__GENHLTH_4.0",
+        "categorical__GENHLTH_5.0",
+        "categorical__EXERANY2_1.0",
+        "categorical__EXERANY2_2.0",
+        "categorical___SMOKER3_1.0",
+        "categorical___SMOKER3_2.0",
+        "categorical___SMOKER3_3.0",
+        "categorical___SMOKER3_4.0",
+        "categorical__DIABETE4_1.0",
+        "categorical__DIABETE4_2.0",
+        "categorical__DIABETE4_3.0",
+        "categorical__DIABETE4_4.0",
+        "categorical__CVDINFR4_1.0",
+        "categorical__CVDINFR4_2.0",
+        "categorical__CVDCRHD4_1.0",
+        "categorical__CVDCRHD4_2.0",
+        "categorical__CHCKDNY2_1.0",
+        "categorical__CHCKDNY2_2.0",
+        "categorical__HAVARTH4_1.0",
+        "categorical__HAVARTH4_2.0",
+        "categorical__EDUCA_1.0",
+        "categorical__EDUCA_2.0",
+        "categorical__EDUCA_3.0",
+        "categorical__EDUCA_4.0",
+        "categorical__EDUCA_5.0",
+        "categorical__EDUCA_6.0",
+        "categorical__INCOME3_1.0",
+        "categorical__INCOME3_2.0",
+        "categorical__INCOME3_3.0",
+        "categorical__INCOME3_4.0",
+        "categorical__INCOME3_5.0",
+        "categorical__INCOME3_6.0",
+        "categorical__INCOME3_7.0",
+        "categorical__INCOME3_8.0",
+        "categorical__INCOME3_9.0",
+        "categorical__INCOME3_10.0",
+        "categorical__INCOME3_11.0",
+        "numeric__PHYSHLTH",
+        "numeric__MENTHLTH",
+        "numeric___BMI5",
+        "numeric__missingindicator_PHYSHLTH",
+        "numeric__missingindicator_MENTHLTH",
+        "numeric__missingindicator__BMI5"
+      ]
+    },
+    {
+      "specification": {
+        "name": "bottleneck15_logistic",
+        "family": "bottleneck",
+        "widths": [
+          64,
+          32,
+          15,
+          16
+        ],
+        "alpha": 0.01
+      },
+      "seconds": 18.316886276999867,
+      "selection": {
+        "n": 68433,
+        "prevalence": 0.045285169435798515,
+        "threshold": 0.5,
+        "auroc": 0.8146521372695161,
+        "average_precision": 0.18948658284384065,
+        "brier": 0.03972533913737193,
+        "ece": 0.0017515521070727484,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 59540,
+            "probability": 0.02586327995008017,
+            "observed": 0.02705744037621767
+          },
+          {
+            "bin": 1,
+            "count": 6752,
+            "probability": 0.13432993579332528,
+            "observed": 0.13462677725118483
+          },
+          {
+            "bin": 2,
+            "count": 1337,
+            "probability": 0.24109530206454385,
+            "observed": 0.22213911742707554
+          },
+          {
+            "bin": 3,
+            "count": 599,
+            "probability": 0.34661773281753916,
+            "observed": 0.332220367278798
+          },
+          {
+            "bin": 4,
+            "count": 188,
+            "probability": 0.43889498192724286,
+            "observed": 0.3829787234042553
+          },
+          {
+            "bin": 5,
+            "count": 15,
+            "probability": 0.5306093119480051,
+            "observed": 0.6666666666666666
+          },
+          {
+            "bin": 6,
+            "count": 2,
+            "probability": 0.6189111532561509,
+            "observed": 0.5
+          }
+        ],
+        "precision": 0.6470588235294118,
+        "sensitivity": 0.0035495321071313327,
+        "specificity": 0.9999081642024061,
+        "f1": 0.007060333761232349,
+        "confusion_matrix": [
+          [
+            65328,
+            6
+          ],
+          [
+            3088,
+            11
+          ]
+        ]
+      },
+      "stopping_history": [
+        {
+          "epoch": 1,
+          "stopping_ap": 0.17093627553501536,
+          "stopping_log_loss": 0.15627489706489942
+        },
+        {
+          "epoch": 2,
+          "stopping_ap": 0.17188733630668454,
+          "stopping_log_loss": 0.15581758689721753
+        },
+        {
+          "epoch": 3,
+          "stopping_ap": 0.1738120660220516,
+          "stopping_log_loss": 0.15575121369828313
+        },
+        {
+          "epoch": 4,
+          "stopping_ap": 0.1743131430818175,
+          "stopping_log_loss": 0.15571993920697919
+        },
+        {
+          "epoch": 5,
+          "stopping_ap": 0.1750471929739174,
+          "stopping_log_loss": 0.15573941750568912
+        },
+        {
+          "epoch": 6,
+          "stopping_ap": 0.17617289081268017,
+          "stopping_log_loss": 0.15574104016080179
+        },
+        {
+          "epoch": 7,
+          "stopping_ap": 0.17706346343080906,
+          "stopping_log_loss": 0.15576477239467593
+        },
+        {
+          "epoch": 8,
+          "stopping_ap": 0.1775200239912012,
+          "stopping_log_loss": 0.15587394193677667
+        },
+        {
+          "epoch": 9,
+          "stopping_ap": 0.17802822666924145,
+          "stopping_log_loss": 0.15584555383348478
+        },
+        {
+          "epoch": 10,
+          "stopping_ap": 0.17802026925393455,
+          "stopping_log_loss": 0.15607935565721406
+        },
+        {
+          "epoch": 11,
+          "stopping_ap": 0.1771057078839275,
+          "stopping_log_loss": 0.15615339584909238
+        },
+        {
+          "epoch": 12,
+          "stopping_ap": 0.17657086186501122,
+          "stopping_log_loss": 0.15631326819566946
+        },
+        {
+          "epoch": 13,
+          "stopping_ap": 0.1768507330770389,
+          "stopping_log_loss": 0.1563851919788699
+        },
+        {
+          "epoch": 14,
+          "stopping_ap": 0.1762177182486591,
+          "stopping_log_loss": 0.15657686388516556
+        },
+        {
+          "epoch": 15,
+          "stopping_ap": 0.17554866438829855,
+          "stopping_log_loss": 0.15678298239153432
+        },
+        {
+          "epoch": 16,
+          "stopping_ap": 0.17433915253952204,
+          "stopping_log_loss": 0.156775385826494
+        },
+        {
+          "epoch": 17,
+          "stopping_ap": 0.1736092719062184,
+          "stopping_log_loss": 0.1569097353669563
+        }
+      ],
+      "selected_encoded_inputs": [
+        "categorical__SEXVAR_1.0",
+        "categorical__SEXVAR_2.0",
+        "categorical___AGEG5YR_1.0",
+        "categorical___AGEG5YR_2.0",
+        "categorical___AGEG5YR_3.0",
+        "categorical___AGEG5YR_4.0",
+        "categorical___AGEG5YR_5.0",
+        "categorical___AGEG5YR_6.0",
+        "categorical___AGEG5YR_7.0",
+        "categorical___AGEG5YR_8.0",
+        "categorical___AGEG5YR_9.0",
+        "categorical___AGEG5YR_10.0",
+        "categorical___AGEG5YR_11.0",
+        "categorical___AGEG5YR_12.0",
+        "categorical___AGEG5YR_13.0",
+        "categorical__GENHLTH_1.0",
+        "categorical__GENHLTH_2.0",
+        "categorical__GENHLTH_3.0",
+        "categorical__GENHLTH_4.0",
+        "categorical__GENHLTH_5.0",
+        "categorical__EXERANY2_1.0",
+        "categorical__EXERANY2_2.0",
+        "categorical___SMOKER3_1.0",
+        "categorical___SMOKER3_2.0",
+        "categorical___SMOKER3_3.0",
+        "categorical___SMOKER3_4.0",
+        "categorical__DIABETE4_1.0",
+        "categorical__DIABETE4_2.0",
+        "categorical__DIABETE4_3.0",
+        "categorical__DIABETE4_4.0",
+        "categorical__CVDINFR4_1.0",
+        "categorical__CVDINFR4_2.0",
+        "categorical__CVDCRHD4_1.0",
+        "categorical__CVDCRHD4_2.0",
+        "categorical__CHCKDNY2_1.0",
+        "categorical__CHCKDNY2_2.0",
+        "categorical__HAVARTH4_1.0",
+        "categorical__HAVARTH4_2.0",
+        "categorical__EDUCA_1.0",
+        "categorical__EDUCA_2.0",
+        "categorical__EDUCA_3.0",
+        "categorical__EDUCA_4.0",
+        "categorical__EDUCA_5.0",
+        "categorical__EDUCA_6.0",
+        "categorical__INCOME3_1.0",
+        "categorical__INCOME3_2.0",
+        "categorical__INCOME3_3.0",
+        "categorical__INCOME3_4.0",
+        "categorical__INCOME3_5.0",
+        "categorical__INCOME3_6.0",
+        "categorical__INCOME3_7.0",
+        "categorical__INCOME3_8.0",
+        "categorical__INCOME3_9.0",
+        "categorical__INCOME3_10.0",
+        "categorical__INCOME3_11.0",
+        "numeric__PHYSHLTH",
+        "numeric__MENTHLTH",
+        "numeric___BMI5",
+        "numeric__missingindicator_PHYSHLTH",
+        "numeric__missingindicator_MENTHLTH",
+        "numeric__missingindicator__BMI5"
+      ]
+    }
+  ],
+  "failures": [],
+  "test_accessed": true,
+  "limitations": [
+    "Internal unweighted validation only; no population inference",
+    "Search budgets differ across families; pilot not a fair family benchmark",
+    "Codebook verification and consequence-sensitive ablations required"
+  ],
+  "winner": "blend_neural_0.25",
+  "threshold": 0.14,
+  "calibration": "L2 sigmoid on clipped probability logits; fitted only on calibration partition",
+  "threshold_rule": "maximum calibrated selection F1; smallest threshold on ties",
+  "ensemble_stage": {
+    "status": "EXPLORATORY_DEVELOPMENT_ONLY",
+    "original_winner": "boosted_31",
+    "neural_specification": {
+      "name": "mlp_regularized",
+      "family": "mlp",
+      "widths": [
+        128,
+        64,
+        32
+      ],
+      "alpha": 0.1
+    },
+    "neural_stopping_history": [
+      {
+        "epoch": 1,
+        "stopping_ap": 0.17136130051033344,
+        "stopping_log_loss": 0.15651945964928016
+      },
+      {
+        "epoch": 2,
+        "stopping_ap": 0.17316040311794983,
+        "stopping_log_loss": 0.1560048023392809
+      },
+      {
+        "epoch": 3,
+        "stopping_ap": 0.17530472725853016,
+        "stopping_log_loss": 0.15575422463269184
+      },
+      {
+        "epoch": 4,
+        "stopping_ap": 0.1764134525863498,
+        "stopping_log_loss": 0.1556954100350688
+      },
+      {
+        "epoch": 5,
+        "stopping_ap": 0.17576366650877354,
+        "stopping_log_loss": 0.1556427710878911
+      },
+      {
+        "epoch": 6,
+        "stopping_ap": 0.1762304286768501,
+        "stopping_log_loss": 0.15563056799140823
+      },
+      {
+        "epoch": 7,
+        "stopping_ap": 0.17577086128751818,
+        "stopping_log_loss": 0.1556525454294527
+      },
+      {
+        "epoch": 8,
+        "stopping_ap": 0.1755285833953646,
+        "stopping_log_loss": 0.15561300651200832
+      },
+      {
+        "epoch": 9,
+        "stopping_ap": 0.17569598764360858,
+        "stopping_log_loss": 0.15561151537473863
+      },
+      {
+        "epoch": 10,
+        "stopping_ap": 0.17579663351086933,
+        "stopping_log_loss": 0.15564407173378456
+      },
+      {
+        "epoch": 11,
+        "stopping_ap": 0.17618454260857314,
+        "stopping_log_loss": 0.1556755025550158
+      },
+      {
+        "epoch": 12,
+        "stopping_ap": 0.1759286829309589,
+        "stopping_log_loss": 0.15565502020732228
+      }
+    ],
+    "candidates": [
+      {
+        "neural_weight": 0.25,
+        "selection": {
+          "n": 68433,
+          "prevalence": 0.045285169435798515,
+          "threshold": 0.5,
+          "auroc": 0.8165117010432544,
+          "average_precision": 0.1938360329251249,
+          "brier": 0.03960139744041861,
+          "ece": 0.0011750887383736278,
+          "calibration": [
+            {
+              "bin": 0,
+              "count": 60281,
+              "probability": 0.02700958745102806,
+              "observed": 0.02745475357077686
+            },
+            {
+              "bin": 1,
+              "count": 6072,
+              "probability": 0.13684200035515967,
+              "observed": 0.14031620553359683
+            },
+            {
+              "bin": 2,
+              "count": 1516,
+              "probability": 0.239968996506607,
+              "observed": 0.24670184696569922
+            },
+            {
+              "bin": 3,
+              "count": 513,
+              "probability": 0.3399787005038455,
+              "observed": 0.38011695906432746
+            },
+            {
+              "bin": 4,
+              "count": 51,
+              "probability": 0.4179120198516966,
+              "observed": 0.45098039215686275
+            }
+          ],
+          "precision": 0.0,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "f1": 0.0,
+          "confusion_matrix": [
+            [
+              65334,
+              0
+            ],
+            [
+              3099,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "neural_weight": 0.5,
+        "selection": {
+          "n": 68433,
+          "prevalence": 0.045285169435798515,
+          "threshold": 0.5,
+          "auroc": 0.816879424536761,
+          "average_precision": 0.19378413166770458,
+          "brier": 0.03961083156315222,
+          "ece": 0.0019466725719444633,
+          "calibration": [
+            {
+              "bin": 0,
+              "count": 60380,
+              "probability": 0.026392543115033074,
+              "observed": 0.027658164955283206
+            },
+            {
+              "bin": 1,
+              "count": 5982,
+              "probability": 0.13693459349225018,
+              "observed": 0.14092276830491474
+            },
+            {
+              "bin": 2,
+              "count": 1532,
+              "probability": 0.23996885093576628,
+              "observed": 0.24347258485639686
+            },
+            {
+              "bin": 3,
+              "count": 505,
+              "probability": 0.33941416282424075,
+              "observed": 0.3900990099009901
+            },
+            {
+              "bin": 4,
+              "count": 34,
+              "probability": 0.4124244843515101,
+              "observed": 0.47058823529411764
+            }
+          ],
+          "precision": 0.0,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "f1": 0.0,
+          "confusion_matrix": [
+            [
+              65334,
+              0
+            ],
+            [
+              3099,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "neural_weight": 0.75,
+        "selection": {
+          "n": 68433,
+          "prevalence": 0.045285169435798515,
+          "threshold": 0.5,
+          "auroc": 0.8166313779934264,
+          "average_precision": 0.19299552588669117,
+          "brier": 0.03964241136788574,
+          "ece": 0.002718256398897377,
+          "calibration": [
+            {
+              "bin": 0,
+              "count": 60495,
+              "probability": 0.025743211399776672,
+              "observed": 0.027969253657327053
+            },
+            {
+              "bin": 1,
+              "count": 5872,
+              "probability": 0.13730294829801476,
+              "observed": 0.13981607629427792
+            },
+            {
+              "bin": 2,
+              "count": 1542,
+              "probability": 0.24020672426671338,
+              "observed": 0.24643320363164722
+            },
+            {
+              "bin": 3,
+              "count": 507,
+              "probability": 0.3393790145294741,
+              "observed": 0.3905325443786982
+            },
+            {
+              "bin": 4,
+              "count": 17,
+              "probability": 0.4081849784181174,
+              "observed": 0.47058823529411764
+            }
+          ],
+          "precision": 0.0,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "f1": 0.0,
+          "confusion_matrix": [
+            [
+              65334,
+              0
+            ],
+            [
+              3099,
+              0
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "test_result": "locked_test.json"
+}

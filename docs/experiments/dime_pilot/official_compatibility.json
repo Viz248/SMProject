@@ -1,0 +1,12 @@
+{
+  "source_sha256": "ae2b2031506069521ffaf3534848496fd0710e07f4bfc76c6b0410f48eab33b0",
+  "pytorch_lightning": "1.9.5",
+  "torchmetrics": "0.11.4",
+  "scoped_setuptools": "80.9.0",
+  "failed_attempts": [
+    "Initial import: pkg_resources absent under setuptools 84; resolved via scoped setuptools 80.9",
+    "First compatibility run: adapter omitted original automatic scheduler monitor; restored before any joint results",
+    "Second compatibility run: Lightning used removed NumPy Inf alias; supplied np.Inf=np.inf before import"
+  ],
+  "all_failures_preceded_any_joint_evaluation": true
+}

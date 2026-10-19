@@ -1,0 +1,110 @@
+{
+  "status": "ONE_TIME_INTERNAL_TEST",
+  "selected_model": "blend_neural_0.25",
+  "seed": 42,
+  "dataset_sha256": "7d53cf088f858e02bcc029a51cf0408cc68f40a0ebeb02a3c0f73058aab36b1c",
+  "threshold": 0.14,
+  "test": {
+    "n": 45622,
+    "prevalence": 0.045285169435798515,
+    "threshold": 0.14,
+    "auroc": 0.8134974141066362,
+    "average_precision": 0.17947781929921258,
+    "brier": 0.039927669538168724,
+    "ece": 0.001716320404684488,
+    "calibration": [
+      {
+        "bin": 0,
+        "count": 39893,
+        "probability": 0.026444412977376406,
+        "observed": 0.027122552828817086
+      },
+      {
+        "bin": 1,
+        "count": 4213,
+        "probability": 0.1387733965383149,
+        "observed": 0.1428910515072395
+      },
+      {
+        "bin": 2,
+        "count": 1066,
+        "probability": 0.24097893066117992,
+        "observed": 0.22045028142589118
+      },
+      {
+        "bin": 3,
+        "count": 396,
+        "probability": 0.3436341300050856,
+        "observed": 0.3207070707070707
+      },
+      {
+        "bin": 4,
+        "count": 54,
+        "probability": 0.4247888973718844,
+        "observed": 0.37037037037037035
+      }
+    ],
+    "precision": 0.20476900149031296,
+    "sensitivity": 0.3325266214908035,
+    "specificity": 0.9387455230048672,
+    "f1": 0.25345877144438295,
+    "confusion_matrix": [
+      [
+        40888,
+        2668
+      ],
+      [
+        1379,
+        687
+      ]
+    ]
+  },
+  "iid_test_ci": {
+    "auroc": {
+      "low": 0.8050721450661739,
+      "high": 0.8215023979517035,
+      "valid_replicates": 500
+    },
+    "average_precision": {
+      "low": 0.16644721528367012,
+      "high": 0.1943973714059123,
+      "valid_replicates": 500
+    },
+    "brier": {
+      "low": 0.038405411832174115,
+      "high": 0.04139014355587505,
+      "valid_replicates": 500
+    },
+    "sensitivity": {
+      "low": 0.3107780500737047,
+      "high": 0.35142572041860864,
+      "valid_replicates": 500
+    },
+    "specificity": {
+      "low": 0.9363370230523022,
+      "high": 0.9408373392583612,
+      "valid_replicates": 500
+    },
+    "f1": {
+      "low": 0.23741763574815924,
+      "high": 0.26831461273167095,
+      "valid_replicates": 500
+    }
+  },
+  "interval_scope": "IID respondents, conditional on fitted selected model; not survey-design CIs",
+  "limitations": [
+    "Single-year internal validation",
+    "No external or clinical validation",
+    "No estimate of training variability from this single seed"
+  ],
+  "survey_weighted_points": {
+    "prevalence": 0.03331589870710429,
+    "auroc": 0.838477093794679,
+    "average_precision": 0.18030052119349582,
+    "brier": 0.029590901941524576,
+    "sensitivity": 0.32867396061088244,
+    "specificity": 0.9529537061594231,
+    "precision": 0.1940504649161012,
+    "interpretation": "Survey-weighted point estimates; no design-aware intervals"
+  }
+}

@@ -1,0 +1,4 @@
+Current reconstructed revision: v3,2026-10-19.
+Six-page manuscript with workflow diagram, R/Python verification, weighted calibration and fitting-sample sensitivity.
+Manuscript SHA256: 30d737f692ca3771ca189daab7df9266f68cf7bcccb3fdb7c150c53b0f638a7b
+Original primary interval remains unavailable. Follow-up analyses are post hoc.

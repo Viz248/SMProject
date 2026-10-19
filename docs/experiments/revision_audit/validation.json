@@ -1,0 +1,16 @@
+{
+  "version": "v3-reconstructed-2026-10-19",
+  "status": "PASS",
+  "tests": 35,
+  "original_models_verified": 30,
+  "calibration_ensembles": 32,
+  "additional_classifiers": 18,
+  "fitting_samples": 3,
+  "R_Python_agreement": true,
+  "notebook_syntax_checked": true,
+  "manuscript_sha256": "30d737f692ca3771ca189daab7df9266f68cf7bcccb3fdb7c150c53b0f638a7b",
+  "manuscript_pages": 6,
+  "fonts": "all embedded, no Type3",
+  "visual_review": "six rendered pages inspected; no clipping/overlap",
+  "latex_final_pass": "no unresolved references or overfull boxes"
+}

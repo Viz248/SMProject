@@ -1,0 +1,40 @@
+{
+  "source": "https://www.cdc.gov/brfss/annual_data/2024/files/LLCP2024XPT.zip",
+  "source_type": "Independent public CDC release; not downloaded from selected Google Drive file",
+  "selected_drive_file_size": 1093874240,
+  "cdc_xpt_size": 1093874240,
+  "xpt_sha256": "7d53cf088f858e02bcc029a51cf0408cc68f40a0ebeb02a3c0f73058aab36b1c",
+  "zip_sha256": "d33de91a584e866f657d29b1d5b51b5672467286ed22d021e36ee3c7b4d712a4",
+  "codebook_zip_sha256": "06c1c0e9c384d70c5b204e7869b1b1ad3f402a37a730c1d9a1f5aeee94fd1918",
+  "raw_n": 457670,
+  "labeled_n": 456218,
+  "positive_n": 20661,
+  "negative_n": 435557,
+  "excluded_target_n": 1452,
+  "unweighted_prevalence": 0.045287559894611785,
+  "design_fields": [
+    "_LLCPWT",
+    "_STSTR",
+    "_PSU",
+    "_STATE"
+  ],
+  "predictor_missing_n": {
+    "SEXVAR": 0,
+    "_AGEG5YR": 8162,
+    "GENHLTH": 1254,
+    "EXERANY2": 1245,
+    "_SMOKER3": 31773,
+    "DIABETE4": 837,
+    "CVDINFR4": 2745,
+    "CVDCRHD4": 4157,
+    "CHCKDNY2": 1764,
+    "HAVARTH4": 2330,
+    "EDUCA": 2267,
+    "INCOME3": 86855,
+    "PHYSHLTH": 10913,
+    "MENTHLTH": 8003,
+    "_BMI5": 42721
+  },
+  "weighted_stroke_prevalence_descriptive": 0.035302470416159006,
+  "note": "No design-aware interval calculated; equal byte sizes do not establish identity to Drive copy."
+}

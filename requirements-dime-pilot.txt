@@ -1,0 +1,14 @@
+# CPU pilot; install torch from https://download.pytorch.org/whl/cpu when needed.
+torch==2.14.1
+numpy==2.3.5
+pandas==2.2.3
+scikit-learn==1.8.0
+scipy==1.17.0
+threadpoolctl==3.6.0
+matplotlib==3.10.8
+# Optional official DIME execution-check dependencies (not needed by dime_pilot).
+pytorch-lightning==1.9.5
+torchmetrics==0.11.4
+tensorboard==2.21.0
+# Official-check wrapper additionally requires setuptools 80.9.0 in a scoped
+# --target directory placed first on PYTHONPATH; do not downgrade shared runtime.

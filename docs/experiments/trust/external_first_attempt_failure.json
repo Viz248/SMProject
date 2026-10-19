@@ -1,0 +1,11 @@
+{
+  "status": "ABORTED_COMPARISON",
+  "cause": "EOFError while loading original TabNet pickle",
+  "completed_models": [
+    "original_blend"
+  ],
+  "incomplete_models": [
+    "tabnet"
+  ],
+  "recovery": "Native checkpoint format; same settings/seed/data refit reproduced selection AP; no external-based tuning"
+}

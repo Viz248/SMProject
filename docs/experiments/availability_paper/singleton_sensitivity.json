@@ -1,0 +1,20 @@
+{
+  "primary_frozen_interval": null,
+  "sensitivity": {
+    "estimate": -0.00015656598130562793,
+    "se": 5.0862655138875247e-05,
+    "ci95": [
+      -0.0002562553010531693,
+      -5.687666155808657e-05
+    ],
+    "singleton_strata": 93,
+    "variance_non_singleton": 2.468724584057774e-09,
+    "variance_singleton_imputed": 1.1828510371837866e-10,
+    "status": "POST_HOC_SENSITIVITY_NOT_FROZEN_PRIMARY_CI",
+    "method": "replace singleton contributions by average contribution of non-singleton strata",
+    "assumptions": "singleton strata comparable in variance contribution to non-singleton strata; no FPC; conditional on models; not independently cross-checked in R"
+  },
+  "reference": "https://r-survey.r-forge.r-project.org/survey/html/surveyoptions.html",
+  "reference_checked": "2026-10-19",
+  "models_or_predictions_changed": false
+}

@@ -1,0 +1,149 @@
+{
+  "version": "1.0",
+  "frozen_date": "2026-10-19",
+  "status": "LOCAL_PRE_EVALUATION_PROTOCOL_NOT_PUBLIC_PREREGISTRATION",
+  "question": "Does training for block-unavailable questionnaire inputs improve stroke-history probability quality beyond fixed-model masking and scenario-specific recalibration?",
+  "endpoint": "CVDSTRK3 self-reported lifetime stroke history (1=yes,2=no); exclude all other responses",
+  "development_year": 2024,
+  "transport_year": 2025,
+  "input_sha256_2024_xpt": "7d53cf088f858e02bcc029a51cf0408cc68f40a0ebeb02a3c0f73058aab36b1c",
+  "input_sha256_2025_xpt": "d99262f8854f018a600c3538ee78e4308569af700abe6b92b36180336c24dec2",
+  "split_seed": 42,
+  "subsample_seed": 2026,
+  "fit_limit": 60000,
+  "stopping_limit": 10000,
+  "development_evaluation_limit": 15000,
+  "calibration": "2024 dedicated calibration partition; logistic calibration on clipped probability logit; C=1; no external refit",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "families": [
+    "hist_gradient_boosting",
+    "mlp"
+  ],
+  "hgb": {
+    "max_iter": 200,
+    "learning_rate": 0.05,
+    "max_leaf_nodes": 31,
+    "l2_regularization": 1.0,
+    "early_stopping": true,
+    "n_iter_no_change": 15
+  },
+  "mlp": {
+    "hidden": [
+      128,
+      64
+    ],
+    "dropout": 0.1,
+    "epochs": 30,
+    "batch_size": 1024,
+    "learning_rate": 0.001,
+    "weight_decay": 0.001,
+    "checkpoint": "minimum dedicated stopping BCE"
+  },
+  "training_weights": "unweighted; no resampling or class balancing",
+  "features": [
+    "SEXVAR",
+    "_AGEG5YR",
+    "GENHLTH",
+    "EXERANY2",
+    "_SMOKER3",
+    "DIABETE4",
+    "CVDINFR4",
+    "CVDCRHD4",
+    "CHCKDNY2",
+    "HAVARTH4",
+    "EDUCA",
+    "INCOME3",
+    "PHYSHLTH",
+    "MENTHLTH",
+    "_BMI5"
+  ],
+  "scenarios": {
+    "full": [
+      "SEXVAR",
+      "_AGEG5YR",
+      "GENHLTH",
+      "EXERANY2",
+      "_SMOKER3",
+      "DIABETE4",
+      "CVDINFR4",
+      "CVDCRHD4",
+      "CHCKDNY2",
+      "HAVARTH4",
+      "EDUCA",
+      "INCOME3",
+      "PHYSHLTH",
+      "MENTHLTH",
+      "_BMI5"
+    ],
+    "without_health_state": [
+      "SEXVAR",
+      "_AGEG5YR",
+      "EXERANY2",
+      "_SMOKER3",
+      "DIABETE4",
+      "CVDINFR4",
+      "CVDCRHD4",
+      "CHCKDNY2",
+      "HAVARTH4",
+      "EDUCA",
+      "INCOME3",
+      "_BMI5"
+    ],
+    "demographics_history": [
+      "SEXVAR",
+      "_AGEG5YR",
+      "DIABETE4",
+      "CVDINFR4",
+      "CVDCRHD4",
+      "CHCKDNY2",
+      "HAVARTH4"
+    ],
+    "demographics": [
+      "SEXVAR",
+      "_AGEG5YR"
+    ]
+  },
+  "conditions": [
+    "fixed_global_calibration",
+    "fixed_scenario_calibration",
+    "mask_trained",
+    "subset_retrained"
+  ],
+  "mask_training": "each fitting/stopping respondent appears in all four predefined scenarios with equal weight; natural nonresponse stays missing; original-variable availability indicators appended",
+  "primary": {
+    "family": "hist_gradient_boosting",
+    "scenario": "demographics_history",
+    "contrast": "mask_trained minus fixed_scenario_calibration in Brier loss (negative favors mask training)",
+    "cohort": "2025 common reporting jurisdictions with 2024",
+    "seed_combination": "average probabilities of three independently fitted seeds for each condition",
+    "estimand": "survey-weighted mean paired Brier-loss difference",
+    "interval": "95% stratified-PSU Taylor linearization of ratio mean, with-replacement approximation; no finite-population correction; t critical using PSU-minus-strata df; no interval if singleton strata"
+  },
+  "secondary": [
+    "unweighted Brier, AUROC, average precision, NLL and ECE",
+    "survey-weighted point metrics",
+    "all 2025 jurisdictions and common-jurisdiction 2024/2025 comparisons",
+    "sex, age (18-44/45-64/65+) and income (<35k/35k+) domains where n>=200 and positive>=20",
+    "seed ranges; remaining scenarios, families and contrasts exploratory; no multiplicity-adjusted superiority claim"
+  ],
+  "exclusions_from_predictors": [
+    "target",
+    "survey weights",
+    "strata",
+    "PSU",
+    "state"
+  ],
+  "natural_missingness": "retain respondents with missing predictors; numeric median imputation and indicators; categorical missing category; fit preprocessing only on fitting data",
+  "prohibitions": [
+    "no 2025 hyperparameter/calibration/threshold tuning",
+    "no future-stroke, clinical-utility or causal claims",
+    "no claim that standard mask training, calibration or subset refitting is a novel algorithm",
+    "no selection of manuscript headline from secondary comparisons"
+  ],
+  "prior_exposure": "2024 test and 2023 transport outcomes and multiple development pilots already inspected; 2025 official schema/codebook inspected, no predictive evaluation before this protocol",
+  "planned_output": "IEEE-format empirical research draft; contribution and acceptance remain subject to critical review"
+}

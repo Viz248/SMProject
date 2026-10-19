@@ -1,0 +1,1913 @@
+{
+  "status": "EXPLORATORY_DEVELOPMENT_TRUST_EXPERIMENT",
+  "dataset_sha256": "7d53cf088f858e02bcc029a51cf0408cc68f40a0ebeb02a3c0f73058aab36b1c",
+  "source_run": "results/cdc2024-development",
+  "final_test_accessed": false,
+  "records": 2048,
+  "model_specification": {
+    "name": "mlp_regularized",
+    "family": "mlp",
+    "widths": [
+      128,
+      64,
+      32
+    ],
+    "alpha": 0.1
+  },
+  "epochs": 20,
+  "member_runs": [
+    {
+      "member": 0,
+      "seed": 42,
+      "resampling": "none",
+      "stopping_history": [
+        {
+          "epoch": 1,
+          "stopping_ap": 0.17136130051033344,
+          "stopping_log_loss": 0.15651945964928016
+        },
+        {
+          "epoch": 2,
+          "stopping_ap": 0.17316040311794983,
+          "stopping_log_loss": 0.1560048023392809
+        },
+        {
+          "epoch": 3,
+          "stopping_ap": 0.17530472725853016,
+          "stopping_log_loss": 0.15575422463269184
+        },
+        {
+          "epoch": 4,
+          "stopping_ap": 0.1764134525863498,
+          "stopping_log_loss": 0.1556954100350688
+        },
+        {
+          "epoch": 5,
+          "stopping_ap": 0.17576366650877354,
+          "stopping_log_loss": 0.1556427710878911
+        },
+        {
+          "epoch": 6,
+          "stopping_ap": 0.1762304286768501,
+          "stopping_log_loss": 0.15563056799140823
+        },
+        {
+          "epoch": 7,
+          "stopping_ap": 0.17577086128751818,
+          "stopping_log_loss": 0.1556525454294527
+        },
+        {
+          "epoch": 8,
+          "stopping_ap": 0.1755285833953646,
+          "stopping_log_loss": 0.15561300651200832
+        },
+        {
+          "epoch": 9,
+          "stopping_ap": 0.17569598764360858,
+          "stopping_log_loss": 0.15561151537473863
+        },
+        {
+          "epoch": 10,
+          "stopping_ap": 0.17579663351086933,
+          "stopping_log_loss": 0.15564407173378456
+        },
+        {
+          "epoch": 11,
+          "stopping_ap": 0.17618454260857314,
+          "stopping_log_loss": 0.1556755025550158
+        },
+        {
+          "epoch": 12,
+          "stopping_ap": 0.1759286829309589,
+          "stopping_log_loss": 0.15565502020732228
+        }
+      ],
+      "development": {
+        "n": 2048,
+        "prevalence": 0.0341796875,
+        "threshold": 0.5,
+        "auroc": 0.8302181135345948,
+        "average_precision": 0.19040975542253716,
+        "brier": 0.03084368452819483,
+        "ece": 0.010122550235324008,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 1808,
+            "probability": 0.025579915374690378,
+            "observed": 0.02267699115044248
+          },
+          {
+            "bin": 1,
+            "count": 174,
+            "probability": 0.14153316118000978,
+            "observed": 0.07471264367816093
+          },
+          {
+            "bin": 2,
+            "count": 52,
+            "probability": 0.24363466561056432,
+            "observed": 0.21153846153846154
+          },
+          {
+            "bin": 3,
+            "count": 12,
+            "probability": 0.33233118103024906,
+            "observed": 0.25
+          },
+          {
+            "bin": 4,
+            "count": 2,
+            "probability": 0.4006254724653342,
+            "observed": 1.0
+          }
+        ],
+        "precision": 0.0,
+        "sensitivity": 0.0,
+        "specificity": 1.0,
+        "f1": 0.0,
+        "confusion_matrix": [
+          [
+            1978,
+            0
+          ],
+          [
+            70,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "member": 1,
+      "seed": 43,
+      "resampling": "none",
+      "stopping_history": [
+        {
+          "epoch": 1,
+          "stopping_ap": 0.1719445230827687,
+          "stopping_log_loss": 0.15635618561430276
+        },
+        {
+          "epoch": 2,
+          "stopping_ap": 0.17474799860734067,
+          "stopping_log_loss": 0.15609629160372449
+        },
+        {
+          "epoch": 3,
+          "stopping_ap": 0.1749794926613327,
+          "stopping_log_loss": 0.15603402137045255
+        },
+        {
+          "epoch": 4,
+          "stopping_ap": 0.175777600673313,
+          "stopping_log_loss": 0.15595943506907373
+        },
+        {
+          "epoch": 5,
+          "stopping_ap": 0.17578639383942607,
+          "stopping_log_loss": 0.1559021858880681
+        },
+        {
+          "epoch": 6,
+          "stopping_ap": 0.17623255375090902,
+          "stopping_log_loss": 0.15580828332344301
+        },
+        {
+          "epoch": 7,
+          "stopping_ap": 0.17672601428346896,
+          "stopping_log_loss": 0.15575261659148248
+        },
+        {
+          "epoch": 8,
+          "stopping_ap": 0.17703282290513073,
+          "stopping_log_loss": 0.1557317688000424
+        },
+        {
+          "epoch": 9,
+          "stopping_ap": 0.17696741880046263,
+          "stopping_log_loss": 0.15574349043631705
+        },
+        {
+          "epoch": 10,
+          "stopping_ap": 0.17674361705060107,
+          "stopping_log_loss": 0.15574550963419923
+        },
+        {
+          "epoch": 11,
+          "stopping_ap": 0.17684455862059714,
+          "stopping_log_loss": 0.1557537663653608
+        },
+        {
+          "epoch": 12,
+          "stopping_ap": 0.17685744325127126,
+          "stopping_log_loss": 0.15573483223656026
+        },
+        {
+          "epoch": 13,
+          "stopping_ap": 0.17701620782328956,
+          "stopping_log_loss": 0.15572684809061269
+        },
+        {
+          "epoch": 14,
+          "stopping_ap": 0.17710474339229698,
+          "stopping_log_loss": 0.15572117371221653
+        },
+        {
+          "epoch": 15,
+          "stopping_ap": 0.17748561325483805,
+          "stopping_log_loss": 0.15571493784405344
+        },
+        {
+          "epoch": 16,
+          "stopping_ap": 0.1774937905094708,
+          "stopping_log_loss": 0.15571484689798032
+        },
+        {
+          "epoch": 17,
+          "stopping_ap": 0.17748110934794106,
+          "stopping_log_loss": 0.15570214148067238
+        },
+        {
+          "epoch": 18,
+          "stopping_ap": 0.1774008523100604,
+          "stopping_log_loss": 0.15570850968029926
+        },
+        {
+          "epoch": 19,
+          "stopping_ap": 0.17792349208051841,
+          "stopping_log_loss": 0.1556617093910327
+        },
+        {
+          "epoch": 20,
+          "stopping_ap": 0.1777685350530508,
+          "stopping_log_loss": 0.15564741124014644
+        }
+      ],
+      "development": {
+        "n": 2048,
+        "prevalence": 0.0341796875,
+        "threshold": 0.5,
+        "auroc": 0.8349487216524628,
+        "average_precision": 0.20422030732639126,
+        "brier": 0.03075206544334016,
+        "ece": 0.010063767764618465,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 1794,
+            "probability": 0.025188630538320652,
+            "observed": 0.022853957636566332
+          },
+          {
+            "bin": 1,
+            "count": 188,
+            "probability": 0.13651680019120974,
+            "observed": 0.06914893617021277
+          },
+          {
+            "bin": 2,
+            "count": 48,
+            "probability": 0.24316347698267113,
+            "observed": 0.1875
+          },
+          {
+            "bin": 3,
+            "count": 18,
+            "probability": 0.32860067416245975,
+            "observed": 0.3888888888888889
+          }
+        ],
+        "precision": 0.0,
+        "sensitivity": 0.0,
+        "specificity": 1.0,
+        "f1": 0.0,
+        "confusion_matrix": [
+          [
+            1978,
+            0
+          ],
+          [
+            70,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "member": 2,
+      "seed": 44,
+      "resampling": "none",
+      "stopping_history": [
+        {
+          "epoch": 1,
+          "stopping_ap": 0.1684065324925938,
+          "stopping_log_loss": 0.1565085504029847
+        },
+        {
+          "epoch": 2,
+          "stopping_ap": 0.17191168241699722,
+          "stopping_log_loss": 0.15596961561399142
+        },
+        {
+          "epoch": 3,
+          "stopping_ap": 0.17453654241926225,
+          "stopping_log_loss": 0.15584621151926134
+        },
+        {
+          "epoch": 4,
+          "stopping_ap": 0.17515573078850696,
+          "stopping_log_loss": 0.15580407337438865
+        },
+        {
+          "epoch": 5,
+          "stopping_ap": 0.1762850352438829,
+          "stopping_log_loss": 0.1557299892528107
+        },
+        {
+          "epoch": 6,
+          "stopping_ap": 0.17673733443423018,
+          "stopping_log_loss": 0.1557101953073279
+        },
+        {
+          "epoch": 7,
+          "stopping_ap": 0.17687866326370974,
+          "stopping_log_loss": 0.15571088746895634
+        },
+        {
+          "epoch": 8,
+          "stopping_ap": 0.17688223734644937,
+          "stopping_log_loss": 0.15564933148846635
+        },
+        {
+          "epoch": 9,
+          "stopping_ap": 0.17694004862110213,
+          "stopping_log_loss": 0.15563110490586277
+        },
+        {
+          "epoch": 10,
+          "stopping_ap": 0.17671297912288586,
+          "stopping_log_loss": 0.1556484117017172
+        },
+        {
+          "epoch": 11,
+          "stopping_ap": 0.1763795321715605,
+          "stopping_log_loss": 0.15561140250958175
+        },
+        {
+          "epoch": 12,
+          "stopping_ap": 0.17600546812229884,
+          "stopping_log_loss": 0.15558760934774835
+        },
+        {
+          "epoch": 13,
+          "stopping_ap": 0.17590888206525568,
+          "stopping_log_loss": 0.15557331109133787
+        },
+        {
+          "epoch": 14,
+          "stopping_ap": 0.1761807409911785,
+          "stopping_log_loss": 0.1556051855166805
+        },
+        {
+          "epoch": 15,
+          "stopping_ap": 0.17654305315002475,
+          "stopping_log_loss": 0.1556035093846725
+        },
+        {
+          "epoch": 16,
+          "stopping_ap": 0.17609500004170242,
+          "stopping_log_loss": 0.15562305343643076
+        },
+        {
+          "epoch": 17,
+          "stopping_ap": 0.1766060608903538,
+          "stopping_log_loss": 0.15566504638551681
+        }
+      ],
+      "development": {
+        "n": 2048,
+        "prevalence": 0.0341796875,
+        "threshold": 0.5,
+        "auroc": 0.8348259425104724,
+        "average_precision": 0.19142281672883799,
+        "brier": 0.03071112889144395,
+        "ece": 0.010105709951583774,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 1811,
+            "probability": 0.025528148361382046,
+            "observed": 0.02263942573163998
+          },
+          {
+            "bin": 1,
+            "count": 161,
+            "probability": 0.13755939416124563,
+            "observed": 0.06832298136645963
+          },
+          {
+            "bin": 2,
+            "count": 52,
+            "probability": 0.2359323980919468,
+            "observed": 0.17307692307692307
+          },
+          {
+            "bin": 3,
+            "count": 24,
+            "probability": 0.33127207759837896,
+            "observed": 0.375
+          }
+        ],
+        "precision": 0.0,
+        "sensitivity": 0.0,
+        "specificity": 1.0,
+        "f1": 0.0,
+        "confusion_matrix": [
+          [
+            1978,
+            0
+          ],
+          [
+            70,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "member": 3,
+      "seed": 45,
+      "resampling": "training respondent bootstrap",
+      "stopping_history": [
+        {
+          "epoch": 1,
+          "stopping_ap": 0.16764813630915312,
+          "stopping_log_loss": 0.15855996765839536
+        },
+        {
+          "epoch": 2,
+          "stopping_ap": 0.1709462392317186,
+          "stopping_log_loss": 0.1570598119404286
+        },
+        {
+          "epoch": 3,
+          "stopping_ap": 0.17126031826910976,
+          "stopping_log_loss": 0.15728786319770627
+        },
+        {
+          "epoch": 4,
+          "stopping_ap": 0.17121177376943572,
+          "stopping_log_loss": 0.15748555185118465
+        },
+        {
+          "epoch": 5,
+          "stopping_ap": 0.17147728695875392,
+          "stopping_log_loss": 0.15763733755895884
+        },
+        {
+          "epoch": 6,
+          "stopping_ap": 0.17124456761444234,
+          "stopping_log_loss": 0.15772768230614892
+        },
+        {
+          "epoch": 7,
+          "stopping_ap": 0.17097425699172342,
+          "stopping_log_loss": 0.15786254794062785
+        },
+        {
+          "epoch": 8,
+          "stopping_ap": 0.1709749541198987,
+          "stopping_log_loss": 0.15792269780500562
+        },
+        {
+          "epoch": 9,
+          "stopping_ap": 0.17050662098564254,
+          "stopping_log_loss": 0.15818801601890456
+        },
+        {
+          "epoch": 10,
+          "stopping_ap": 0.17037423420047973,
+          "stopping_log_loss": 0.15820468318973904
+        },
+        {
+          "epoch": 11,
+          "stopping_ap": 0.16993385958601373,
+          "stopping_log_loss": 0.1582179099371363
+        },
+        {
+          "epoch": 12,
+          "stopping_ap": 0.1695407539266177,
+          "stopping_log_loss": 0.15831272991614528
+        },
+        {
+          "epoch": 13,
+          "stopping_ap": 0.1691039220171521,
+          "stopping_log_loss": 0.15838243123997656
+        }
+      ],
+      "development": {
+        "n": 2048,
+        "prevalence": 0.0341796875,
+        "threshold": 0.5,
+        "auroc": 0.8302253358370648,
+        "average_precision": 0.17995285002963327,
+        "brier": 0.030927801081893393,
+        "ece": 0.009454574923836227,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 1824,
+            "probability": 0.02635861126357516,
+            "observed": 0.023574561403508772
+          },
+          {
+            "bin": 1,
+            "count": 152,
+            "probability": 0.13783403802289146,
+            "observed": 0.05263157894736842
+          },
+          {
+            "bin": 2,
+            "count": 49,
+            "probability": 0.2370921462676112,
+            "observed": 0.24489795918367346
+          },
+          {
+            "bin": 3,
+            "count": 20,
+            "probability": 0.3360375783330344,
+            "observed": 0.3
+          },
+          {
+            "bin": 4,
+            "count": 3,
+            "probability": 0.4102841067427539,
+            "observed": 0.3333333333333333
+          }
+        ],
+        "precision": 0.0,
+        "sensitivity": 0.0,
+        "specificity": 1.0,
+        "f1": 0.0,
+        "confusion_matrix": [
+          [
+            1978,
+            0
+          ],
+          [
+            70,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "member": 4,
+      "seed": 46,
+      "resampling": "training respondent bootstrap",
+      "stopping_history": [
+        {
+          "epoch": 1,
+          "stopping_ap": 0.17400457621445967,
+          "stopping_log_loss": 0.1562878180746472
+        },
+        {
+          "epoch": 2,
+          "stopping_ap": 0.1736286176589878,
+          "stopping_log_loss": 0.1567662842417416
+        },
+        {
+          "epoch": 3,
+          "stopping_ap": 0.1736452520680191,
+          "stopping_log_loss": 0.1568218111371794
+        },
+        {
+          "epoch": 4,
+          "stopping_ap": 0.17401190701144256,
+          "stopping_log_loss": 0.15704017913874013
+        },
+        {
+          "epoch": 5,
+          "stopping_ap": 0.17394534563737987,
+          "stopping_log_loss": 0.15716634365829893
+        },
+        {
+          "epoch": 6,
+          "stopping_ap": 0.1739960300492118,
+          "stopping_log_loss": 0.15721954974853367
+        },
+        {
+          "epoch": 7,
+          "stopping_ap": 0.17416462266140278,
+          "stopping_log_loss": 0.15730196857094667
+        },
+        {
+          "epoch": 8,
+          "stopping_ap": 0.1740521650571921,
+          "stopping_log_loss": 0.15752122938566795
+        },
+        {
+          "epoch": 9,
+          "stopping_ap": 0.17355250249424123,
+          "stopping_log_loss": 0.15774671624669218
+        },
+        {
+          "epoch": 10,
+          "stopping_ap": 0.17361863423386073,
+          "stopping_log_loss": 0.15783226583068133
+        },
+        {
+          "epoch": 11,
+          "stopping_ap": 0.17327248195567796,
+          "stopping_log_loss": 0.15798551920514162
+        },
+        {
+          "epoch": 12,
+          "stopping_ap": 0.17267352326139146,
+          "stopping_log_loss": 0.1581037150142879
+        },
+        {
+          "epoch": 13,
+          "stopping_ap": 0.17168540542683888,
+          "stopping_log_loss": 0.1582146485215919
+        },
+        {
+          "epoch": 14,
+          "stopping_ap": 0.17101502963258647,
+          "stopping_log_loss": 0.15844140098664666
+        },
+        {
+          "epoch": 15,
+          "stopping_ap": 0.16996791853283155,
+          "stopping_log_loss": 0.15855636787881452
+        }
+      ],
+      "development": {
+        "n": 2048,
+        "prevalence": 0.0341796875,
+        "threshold": 0.5,
+        "auroc": 0.8385670951899467,
+        "average_precision": 0.21840646501875954,
+        "brier": 0.03049815782235868,
+        "ece": 0.012594108329390185,
+        "calibration": [
+          {
+            "bin": 0,
+            "count": 1787,
+            "probability": 0.025558109319837694,
+            "observed": 0.021264689423614997
+          },
+          {
+            "bin": 1,
+            "count": 197,
+            "probability": 0.13465449997682652,
+            "observed": 0.07106598984771574
+          },
+          {
+            "bin": 2,
+            "count": 47,
+            "probability": 0.2403925305632136,
+            "observed": 0.19148936170212766
+          },
+          {
+            "bin": 3,
+            "count": 17,
+            "probability": 0.33558781928616016,
+            "observed": 0.5294117647058824
+          }
+        ],
+        "precision": 0.0,
+        "sensitivity": 0.0,
+        "specificity": 1.0,
+        "f1": 0.0,
+        "confusion_matrix": [
+          [
+            1978,
+            0
+          ],
+          [
+            70,
+            0
+          ]
+        ]
+      }
+    }
+  ],
+  "notes": [
+    "Unweighted, single-year internal exploratory study",
+    "Selection partition was reused in prior model development; not independent confirmation",
+    "DSI/CAS/RAI are proposed summaries of existing concepts, not established novelty",
+    "No causal uncertainty attribution or clinical guidance"
+  ],
+  "cas": {
+    "development_ensemble_metrics": {
+      "n": 2048,
+      "prevalence": 0.0341796875,
+      "threshold": 0.14,
+      "auroc": 0.8349559439549328,
+      "average_precision": 0.20228402198047973,
+      "brier": 0.030688668199745417,
+      "ece": 0.010484395620696254,
+      "calibration": [
+        {
+          "bin": 0,
+          "count": 1813,
+          "probability": 0.02613785596423586,
+          "observed": 0.023717595146166576
+        },
+        {
+          "bin": 1,
+          "count": 171,
+          "probability": 0.1404890885368246,
+          "observed": 0.05263157894736842
+        },
+        {
+          "bin": 2,
+          "count": 44,
+          "probability": 0.24185572670019165,
+          "observed": 0.22727272727272727
+        },
+        {
+          "bin": 3,
+          "count": 20,
+          "probability": 0.32905883732895613,
+          "observed": 0.4
+        }
+      ],
+      "precision": 0.15942028985507245,
+      "sensitivity": 0.3142857142857143,
+      "specificity": 0.9413549039433772,
+      "f1": 0.21153846153846154,
+      "confusion_matrix": [
+        [
+          1862,
+          116
+        ],
+        [
+          48,
+          22
+        ]
+      ]
+    },
+    "mean_summaries": {
+      "predictive_entropy": 0.21521304821172507,
+      "mean_member_entropy": 0.21468179442600885,
+      "ensemble_disagreement": 0.000531253785716221,
+      "entropy_confidence": 0.784786951788275,
+      "mean_probability": 0.04327851353727743
+    },
+    "entropy_absolute_error_spearman": 0.9886095622167173,
+    "disagreement_absolute_error_spearman": 0.7962882229047209,
+    "entropy_error_detection_auroc": 0.9364869763347315,
+    "disagreement_error_detection_auroc": 0.8302327688881985,
+    "identity_max_residual": 0.0,
+    "interpretation": "Entropy summaries of calibrated member probabilities; not unique epistemic/aleatoric or causal components"
+  },
+  "dsi": {
+    "seed_retraining": {
+      "dsi": {
+        "mean": 0.8695527779963825,
+        "low": 0.8635185842627094,
+        "high": 0.8753650704433068,
+        "n": 128
+      },
+      "rank_spearman": {
+        "mean": 0.8578665260674159,
+        "low": 0.8449766518893002,
+        "high": 0.8709379028500381,
+        "n": 128
+      },
+      "top_k_jaccard": {
+        "mean": 0.7344990079365079,
+        "low": 0.7021228608630952,
+        "high": 0.7598780071924602,
+        "n": 128
+      }
+    },
+    "bootstrap_retraining": {
+      "dsi": {
+        "mean": 0.8402269083997657,
+        "low": 0.8319256246763953,
+        "high": 0.8478582646032085,
+        "n": 128
+      },
+      "rank_spearman": {
+        "mean": 0.8309656954150134,
+        "low": 0.8159495676273557,
+        "high": 0.8440495034517403,
+        "n": 128
+      },
+      "top_k_jaccard": {
+        "mean": 0.7101469494047619,
+        "low": 0.6801362537202381,
+        "high": 0.733525158110119,
+        "n": 128
+      }
+    },
+    "attribution_sampling_repeat": {
+      "dsi": {
+        "mean": 0.7364530328120767,
+        "low": 0.721186931830567,
+        "high": 0.7509375415310979,
+        "n": 128
+      },
+      "rank_spearman": {
+        "mean": 0.5653698786869714,
+        "low": 0.5271185658983922,
+        "high": 0.6033506833219022,
+        "n": 128
+      },
+      "top_k_jaccard": {
+        "mean": 0.5607948908730159,
+        "low": 0.5261610243055556,
+        "high": 0.5963293650793651,
+        "n": 128
+      }
+    },
+    "small_numeric_perturbation": {
+      "dsi": {
+        "mean": 0.9857070256269325,
+        "low": 0.9838528906105758,
+        "high": 0.9874116085897429,
+        "n": 128
+      },
+      "rank_spearman": {
+        "mean": 0.9910578405407541,
+        "low": 0.9885156169473681,
+        "high": 0.9931421915968773,
+        "n": 128
+      },
+      "top_k_jaccard": {
+        "mean": 0.96875,
+        "low": 0.9505208333333333,
+        "high": 0.984375,
+        "n": 128
+      }
+    },
+    "seed_dsi_absolute_error_spearman": -0.17238715436733199,
+    "sex_group_descriptive": {
+      "1": {
+        "mean": 0.8710214258120472,
+        "low": 0.8628896480915963,
+        "high": 0.8774443452858861,
+        "n": 65
+      },
+      "2": {
+        "mean": 0.8680375064405379,
+        "low": 0.859421588765511,
+        "high": 0.8760650778578914,
+        "n": 63
+      }
+    },
+    "maximum_local_accuracy_residual": 5.551115123125783e-17,
+    "permutations": 16,
+    "explanation_records": 128,
+    "background_records": 2048,
+    "interpretation": "Original 15-variable probability-scale interventional permutation Shapley; finite MC approximation",
+    "limitation": "Mixed coalitions may violate correlations; 128/256-record CIs are IID exploratory, not survey-aware"
+  },
+  "rai": {
+    "mode": "Fixed predictor with training-fitted imputation; NOT subset retraining",
+    "full": {
+      "n": 2048,
+      "prevalence": 0.0341796875,
+      "threshold": 0.14,
+      "auroc": 0.8349559439549328,
+      "average_precision": 0.20228402198047973,
+      "brier": 0.030688668199745417,
+      "ece": 0.010484395620696254,
+      "calibration": [
+        {
+          "bin": 0,
+          "count": 1813,
+          "probability": 0.02613785596423586,
+          "observed": 0.023717595146166576
+        },
+        {
+          "bin": 1,
+          "count": 171,
+          "probability": 0.1404890885368246,
+          "observed": 0.05263157894736842
+        },
+        {
+          "bin": 2,
+          "count": 44,
+          "probability": 0.24185572670019165,
+          "observed": 0.22727272727272727
+        },
+        {
+          "bin": 3,
+          "count": 20,
+          "probability": 0.32905883732895613,
+          "observed": 0.4
+        }
+      ],
+      "precision": 0.15942028985507245,
+      "sensitivity": 0.3142857142857143,
+      "specificity": 0.9413549039433772,
+      "f1": 0.21153846153846154,
+      "confusion_matrix": [
+        [
+          1862,
+          116
+        ],
+        [
+          48,
+          22
+        ]
+      ]
+    },
+    "null_brier": 0.033134864745927736,
+    "scenarios": [
+      {
+        "scenario": "demographics_only",
+        "metrics": {
+          "n": 2048,
+          "prevalence": 0.0341796875,
+          "threshold": 0.14,
+          "auroc": 0.7361909576773076,
+          "average_precision": 0.07901297287806364,
+          "brier": 0.03224980486521202,
+          "ece": 0.003382859281211646,
+          "calibration": [
+            {
+              "bin": 0,
+              "count": 2048,
+              "probability": 0.037562546781211646,
+              "observed": 0.0341796875
+            }
+          ],
+          "precision": 0.0,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "f1": 0.0,
+          "confusion_matrix": [
+            [
+              1978,
+              0
+            ],
+            [
+              70,
+              0
+            ]
+          ]
+        },
+        "mean_entropy_change": 0.006519680390916365,
+        "masking_fraction": 0.86796875
+      },
+      {
+        "scenario": "demographics_history",
+        "metrics": {
+          "n": 2048,
+          "prevalence": 0.0341796875,
+          "threshold": 0.14,
+          "auroc": 0.8151668351870577,
+          "average_precision": 0.15850497587279458,
+          "brier": 0.03176856204638878,
+          "ece": 0.02629594303785475,
+          "calibration": [
+            {
+              "bin": 0,
+              "count": 1784,
+              "probability": 0.04147601333951943,
+              "observed": 0.020739910313901346
+            },
+            {
+              "bin": 1,
+              "count": 162,
+              "probability": 0.13384270843601118,
+              "observed": 0.07407407407407407
+            },
+            {
+              "bin": 2,
+              "count": 72,
+              "probability": 0.2575876036702943,
+              "observed": 0.20833333333333334
+            },
+            {
+              "bin": 3,
+              "count": 30,
+              "probability": 0.32106857709762854,
+              "observed": 0.2
+            }
+          ],
+          "precision": 0.14838709677419354,
+          "sensitivity": 0.32857142857142857,
+          "specificity": 0.9332659251769464,
+          "f1": 0.20444444444444446,
+          "confusion_matrix": [
+            [
+              1846,
+              132
+            ],
+            [
+              47,
+              23
+            ]
+          ]
+        },
+        "mean_entropy_change": 0.07748553125426243,
+        "masking_fraction": 0.5365885416666667
+      },
+      {
+        "scenario": "without_health_state",
+        "metrics": {
+          "n": 2048,
+          "prevalence": 0.0341796875,
+          "threshold": 0.14,
+          "auroc": 0.8244041600462227,
+          "average_precision": 0.1676097287880099,
+          "brier": 0.03162673389918355,
+          "ece": 0.028675362214674278,
+          "calibration": [
+            {
+              "bin": 0,
+              "count": 1707,
+              "probability": 0.0397567941373524,
+              "observed": 0.019332161687170474
+            },
+            {
+              "bin": 1,
+              "count": 239,
+              "probability": 0.13089859635396933,
+              "observed": 0.058577405857740586
+            },
+            {
+              "bin": 2,
+              "count": 83,
+              "probability": 0.26072375126334185,
+              "observed": 0.1927710843373494
+            },
+            {
+              "bin": 3,
+              "count": 19,
+              "probability": 0.31908114001387716,
+              "observed": 0.3684210526315789
+            }
+          ],
+          "precision": 0.14835164835164835,
+          "sensitivity": 0.38571428571428573,
+          "specificity": 0.9216380182002022,
+          "f1": 0.21428571428571427,
+          "confusion_matrix": [
+            [
+              1823,
+              155
+            ],
+            [
+              43,
+              27
+            ]
+          ]
+        },
+        "mean_entropy_change": 0.08195292974152961,
+        "masking_fraction": 0.22757161458333333
+      },
+      {
+        "scenario": "mcar_0.1",
+        "metrics": {
+          "n": 2048,
+          "prevalence": 0.0341796875,
+          "threshold": 0.14,
+          "auroc": 0.8151018344648274,
+          "average_precision": 0.1945818385996305,
+          "brier": 0.030857951763364932,
+          "ece": 0.010716593720099744,
+          "calibration": [
+            {
+              "bin": 0,
+              "count": 1832,
+              "probability": 0.027606498182756758,
+              "observed": 0.02292576419213974
+            },
+            {
+              "bin": 1,
+              "count": 153,
+              "probability": 0.13891938186367034,
+              "observed": 0.08496732026143791
+            },
+            {
+              "bin": 2,
+              "count": 44,
+              "probability": 0.23563476725573354,
+              "observed": 0.1590909090909091
+            },
+            {
+              "bin": 3,
+              "count": 19,
+              "probability": 0.3289534692863125,
+              "observed": 0.42105263157894735
+            }
+          ],
+          "precision": 0.15671641791044777,
+          "sensitivity": 0.3,
+          "specificity": 0.9428715874620829,
+          "f1": 0.20588235294117646,
+          "confusion_matrix": [
+            [
+              1865,
+              113
+            ],
+            [
+              49,
+              21
+            ]
+          ]
+        },
+        "mean_entropy_change": 0.0033925901893628084,
+        "masking_fraction": 0.12613932291666666
+      },
+      {
+        "scenario": "mcar_0.3",
+        "metrics": {
+          "n": 2048,
+          "prevalence": 0.0341796875,
+          "threshold": 0.14,
+          "auroc": 0.8140979344214935,
+          "average_precision": 0.16472793239450081,
+          "brier": 0.030701316726073104,
+          "ece": 0.01128273904800048,
+          "calibration": [
+            {
+              "bin": 0,
+              "count": 1862,
+              "probability": 0.03069732710448884,
+              "observed": 0.02201933404940924
+            },
+            {
+              "bin": 1,
+              "count": 133,
+              "probability": 0.13529867871979756,
+              "observed": 0.09774436090225563
+            },
+            {
+              "bin": 2,
+              "count": 41,
+              "probability": 0.24737576167123404,
+              "observed": 0.2926829268292683
+            },
+            {
+              "bin": 3,
+              "count": 12,
+              "probability": 0.3253076282888097,
+              "observed": 0.3333333333333333
+            }
+          ],
+          "precision": 0.20388349514563106,
+          "sensitivity": 0.3,
+          "specificity": 0.9585439838220424,
+          "f1": 0.24277456647398843,
+          "confusion_matrix": [
+            [
+              1896,
+              82
+            ],
+            [
+              49,
+              21
+            ]
+          ]
+        },
+        "mean_entropy_change": 0.012244578297358762,
+        "masking_fraction": 0.3251953125
+      },
+      {
+        "scenario": "mcar_0.5",
+        "metrics": {
+          "n": 2048,
+          "prevalence": 0.0341796875,
+          "threshold": 0.14,
+          "auroc": 0.7584356492849921,
+          "average_precision": 0.1308106450709289,
+          "brier": 0.03163613101797841,
+          "ece": 0.008177793755065183,
+          "calibration": [
+            {
+              "bin": 0,
+              "count": 1917,
+              "probability": 0.034261960996636774,
+              "observed": 0.026604068857589983
+            },
+            {
+              "bin": 1,
+              "count": 101,
+              "probability": 0.13333501996395983,
+              "observed": 0.12871287128712872
+            },
+            {
+              "bin": 2,
+              "count": 27,
+              "probability": 0.24391699174006806,
+              "observed": 0.18518518518518517
+            },
+            {
+              "bin": 3,
+              "count": 3,
+              "probability": 0.33844886215967235,
+              "observed": 0.3333333333333333
+            }
+          ],
+          "precision": 0.19402985074626866,
+          "sensitivity": 0.18571428571428572,
+          "specificity": 0.9726996966632963,
+          "f1": 0.1897810218978102,
+          "confusion_matrix": [
+            [
+              1924,
+              54
+            ],
+            [
+              57,
+              13
+            ]
+          ]
+        },
+        "mean_entropy_change": 0.016938114490023574,
+        "masking_fraction": 0.5167643229166666
+      },
+      {
+        "scenario": "age_associated_bmi_missing",
+        "metrics": {
+          "n": 2048,
+          "prevalence": 0.0341796875,
+          "threshold": 0.14,
+          "auroc": 0.8301097789975445,
+          "average_precision": 0.18530106166496899,
+          "brier": 0.030818609382863387,
+          "ece": 0.00831107667938996,
+          "calibration": [
+            {
+              "bin": 0,
+              "count": 1843,
+              "probability": 0.025837944685107972,
+              "observed": 0.02387411828540423
+            },
+            {
+              "bin": 1,
+              "count": 148,
+              "probability": 0.14245517589431833,
+              "observed": 0.07432432432432433
+            },
+            {
+              "bin": 2,
+              "count": 40,
+              "probability": 0.24759269348342788,
+              "observed": 0.2
+            },
+            {
+              "bin": 3,
+              "count": 17,
+              "probability": 0.3285482815858579,
+              "observed": 0.4117647058823529
+            }
+          ],
+          "precision": 0.16923076923076924,
+          "sensitivity": 0.3142857142857143,
+          "specificity": 0.9453993933265925,
+          "f1": 0.22,
+          "confusion_matrix": [
+            [
+              1870,
+              108
+            ],
+            [
+              48,
+              22
+            ]
+          ]
+        },
+        "mean_entropy_change": -0.0077499763756311395,
+        "masking_fraction": 0.05048828125
+      }
+    ],
+    "summary": {
+      "rai": 0.7174370081704764,
+      "retention": [
+        0.36181061660682723,
+        0.5585416681547066,
+        0.6165207162514657,
+        0.9307972354536642,
+        0.9948293090563688,
+        0.6126791938645901,
+        0.9468803178057118
+      ],
+      "unbounded_relative_excess": [
+        0.6381893833931728,
+        0.44145833184529343,
+        0.3834792837485343,
+        0.0692027645463358,
+        0.00517069094363119,
+        0.3873208061354099,
+        0.05311968219428818
+      ],
+      "normalized_weights": [
+        0.14285714285714288,
+        0.14285714285714288,
+        0.14285714285714288,
+        0.14285714285714288,
+        0.14285714285714288,
+        0.14285714285714288,
+        0.14285714285714288
+      ]
+    },
+    "interpretation": "Equal weights across seven declared scenarios; saturation hides improvement, raw losses retained",
+    "limitation": "Simulated MCAR/age-associated masking is not an estimate of real deployment missingness"
+  },
+  "acquisition": {
+    "records": 256,
+    "steps": 3,
+    "initial_known": [
+      "SEXVAR",
+      "_AGEG5YR"
+    ],
+    "donor_pool": 8192,
+    "neighbors": 64,
+    "policies": {
+      "conditional_information": {
+        "steps": [
+          {
+            "n": 256,
+            "prevalence": 0.0234375,
+            "threshold": 0.14,
+            "auroc": 0.9213333333333333,
+            "average_precision": 0.1856837606837607,
+            "brier": 0.021836729048301667,
+            "ece": 0.031994832421252256,
+            "calibration": [
+              {
+                "bin": 0,
+                "count": 244,
+                "probability": 0.03863256635739637,
+                "observed": 0.012295081967213115
+              },
+              {
+                "bin": 1,
+                "count": 12,
+                "probability": 0.10297242428034468,
+                "observed": 0.25
+              }
+            ],
+            "precision": 0.0,
+            "sensitivity": 0.0,
+            "specificity": 1.0,
+            "f1": 0.0,
+            "confusion_matrix": [
+              [
+                250,
+                0
+              ],
+              [
+                6,
+                0
+              ]
+            ]
+          },
+          {
+            "n": 256,
+            "prevalence": 0.0234375,
+            "threshold": 0.14,
+            "auroc": 0.8433333333333334,
+            "average_precision": 0.14077946725462254,
+            "brier": 0.021992882956697164,
+            "ece": 0.018975035496240897,
+            "calibration": [
+              {
+                "bin": 0,
+                "count": 236,
+                "probability": 0.030122347848110374,
+                "observed": 0.01694915254237288
+              },
+              {
+                "bin": 1,
+                "count": 17,
+                "probability": 0.1384439126572563,
+                "observed": 0.058823529411764705
+              },
+              {
+                "bin": 2,
+                "count": 3,
+                "probability": 0.20160384009657886,
+                "observed": 0.3333333333333333
+              }
+            ],
+            "precision": 0.125,
+            "sensitivity": 0.16666666666666666,
+            "specificity": 0.972,
+            "f1": 0.14285714285714285,
+            "confusion_matrix": [
+              [
+                243,
+                7
+              ],
+              [
+                5,
+                1
+              ]
+            ]
+          },
+          {
+            "n": 256,
+            "prevalence": 0.0234375,
+            "threshold": 0.14,
+            "auroc": 0.8613333333333333,
+            "average_precision": 0.15058641559853028,
+            "brier": 0.021836915113710026,
+            "ece": 0.014286120943151443,
+            "calibration": [
+              {
+                "bin": 0,
+                "count": 231,
+                "probability": 0.025424765271733568,
+                "observed": 0.012987012987012988
+              },
+              {
+                "bin": 1,
+                "count": 22,
+                "probability": 0.1337734470487938,
+                "observed": 0.13636363636363635
+              },
+              {
+                "bin": 2,
+                "count": 3,
+                "probability": 0.24238067291659304,
+                "observed": 0.0
+              }
+            ],
+            "precision": 0.2222222222222222,
+            "sensitivity": 0.3333333333333333,
+            "specificity": 0.972,
+            "f1": 0.26666666666666666,
+            "confusion_matrix": [
+              [
+                243,
+                7
+              ],
+              [
+                4,
+                2
+              ]
+            ]
+          },
+          {
+            "n": 256,
+            "prevalence": 0.0234375,
+            "threshold": 0.14,
+            "auroc": 0.851,
+            "average_precision": 0.10972956038745513,
+            "brier": 0.022551078541981316,
+            "ece": 0.01612892359174625,
+            "calibration": [
+              {
+                "bin": 0,
+                "count": 233,
+                "probability": 0.025435466070746354,
+                "observed": 0.012875536480686695
+              },
+              {
+                "bin": 1,
+                "count": 19,
+                "probability": 0.1468810278247845,
+                "observed": 0.15789473684210525
+              },
+              {
+                "bin": 2,
+                "count": 4,
+                "probability": 0.2483200934185112,
+                "observed": 0.0
+              }
+            ],
+            "precision": 0.125,
+            "sensitivity": 0.3333333333333333,
+            "specificity": 0.944,
+            "f1": 0.18181818181818182,
+            "confusion_matrix": [
+              [
+                236,
+                14
+              ],
+              [
+                4,
+                2
+              ]
+            ]
+          }
+        ],
+        "realized_brier_reduction": {
+          "mean": -0.0007143494936796514,
+          "low": -0.0026826973080947528,
+          "high": 0.0015734876445048747,
+          "n": 256
+        },
+        "entropy_reduction": {
+          "mean": 0.033701190669054984,
+          "low": 0.015925073488252124,
+          "high": 0.050028693558089664,
+          "n": 256
+        },
+        "first_acquisition_counts": {
+          "INCOME3": 17,
+          "GENHLTH": 227,
+          "CVDINFR4": 12
+        }
+      },
+      "random": {
+        "steps": [
+          {
+            "n": 256,
+            "prevalence": 0.0234375,
+            "threshold": 0.14,
+            "auroc": 0.9213333333333333,
+            "average_precision": 0.1856837606837607,
+            "brier": 0.021836729048301667,
+            "ece": 0.031994832421252256,
+            "calibration": [
+              {
+                "bin": 0,
+                "count": 244,
+                "probability": 0.03863256635739637,
+                "observed": 0.012295081967213115
+              },
+              {
+                "bin": 1,
+                "count": 12,
+                "probability": 0.10297242428034468,
+                "observed": 0.25
+              }
+            ],
+            "precision": 0.0,
+            "sensitivity": 0.0,
+            "specificity": 1.0,
+            "f1": 0.0,
+            "confusion_matrix": [
+              [
+                250,
+                0
+              ],
+              [
+                6,
+                0
+              ]
+            ]
+          },
+          {
+            "n": 256,
+            "prevalence": 0.0234375,
+            "threshold": 0.14,
+            "auroc": 0.8963333333333333,
+            "average_precision": 0.12594154993997886,
+            "brier": 0.022018163314583686,
+            "ece": 0.015303760338428576,
+            "calibration": [
+              {
+                "bin": 0,
+                "count": 246,
+                "probability": 0.03528280105758424,
+                "observed": 0.024390243902439025
+              },
+              {
+                "bin": 1,
+                "count": 10,
+                "probability": 0.12381935864719928,
+                "observed": 0.0
+              }
+            ],
+            "precision": 0.0,
+            "sensitivity": 0.0,
+            "specificity": 0.996,
+            "f1": 0.0,
+            "confusion_matrix": [
+              [
+                249,
+                1
+              ],
+              [
+                6,
+                0
+              ]
+            ]
+          },
+          {
+            "n": 256,
+            "prevalence": 0.0234375,
+            "threshold": 0.14,
+            "auroc": 0.886,
+            "average_precision": 0.10268612201751737,
+            "brier": 0.022435028584385626,
+            "ece": 0.014630218017387278,
+            "calibration": [
+              {
+                "bin": 0,
+                "count": 243,
+                "probability": 0.03254465188529239,
+                "observed": 0.024691358024691357
+              },
+              {
+                "bin": 1,
+                "count": 12,
+                "probability": 0.13457202606665233,
+                "observed": 0.0
+              },
+              {
+                "bin": 2,
+                "count": 1,
+                "probability": 0.2221210915252643,
+                "observed": 0.0
+              }
+            ],
+            "precision": 0.0,
+            "sensitivity": 0.0,
+            "specificity": 0.972,
+            "f1": 0.0,
+            "confusion_matrix": [
+              [
+                243,
+                7
+              ],
+              [
+                6,
+                0
+              ]
+            ]
+          },
+          {
+            "n": 256,
+            "prevalence": 0.0234375,
+            "threshold": 0.14,
+            "auroc": 0.8800000000000001,
+            "average_precision": 0.11165772212283841,
+            "brier": 0.022171551496056048,
+            "ece": 0.014192383292318114,
+            "calibration": [
+              {
+                "bin": 0,
+                "count": 239,
+                "probability": 0.029985295803941967,
+                "observed": 0.02092050209205021
+              },
+              {
+                "bin": 1,
+                "count": 16,
+                "probability": 0.14152462491192566,
+                "observed": 0.0625
+              },
+              {
+                "bin": 2,
+                "count": 1,
+                "probability": 0.2023704271004959,
+                "observed": 0.0
+              }
+            ],
+            "precision": 0.125,
+            "sensitivity": 0.16666666666666666,
+            "specificity": 0.972,
+            "f1": 0.14285714285714285,
+            "confusion_matrix": [
+              [
+                243,
+                7
+              ],
+              [
+                5,
+                1
+              ]
+            ]
+          }
+        ],
+        "realized_brier_reduction": {
+          "mean": -0.0003348224477543833,
+          "low": -0.0017522176491623397,
+          "high": 0.0015030648987277306,
+          "n": 256
+        },
+        "entropy_reduction": {
+          "mean": 0.026310846618217844,
+          "low": 0.015249628060137042,
+          "high": 0.039253982620811076,
+          "n": 256
+        },
+        "first_acquisition_counts": {
+          "EXERANY2": 22,
+          "CHCKDNY2": 24,
+          "EDUCA": 19,
+          "_BMI5": 26,
+          "GENHLTH": 17,
+          "PHYSHLTH": 18,
+          "CVDINFR4": 15,
+          "INCOME3": 25,
+          "_SMOKER3": 16,
+          "CVDCRHD4": 26,
+          "HAVARTH4": 17,
+          "MENTHLTH": 14,
+          "DIABETE4": 17
+        }
+      },
+      "global_importance": {
+        "steps": [
+          {
+            "n": 256,
+            "prevalence": 0.0234375,
+            "threshold": 0.14,
+            "auroc": 0.9213333333333333,
+            "average_precision": 0.1856837606837607,
+            "brier": 0.021836729048301667,
+            "ece": 0.031994832421252256,
+            "calibration": [
+              {
+                "bin": 0,
+                "count": 244,
+                "probability": 0.03863256635739637,
+                "observed": 0.012295081967213115
+              },
+              {
+                "bin": 1,
+                "count": 12,
+                "probability": 0.10297242428034468,
+                "observed": 0.25
+              }
+            ],
+            "precision": 0.0,
+            "sensitivity": 0.0,
+            "specificity": 1.0,
+            "f1": 0.0,
+            "confusion_matrix": [
+              [
+                250,
+                0
+              ],
+              [
+                6,
+                0
+              ]
+            ]
+          },
+          {
+            "n": 256,
+            "prevalence": 0.0234375,
+            "threshold": 0.14,
+            "auroc": 0.8453333333333334,
+            "average_precision": 0.09991553918500329,
+            "brier": 0.022592291016563674,
+            "ece": 0.01614676373830414,
+            "calibration": [
+              {
+                "bin": 0,
+                "count": 231,
+                "probability": 0.028690540948357476,
+                "observed": 0.012987012987012988
+              },
+              {
+                "bin": 1,
+                "count": 23,
+                "probability": 0.1349628108814799,
+                "observed": 0.13043478260869565
+              },
+              {
+                "bin": 2,
+                "count": 2,
+                "probability": 0.20095595383062287,
+                "observed": 0.0
+              }
+            ],
+            "precision": 0.0,
+            "sensitivity": 0.0,
+            "specificity": 0.964,
+            "f1": 0.0,
+            "confusion_matrix": [
+              [
+                241,
+                9
+              ],
+              [
+                6,
+                0
+              ]
+            ]
+          },
+          {
+            "n": 256,
+            "prevalence": 0.0234375,
+            "threshold": 0.14,
+            "auroc": 0.8333333333333334,
+            "average_precision": 0.09627525252525253,
+            "brier": 0.022891680632340775,
+            "ece": 0.016263513793142267,
+            "calibration": [
+              {
+                "bin": 0,
+                "count": 228,
+                "probability": 0.027110605000920145,
+                "observed": 0.021929824561403508
+              },
+              {
+                "bin": 1,
+                "count": 23,
+                "probability": 0.12462505951111442,
+                "observed": 0.043478260869565216
+              },
+              {
+                "bin": 2,
+                "count": 5,
+                "probability": 0.2231730444157991,
+                "observed": 0.0
+              }
+            ],
+            "precision": 0.1111111111111111,
+            "sensitivity": 0.16666666666666666,
+            "specificity": 0.968,
+            "f1": 0.13333333333333333,
+            "confusion_matrix": [
+              [
+                242,
+                8
+              ],
+              [
+                5,
+                1
+              ]
+            ]
+          },
+          {
+            "n": 256,
+            "prevalence": 0.0234375,
+            "threshold": 0.14,
+            "auroc": 0.8470000000000001,
+            "average_precision": 0.11397799731133065,
+            "brier": 0.022541161423233987,
+            "ece": 0.015295993839894181,
+            "calibration": [
+              {
+                "bin": 0,
+                "count": 229,
+                "probability": 0.025058733688122642,
+                "observed": 0.013100436681222707
+              },
+              {
+                "bin": 1,
+                "count": 23,
+                "probability": 0.1381643611139788,
+                "observed": 0.13043478260869565
+              },
+              {
+                "bin": 2,
+                "count": 4,
+                "probability": 0.2498860257028281,
+                "observed": 0.0
+              }
+            ],
+            "precision": 0.14285714285714285,
+            "sensitivity": 0.3333333333333333,
+            "specificity": 0.952,
+            "f1": 0.2,
+            "confusion_matrix": [
+              [
+                238,
+                12
+              ],
+              [
+                4,
+                2
+              ]
+            ]
+          }
+        ],
+        "realized_brier_reduction": {
+          "mean": -0.000704432374932318,
+          "low": -0.002808447016403023,
+          "high": 0.0015993019282994798,
+          "n": 256
+        },
+        "entropy_reduction": {
+          "mean": 0.03116405850787791,
+          "low": 0.01358294330042901,
+          "high": 0.0487328884954674,
+          "n": 256
+        },
+        "first_acquisition_counts": {
+          "GENHLTH": 256
+        }
+      }
+    },
+    "paired_final_brier_advantage": {
+      "random": {
+        "mean": -0.0003795270459252678,
+        "low": -0.0019852947673745036,
+        "high": 0.0016829884395210524,
+        "n": 256
+      },
+      "global_importance": {
+        "mean": -9.917118747333411e-06,
+        "low": -0.0004493652016127546,
+        "high": 0.0003864450607761687,
+        "n": 256
+      }
+    },
+    "interpretation": "kNN empirical conditional donors; expected model-implied entropy reduction, not causal/clinical value",
+    "limitations": [
+      "Complete-case selected evaluation cohort",
+      "No defensible measurement costs; unit feature counts",
+      "Numeric donor values grouped into four quantile bins",
+      "No claim of clinical measurement recommendations"
+    ]
+  }
+}

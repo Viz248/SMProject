@@ -1,0 +1,69 @@
+{
+  "description": "Executed protocol snapshot; CLI modules document command options",
+  "tabnet": {
+    "configurations": [
+      {
+        "name": "tabnet8",
+        "n_d": 8,
+        "n_steps": 3,
+        "lambda_sparse": 0.001,
+        "weight_decay": 0.0001
+      },
+      {
+        "name": "tabnet16",
+        "n_d": 16,
+        "n_steps": 3,
+        "lambda_sparse": 0.001,
+        "weight_decay": 0.001
+      },
+      {
+        "name": "tabnet16_sparse",
+        "n_d": 16,
+        "n_steps": 4,
+        "lambda_sparse": 0.01,
+        "weight_decay": 0.001
+      }
+    ],
+    "epochs": 30,
+    "batch_size": 4096,
+    "virtual_batch_size": 256,
+    "seed": 42,
+    "threads": 2,
+    "initial_lr": 0.01,
+    "scheduler_step": 5,
+    "scheduler_gamma": 0.8
+  },
+  "trust": {
+    "member_seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "bootstrap_members": [
+      45,
+      46
+    ],
+    "epochs": 20,
+    "records": 2048,
+    "explanation_records": 128,
+    "initial_permutations": 16,
+    "convergence_permutations": [
+      16,
+      64,
+      256
+    ],
+    "acquisition_records": 256,
+    "acquisition_steps": 3,
+    "donor_pool": 8192,
+    "neighbors": 64
+  },
+  "external": {
+    "train_year": 2024,
+    "evaluation_year": 2023,
+    "threshold": 0.14,
+    "fit_on_external": false,
+    "interpretation": "Reverse-calendar year transport only; no clinical or future-incident prediction claim"
+  }
+}

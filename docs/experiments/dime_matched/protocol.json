@@ -1,0 +1,36 @@
+{
+  "status": "EXPLORATORY_MATCHED_REFERENCE_FOLLOWUP",
+  "reference_commit": "06ba70f7bcd54dbd8ccd64bed398dfef90d09da5",
+  "primary": "Brier benefit cf_brier versus separately refitted insample_brier head after 3 acquisitions, same frozen full Brier DIME predictor",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "pretrain_epochs": 15,
+  "joint_epochs": 15,
+  "value_epochs": 25,
+  "final_test_accessed": false,
+  "brfss2025_accessed": false,
+  "notes": [
+    "All evaluation records are development records, not fresh confirmation",
+    "CE native uses bounded scaling; Brier native uses unconstrained scaling because entropy bound is CE-specific",
+    "Native classes use original repeated-action training sampler",
+    "Each fold fits preprocessing and teacher only on its own training records; same separate stopping partition",
+    "CE and Brier reference checkpoints selected by their own validation losses",
+    "No external probability calibration; native CE uses separate predictor, other policy comparisons share full Brier predictor",
+    "CF requires three extra teacher fits; compute not equal",
+    "Fold teachers have less data than deployment predictor; same-size in-sample control included",
+    "Record bootstrap conditional on models; no design-based or training-uncertainty CI",
+    "Wisconsin is auxiliary tabular diagnostic data, not a published DIME benchmark"
+  ],
+  "source_sha256": "901f134898cbf73fb02c6f5960502bff9cc03838f6acbe2741251471a4b00faf",
+  "versions": {
+    "torch": "2.14.1+cpu",
+    "numpy": "2.3.5",
+    "scikit-learn": "1.8.0",
+    "pytorch-lightning": "1.9.5",
+    "torchmetrics": "0.11.4"
+  },
+  "brfss_sha256": "1568dec8239ade0dcf89bddadb1c119abf0fcb2955c015382b87767763f6a74c"
+}
