@@ -1,0 +1,50 @@
+% IEEE-style algorithmic pseudocode for AdaptiveDecisionPolicy.decide()
+% Matches actual implementation in truststroke/adaptive_layer.py
+
+\begin{algorithm}[t]
+\caption{Adaptive Decision Policy with Gated Acquisition and Abstention}
+\label{alg:adaptive_policy}
+\small
+\begin{algorithmic}[1]
+\REQUIRE Initial observed feature dictionary $\mathbf{x}_{\text{obs}} = \{(c, v) \mid c \in \mathcal{F}_{\text{canonical}}\}$;
+Base model ensemble $\{f_m\}_{m=1}^M$; Scenario calibrators $\mathcal{C}$; Recommender engine $\mathcal{E}$ (static priority queue or conditional donors); On-demand feature provider $\text{Query}(\cdot)$; Decision threshold $\theta$ (default 0.14); Acquisition trigger $\tau_{\text{acq}}$; Abstention trigger $\tau_{\text{abstain}}$; Abstention margin $\delta_{\text{margin}}$; Maximum steps $K_{\max}$; Minimum information gain $\gamma_{\min}$.
+\ENSURE Immutable decision record $\mathcal{D} = \langle \text{action}, \hat{y}, \bar{p}, H(\bar{p}), \mathcal{F}_{\text{acquired}}, \text{reason} \rangle$.
+
+\STATE $\mathcal{F}_{\text{curr}} \leftarrow \{c \mid (c, v) \in \mathbf{x}_{\text{obs}} \text{ and } v \text{ is not NaN}\}$
+\STATE $\mathcal{F}_{\text{acquired}} \leftarrow \emptyset$, \quad $k \leftarrow 0$
+\STATE $\bar{p}, H_{\text{total}}, H_{\text{between}} \leftarrow \text{PredictAndCalibrate}(\mathbf{x}_{\text{obs}}, \mathcal{F}_{\text{curr}}, \{f_m\}, \mathcal{C})$
+
+\WHILE{$k < K_{\max}$}
+    \STATE \textbf{Check acquisition criteria:}
+    \IF{$H_{\text{total}} < \tau_{\text{acq}}$ \textbf{and} $H_{\text{between}} < \tau_{\text{disagree}}$}
+        \STATE \textbf{break} \COMMENT{Uncertainty sufficiently low; proceed directly to decision}
+    \ENDIF
+    \IF{$\mathcal{E}$ is \textbf{None} \textbf{or} $\text{Query}$ is \textbf{None}}
+        \STATE \textbf{break} \COMMENT{Acquisition engine or provider unavailable}
+    \ENDIF
+
+    \STATE $(c^*, \text{info}) \leftarrow \mathcal{E}.\text{recommend}(\mathbf{x}_{\text{obs}})$
+    \IF{$c^* = \textbf{None}$ \textbf{or} $\text{info}.\text{gain}(c^*) < \gamma_{\min}$}
+        \STATE \textbf{break} \COMMENT{No remaining candidate features or gain below threshold}
+    \ENDIF
+
+    \STATE \COMMENT{Strict on-demand access: feature value concealed until explicitly queried}
+    \STATE $v^* \leftarrow \text{Query}(c^*)$
+    \IF{$v^*$ is NaN}
+        \STATE \textbf{break} \COMMENT{Feature unobtainable or unrecorded upon query}
+    \ENDIF
+
+    \STATE $\mathbf{x}_{\text{obs}}[c^*] \leftarrow v^*$, \quad $\mathcal{F}_{\text{curr}} \leftarrow \mathcal{F}_{\text{curr}} \cup \{c^*\}$
+    \STATE $\mathcal{F}_{\text{acquired}} \leftarrow \mathcal{F}_{\text{acquired}} \cup \{c^*\}$, \quad $k \leftarrow k + 1$
+    \STATE $\bar{p}, H_{\text{total}}, H_{\text{between}} \leftarrow \text{PredictAndCalibrate}(\mathbf{x}_{\text{obs}}, \mathcal{F}_{\text{curr}}, \{f_m\}, \mathcal{C})$
+\ENDWHILE
+
+\STATE \COMMENT{Evaluate Abstention Safety Criteria}
+\IF{($\tau_{\text{abstain}} \ne \textbf{None}$ \textbf{and} $H_{\text{total}} \ge \tau_{\text{abstain}}$) \textbf{or} ($\delta_{\text{margin}} \ne \textbf{None}$ \textbf{and} $|\bar{p} - \theta| \le \delta_{\text{margin}}$)}
+    \RETURN $\mathcal{D} = \langle \text{action}=\text{`abstain'}, \hat{y}=\textbf{None}, \bar{p}, H_{\text{total}}, \mathcal{F}_{\text{acquired}}, \text{reason}=\text{`Safety threshold breached'} \rangle$
+\ENDIF
+
+\STATE $\hat{y} \leftarrow \mathbb{I}(\bar{p} \ge \theta)$
+\RETURN $\mathcal{D} = \langle \text{action}=\text{`classify'}, \hat{y}, \bar{p}, H_{\text{total}}, \mathcal{F}_{\text{acquired}}, \text{reason}=\text{`Classified'} \rangle$
+\end{algorithmic}
+\end{algorithm}

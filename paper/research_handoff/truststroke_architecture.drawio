@@ -1,0 +1,142 @@
+<mxfile host="app.diagrams.net" modified="2026-10-20T13:00:00.000Z" agent="TrustStroke Research Architecture" version="21.0.0" type="device">
+  <diagram id="truststroke-architecture-revised" name="TrustStroke System Architecture (Revised)">
+    <mxGraphModel dx="1422" dy="892" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="850" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- TITLE BLOCK -->
+        <mxCell id="title" value="&lt;b style=&quot;font-size: 16px; color: #0F172A;&quot;&gt;TrustStroke: Trust-Aware Classification &amp;amp; Adaptive Decision Framework&lt;/b&gt;&lt;br&gt;&lt;i style=&quot;font-size: 11px; color: #475569;&quot;&gt;Target: Lifetime Stroke History (CVDSTRK3) | CDC BRFSS Multi-Year Survey&lt;/i&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="15" width="580" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== SECTION 1: DATA INGESTION, AVAILABILITY & MODELING ==================== -->
+        <mxCell id="sec1_group" value="SECTION 1: POPULATION DATA INGESTION, AVAILABILITY MODELING &amp;amp; SCENARIO RECALIBRATION" style="swimlane;whiteSpace=wrap;html=1;startSize=26;fillColor=#FFFFFF;strokeColor=#2563EB;strokeWidth=2;fontStyle=1;fontSize=11;fontColor=#2563EB;rounded=1;arcSize=3;" vertex="1" parent="1">
+          <mxGeometry x="40" y="65" width="1120" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="s1_data" value="&lt;b&gt;1. CDC BRFSS Ingestion &amp;amp; Design&lt;/b&gt;&lt;br&gt;• 2024 Source &amp;amp; 2025 Temporal Releases&lt;br&gt;• Target: CVDSTRK3 (Stroke History)&lt;br&gt;• 15 Canonical Predictors (4 Cat, 11 Num)&lt;br&gt;• Complex Survey Weights, Strata &amp;amp; Clusters" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="sec1_group">
+          <mxGeometry x="20" y="38" width="310" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="s1_scenarios" value="&lt;b&gt;2. Simulated Availability Scenarios&lt;/b&gt;&lt;br&gt;• Full (15) &amp;amp; Demographics Only (2)&lt;br&gt;• Demographics + Disease History (7)&lt;br&gt;• Without Health State (12; drops general/phys)&lt;br&gt;• Missingness encoded via zero-mask &amp;amp; indicators" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="sec1_group">
+          <mxGeometry x="370" y="38" width="340" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="s1_models" value="&lt;b&gt;3. Estimators &amp;amp; Scenario Recalibration&lt;/b&gt;&lt;br&gt;• Boosted Trees, MLP, Logistic Regression&lt;br&gt;• 4 Controls: Global, Scenario, Mixed, Retrain&lt;br&gt;• Platt Sigmoid Scaling: P_cal = σ(A_s·logit(p) + B_s)&lt;br&gt;• Resolves representation mismatch without refit" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="sec1_group">
+          <mxGeometry x="750" y="38" width="350" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s1_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=1.5;" edge="1" source="s1_data" target="s1_scenarios" parent="sec1_group">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s1_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=1.5;" edge="1" source="s1_scenarios" target="s1_models" parent="sec1_group">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Downward Connectors from Section 1 to Section 2 -->
+        <mxCell id="e_down_record" value="Patient Record x_obs" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontSize=10;fontColor=#475569;" edge="1" source="s1_data" target="r_obs" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array points="[215, 235], [115, 235]" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_down_calibrators" value="Scenario Calibrator Routing" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=1.5;fontSize=10;fontColor=#2563EB;" edge="1" source="s1_models" target="r_gate" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array points="[965, 235], [330, 235]" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ==================== SECTION 2: RUNTIME ADAPTIVE POLICY ==================== -->
+        <mxCell id="sec2_group" value="SECTION 2: RUNTIME ADAPTIVE DECISION POLICY (Sequential Online Inference Loop)" style="swimlane;whiteSpace=wrap;html=1;startSize=26;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=2;fontStyle=1;fontSize=11;fontColor=#059669;rounded=1;arcSize=3;" vertex="1" parent="1">
+          <mxGeometry x="40" y="250" width="1120" height="240" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r_obs" value="&lt;b&gt;Observed Input&lt;/b&gt;&lt;br&gt;Initial subset x_obs&lt;br&gt;Unobserved features&lt;br&gt;concealed as NaN&lt;br&gt;(Zero feature leakage)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0FDF4;strokeColor=#10B981;fontSize=10;align=center;" vertex="1" parent="sec2_group">
+          <mxGeometry x="20" y="45" width="150" height="95" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r_gate" value="&lt;b&gt;CAS Uncertainty Gate&lt;/b&gt;&lt;br&gt;Initial calibrated p &amp;amp; entropy&lt;br&gt;Check Acquisition Criteria:&lt;br&gt;  H_total(p) ≥ τ_acq (0.30)&lt;br&gt;  or Disagreement ≥ τ_disag" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0FDF4;strokeColor=#10B981;fontSize=10;align=center;" vertex="1" parent="sec2_group">
+          <mxGeometry x="210" y="45" width="180" height="95" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r_recommender" value="&lt;b&gt;Feature Recommender&lt;/b&gt;&lt;br&gt;Rank missing candidates:&lt;br&gt;• Static Priority: CVDINFR4&lt;br&gt;• ConditionalDonors: max ΔH&lt;br&gt;  (k=64 complete donors)&lt;br&gt;Stop if ΔH &amp;lt; γ_min" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0FDF4;strokeColor=#10B981;fontSize=10;align=center;" vertex="1" parent="sec2_group">
+          <mxGeometry x="440" y="45" width="200" height="95" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r_query" value="&lt;b&gt;On-Demand Query&lt;/b&gt;&lt;br&gt;Strict Callback Provider:&lt;br&gt;  v* = Query(c*)&lt;br&gt;Update x_obs ← x_obs ∪ {c*}&lt;br&gt;Steps k ← k + 1 (k ≤ K_max)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0FDF4;strokeColor=#10B981;fontSize=10;align=center;" vertex="1" parent="sec2_group">
+          <mxGeometry x="690" y="45" width="180" height="95" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r_safety" value="&lt;b&gt;Safety Abstention Gate&lt;/b&gt;&lt;br&gt;Post-Acquisition Re-scoring&lt;br&gt;Check Abstention Criteria:&lt;br&gt;  H_total(p) ≥ τ_abs (0.85)&lt;br&gt;  or Margin |p - θ| ≤ δ_margin" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0FDF4;strokeColor=#10B981;fontSize=10;align=center;" vertex="1" parent="sec2_group">
+          <mxGeometry x="910" y="45" width="190" height="95" as="geometry" />
+        </mxCell>
+
+        <!-- Actions -->
+        <mxCell id="act_classify" value="&lt;b&gt;ACTION: CLASSIFY&lt;/b&gt;&lt;br&gt;y_hat = I(p ≥ 0.14) | Emits Record" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.5;fontSize=10;fontColor=#065F46;align=center;" vertex="1" parent="sec2_group">
+          <mxGeometry x="915" y="175" width="185" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="act_abstain" value="&lt;b&gt;ACTION: ABSTAIN&lt;/b&gt;&lt;br&gt;y_hat = None | Emits Record" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF2F2;strokeColor=#DC2626;strokeWidth=1.5;fontSize=10;fontColor=#991B1B;align=center;" vertex="1" parent="sec2_group">
+          <mxGeometry x="690" y="175" width="180" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- Runtime Arrows -->
+        <mxCell id="e_r_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#059669;strokeWidth=1.5;" edge="1" source="r_obs" target="r_gate" parent="sec2_group">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r_2" value="High Uncertainty" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#059669;strokeWidth=1.5;fontSize=9;fontColor=#047857;" edge="1" source="r_gate" target="r_recommender" parent="sec2_group">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r_3" value="Query c*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#059669;strokeWidth=1.5;fontSize=9;fontColor=#047857;" edge="1" source="r_recommender" target="r_query" parent="sec2_group">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r_4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#059669;strokeWidth=1.5;" edge="1" source="r_query" target="r_safety" parent="sec2_group">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Loopback arrow -->
+        <mxCell id="e_r_loop" value="Update x_obs &amp;amp; Recalibrate (k &amp;lt; K_max)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#047857;strokeWidth=1.5;strokeDasharray=3 3;fontSize=9;fontColor=#047857;" edge="1" source="r_query" target="r_gate" parent="sec2_group">
+          <mxGeometry relative="1" as="geometry">
+            <Array points="[780, 155], [300, 155]" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Skip arrow (uncertainty low) -->
+        <mxCell id="e_r_skip" value="Uncertainty Low (Skip Acquisition directly to Safety Gate)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.2;strokeDasharray=2 2;fontSize=9;fontColor=#475569;" edge="1" source="r_gate" target="r_safety" parent="sec2_group">
+          <mxGeometry relative="1" as="geometry">
+            <Array points="[300, 25], [1005, 25]" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Action Arrows -->
+        <mxCell id="e_r_classify" value="Safe (H &amp;lt; τ_abs)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#059669;strokeWidth=1.5;fontSize=9;fontColor=#065F46;" edge="1" source="r_safety" target="act_classify" parent="sec2_group">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r_abstain" value="Ambiguous / Boundary" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DC2626;strokeWidth=1.5;fontSize=9;fontColor=#991B1B;" edge="1" source="r_safety" target="act_abstain" parent="sec2_group">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== SECTION 3: OFFLINE TRUST DIAGNOSTICS ==================== -->
+        <mxCell id="sec3_group" value="SECTION 3: OFFLINE TRUST DIAGNOSTICS (Model Auditing; Excluded from Runtime Routing)" style="swimlane;whiteSpace=wrap;html=1;startSize=26;fillColor=#FFFFFF;strokeColor=#D97706;strokeWidth=1.5;strokeDasharray=4 4;fontStyle=1;fontSize=10;fontColor=#D97706;rounded=1;arcSize=3;" vertex="1" parent="1">
+          <mxGeometry x="40" y="510" width="540" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_dsi" value="&lt;b&gt;Decision Stability (DSI)&lt;/b&gt;&lt;br&gt;• Permutation Shapley attribution&lt;br&gt;  similarity across random seeds&lt;br&gt;• Diagnoses Monte Carlo path&lt;br&gt;  noise (16 to 256 paths)&lt;br&gt;• Offline estimator audit" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#F59E0B;fontSize=9.5;align=left;spacingLeft=6;" vertex="1" parent="sec3_group">
+          <mxGeometry x="15" y="38" width="160" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_cas" value="&lt;b&gt;Confidence Attribution (CAS)&lt;/b&gt;&lt;br&gt;• H_total = H_within + H_between&lt;br&gt;• Decomposes ensemble entropy&lt;br&gt;  into member entropy &amp;amp; Jensen-gap&lt;br&gt;  disagreement (epistemic proxy)&lt;br&gt;• Offline misclassification audit" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#F59E0B;fontSize=9.5;align=left;spacingLeft=6;" vertex="1" parent="sec3_group">
+          <mxGeometry x="190" y="38" width="170" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_rai" value="&lt;b&gt;Resource Adaptability (RAI)&lt;/b&gt;&lt;br&gt;• Brier headroom retention r_s&lt;br&gt;  above null-prevalence baseline&lt;br&gt;• Evaluates multiple missingness&lt;br&gt;  patterns (MCAR &amp;amp; informative)&lt;br&gt;• Complements loss curves" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#F59E0B;fontSize=9.5;align=left;spacingLeft=6;" vertex="1" parent="sec3_group">
+          <mxGeometry x="375" y="38" width="150" height="115" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== SECTION 4: DUAL INDEPENDENT EVALUATIONS ==================== -->
+        <mxCell id="sec4_group" value="SECTION 4: DUAL INDEPENDENT EVALUATION REGIMES (Separately Evaluated Protocols)" style="swimlane;whiteSpace=wrap;html=1;startSize=26;fillColor=#FFFFFF;strokeColor=#4F46E5;strokeWidth=2;fontStyle=1;fontSize=10;fontColor=#4F46E5;rounded=1;arcSize=3;" vertex="1" parent="1">
+          <mxGeometry x="610" y="510" width="550" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_regime_a" value="&lt;b&gt;Regime A: Forward Temporal Transport&lt;/b&gt;&lt;br&gt;• &lt;b&gt;Core Conference Paper Evaluation&lt;/b&gt;&lt;br&gt;• 2024 Development → 2025 External Transport&lt;br&gt;• Complex Survey Weights &amp;amp; Multi-Stage Clusters&lt;br&gt;• Stratified Taylor Linearization (Discloses Singletons)&lt;br&gt;• Compares Global vs Scenario vs Mixed vs Retrain" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2FF;strokeColor=#6366F1;fontSize=9.5;align=left;spacingLeft=6;" vertex="1" parent="sec4_group">
+          <mxGeometry x="20" y="38" width="245" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_regime_b" value="&lt;b&gt;Regime B: Sequential Adaptive Benchmark&lt;/b&gt;&lt;br&gt;• &lt;b&gt;Exploratory Acquisition &amp;amp; Safety Study&lt;/b&gt;&lt;br&gt;• 2024 Locked Test Partition (I.I.D. Resampling)&lt;br&gt;• Paired Respondent-Level Bootstrap Differences&lt;br&gt;• Evaluates ConditionalDonors vs Static Priority&lt;br&gt;• Documents Trade-offs of Safety Abstention" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2FF;strokeColor=#6366F1;fontSize=9.5;align=left;spacingLeft=6;" vertex="1" parent="sec4_group">
+          <mxGeometry x="280" y="38" width="250" height="115" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

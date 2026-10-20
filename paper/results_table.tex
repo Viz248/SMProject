@@ -1,0 +1,38 @@
+% IEEE-style comparative results table template across all four feature availability scenarios
+% Strictly separates Full-Population Probability Metrics from Covered-Only Decision Metrics.
+% All numerical cells are placeholders awaiting the completed full 91,244-respondent BRFSS evaluation.
+
+\begin{table*}[t]
+\caption{Comparative Evaluation Across Availability Scenarios on the Locked Test Partition ($N_{\text{test}} = 91,244$). Full-population probability metrics evaluate calibration across all respondents; covered-only decision metrics evaluate classification performance strictly conditional on non-abstention at decision threshold $\theta = 0.14$.}
+\label{tab:adaptive_comparative_results}
+\centering
+\small
+\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{ll ccc cccc ccccc}
+\toprule
+& & \multicolumn{3}{c}{\textbf{Operational Rates}} & \multicolumn{4}{c}{\textbf{Full-Population Probability Metrics}} & \multicolumn{5}{c}{\textbf{Covered-Only Decision Metrics}} \\
+\cmidrule(lr){3-5} \cmidrule(lr){6-9} \cmidrule(lr){10-14}
+\textbf{Scenario} & \textbf{Policy} & \textbf{Cov.} $\uparrow$ & \textbf{Abst.} & \textbf{Acq.} & \textbf{Brier} $\downarrow$ & \textbf{AUROC} $\uparrow$ & \textbf{AP} $\uparrow$ & \textbf{ECE} $\downarrow$ & $n_{\text{cov}}$ & \textbf{Sens.} $\uparrow$ & \textbf{Spec.} $\uparrow$ & \textbf{Prec.} $\uparrow$ & \textbf{F1} $\uparrow$ \\
+\midrule
+\multirow{3}{*}{\shortstack[l]{\textbf{Full}\\\textit{(15/15 features)}}} 
+& No Intervention     & 1.000 & 0.000 & 0.000 & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] \\
+& Fixed Recalibration & 1.000 & 0.000 & 0.000 & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] \\
+& Adaptive Policy     & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] \\
+\midrule
+\multirow{3}{*}{\shortstack[l]{\textbf{Without Health State}\\\textit{(12/15 features)}}} 
+& No Intervention     & 1.000 & 0.000 & 0.000 & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] \\
+& Fixed Recalibration & 1.000 & 0.000 & 0.000 & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] \\
+& Adaptive Policy     & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] \\
+\midrule
+\multirow{3}{*}{\shortstack[l]{\textbf{Demographics + History}\\\textit{(7/15 features)}}} 
+& No Intervention     & 1.000 & 0.000 & 0.000 & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] \\
+& Fixed Recalibration & 1.000 & 0.000 & 0.000 & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] \\
+& Adaptive Policy     & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] \\
+\midrule
+\multirow{3}{*}{\shortstack[l]{\textbf{Demographics Only}\\\textit{(2/15 features)}}} 
+& No Intervention     & 1.000 & 0.000 & 0.000 & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] \\
+& Fixed Recalibration & 1.000 & 0.000 & 0.000 & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] \\
+& Adaptive Policy     & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] & [---] \\
+\bottomrule
+\end{tabular}
+\end{table*}

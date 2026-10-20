@@ -438,6 +438,18 @@ class TestAdaptiveEvaluationHelpers(unittest.TestCase):
         # After acquiring _AGEG5YR, CalAcquired was routed, giving prob 0.04
         self.assertAlmostEqual(decision.probability, 0.04)
 
+    def test_static_recommender_wrapper(self):
+        """Verify StaticFeatureRecommender recommends target feature until observed."""
+        from truststroke.benchmark_acquisition import StaticFeatureRecommender
+        recommender = StaticFeatureRecommender("CVDINFR4")
+        feat, res = recommender.recommend({'SEXVAR': 1.0})
+        self.assertEqual(feat, "CVDINFR4")
+        self.assertIn("CVDINFR4", res["expected_information_gain"])
+
+        feat_done, res_done = recommender.recommend({'SEXVAR': 1.0, 'CVDINFR4': 2.0})
+        self.assertIsNone(feat_done)
+        self.assertEqual(res_done["expected_information_gain"], {})
+
 
 if __name__ == '__main__':
     unittest.main()
