@@ -332,9 +332,62 @@ class TestAdaptiveEvaluationHelpers(unittest.TestCase):
             self.assertEqual(summary['data_mode'], 'SYNTHETIC_SMOKE')
             self.assertIn('scenarios', summary)
             self.assertIn('demographics', summary['scenarios'])
-            self.assertIn('adaptive_policy', summary['scenarios']['demographics'])
+            demo_res = summary['scenarios']['demographics']
+            self.assertIn('adaptive_policy', demo_res)
+            self.assertIn('full_population_probability_metrics', demo_res['adaptive_policy'])
+            self.assertIn('covered_decision_metrics', demo_res['adaptive_policy'])
+            self.assertIn('brier', demo_res['adaptive_policy']['full_population_probability_metrics'])
+
+    def test_policy_calibrator_routing(self):
+        """Verify that AdaptiveDecisionPolicy routes predictions through scenario calibrators."""
+        class DummyCal:
+            def predict_proba(self, logits):
+                # Always return calibrated prob of 0.05
+                n = len(logits)
+                return np.column_stack([np.full(n, 0.95), np.full(n, 0.05)])
+
+        model = DummyPredictor(prob=0.80)
+        calibrator_map = {('SEXVAR',): DummyCal()}
+
+        # Without calibrators: probability is 0.80
+        policy_uncal = AdaptiveDecisionPolicy(model=model, decision_threshold=0.14)
+        dec_uncal = policy_uncal.decide({'SEXVAR': 1.0})
+        self.assertAlmostEqual(dec_uncal.probability, 0.80)
+
+        # With calibrators: probability is calibrated to 0.05
+        policy_cal = AdaptiveDecisionPolicy(
+            model=model,
+            decision_threshold=0.14,
+            calibrators=calibrator_map
+        )
+        dec_cal = policy_cal.decide({'SEXVAR': 1.0})
+        self.assertAlmostEqual(dec_cal.probability, 0.05)
+
+    def test_abstention_metric_separation(self):
+        """Verify evaluate_adaptive separates full population from covered population metrics."""
+        from truststroke.evaluate_adaptive import evaluate_adaptive
+        model = DummyPredictor(prob=0.50)  # High entropy (1.0)
+        policy = AdaptiveDecisionPolicy(
+            model=model,
+            decision_threshold=0.14,
+            tau_entropy_abstain=0.80  # Will abstain on all records
+        )
+        X_eval = pd.DataFrame({'SEXVAR': [1.0, 2.0], '_AGEG5YR': [1.0, 2.0]})
+        y_eval = pd.Series([0, 1])
+
+        res = evaluate_adaptive(policy, X_eval, y_eval, ['SEXVAR'], 0.14)
+        self.assertEqual(res['n_total'], 2)
+        self.assertEqual(res['n_covered'], 0)
+        self.assertEqual(res['coverage'], 0.0)
+        self.assertEqual(res['abstention_rate'], 1.0)
+        # Full population Brier is computed
+        self.assertAlmostEqual(res['full_population_probability_metrics']['brier'], 0.25)
+        # Covered decision metrics has n=0 and None for decision metrics
+        self.assertEqual(res['covered_decision_metrics']['n'], 0)
+        self.assertIsNone(res['covered_decision_metrics']['sensitivity'])
 
 
 if __name__ == '__main__':
     unittest.main()
+
 

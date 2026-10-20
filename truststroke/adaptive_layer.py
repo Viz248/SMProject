@@ -56,6 +56,7 @@ class AdaptiveDecisionPolicy:
         donor_engine: Optional[ConditionalDonors] = None,
         min_information_gain: float = 0.001,
         allowed_acquisition_features: Optional[Sequence[str]] = None,
+        calibrators: Optional[Dict[str, Any]] = None,
     ):
         """
         Parameters
@@ -85,6 +86,9 @@ class AdaptiveDecisionPolicy:
             Minimum expected information gain (bits) required to execute an acquisition step.
         allowed_acquisition_features : sequence of str, optional
             Subset of FEATURES that are permissible to acquire. Defaults to all FEATURES.
+        calibrators : dict, optional
+            Mapping of scenario name or feature-tuple to a fitted calibrator (e.g. Platt LogisticRegression).
+            Alternatively, if a single calibrator object is passed, it is used for calibration.
         """
         target_model = model_or_ensemble if model_or_ensemble is not None else model
         if target_model is None:
@@ -107,6 +111,7 @@ class AdaptiveDecisionPolicy:
         self.max_acquisition_steps = int(max_acquisition_steps)
         self.donor_engine = donor_engine
         self.min_information_gain = float(min_information_gain)
+        self.calibrators = calibrators
 
         if allowed_acquisition_features is None:
             self.allowed_acquisition_features = set(FEATURES)
@@ -155,6 +160,30 @@ class AdaptiveDecisionPolicy:
             member_probs.append(p)
 
         p_array = np.array(member_probs, dtype=float)
+
+        # Apply calibration if calibrators are provided
+        if self.calibrators is not None:
+            cal = None
+            if hasattr(self.calibrators, "predict_proba"):
+                cal = self.calibrators
+            elif isinstance(self.calibrators, dict):
+                # Check for exact tuple match of sorted observed features
+                obs_tuple = tuple(sorted(observed_cols))
+                if obs_tuple in self.calibrators:
+                    cal = self.calibrators[obs_tuple]
+                else:
+                    # Look for best subset or matching scenario name
+                    for k, c in self.calibrators.items():
+                        if isinstance(k, (list, tuple, set)) and set(k) == set(observed_cols):
+                            cal = c
+                            break
+                        elif isinstance(k, str) and k in ["recalibrated", "default", "global"]:
+                            cal = c
+            if cal is not None and hasattr(cal, "predict_proba"):
+                # Apply calibrator to logits of probabilities
+                logits = np.log(np.clip(p_array, 1e-6, 1 - 1e-6) / (1 - np.clip(p_array, 1e-6, 1 - 1e-6))).reshape(-1, 1)
+                p_array = cal.predict_proba(logits)[:, 1]
+
         p_mean = float(p_array.mean())
 
         if self.is_ensemble:

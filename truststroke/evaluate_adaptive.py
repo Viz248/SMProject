@@ -97,12 +97,36 @@ def evaluate_no_intervention(
     masked_X[missing_cols] = np.nan
 
     p = base_model.predict_proba(masked_X)[:, 1]
-    m = metrics(y_eval, p, threshold=threshold)
-    m["coverage"] = 1.0
-    m["abstention_rate"] = 0.0
-    m["mean_acquisition_steps"] = 0.0
-    m["probabilities"] = p
-    return m
+    m_full = metrics(y_eval, p, threshold=threshold)
+    n = len(y_eval)
+
+    return {
+        "n_total": n,
+        "n_covered": n,
+        "coverage": 1.0,
+        "abstention_rate": 0.0,
+        "mean_acquisition_steps": 0.0,
+        "acquisition_frequency": 0.0,
+        "full_population_probability_metrics": {
+            "brier": m_full.get("brier"),
+            "auroc": m_full.get("auroc"),
+            "average_precision": m_full.get("average_precision"),
+            "ece": m_full.get("ece"),
+        },
+        "covered_decision_metrics": {
+            "n": n,
+            "prevalence": m_full.get("prevalence"),
+            "sensitivity": m_full.get("sensitivity"),
+            "specificity": m_full.get("specificity"),
+            "precision": m_full.get("precision"),
+            "f1": m_full.get("f1"),
+            "confusion_matrix": m_full.get("confusion_matrix"),
+            "brier": m_full.get("brier"),
+            "auroc": m_full.get("auroc"),
+            "average_precision": m_full.get("average_precision"),
+        },
+        "probabilities": p,
+    }
 
 
 def evaluate_fixed_recalibration(
@@ -120,12 +144,36 @@ def evaluate_fixed_recalibration(
 
     p_raw = base_model.predict_proba(masked_X)[:, 1]
     p_cal = calibrator.predict_proba(probability_logit(p_raw))[:, 1]
-    m = metrics(y_eval, p_cal, threshold=threshold)
-    m["coverage"] = 1.0
-    m["abstention_rate"] = 0.0
-    m["mean_acquisition_steps"] = 0.0
-    m["probabilities"] = p_cal
-    return m
+    m_full = metrics(y_eval, p_cal, threshold=threshold)
+    n = len(y_eval)
+
+    return {
+        "n_total": n,
+        "n_covered": n,
+        "coverage": 1.0,
+        "abstention_rate": 0.0,
+        "mean_acquisition_steps": 0.0,
+        "acquisition_frequency": 0.0,
+        "full_population_probability_metrics": {
+            "brier": m_full.get("brier"),
+            "auroc": m_full.get("auroc"),
+            "average_precision": m_full.get("average_precision"),
+            "ece": m_full.get("ece"),
+        },
+        "covered_decision_metrics": {
+            "n": n,
+            "prevalence": m_full.get("prevalence"),
+            "sensitivity": m_full.get("sensitivity"),
+            "specificity": m_full.get("specificity"),
+            "precision": m_full.get("precision"),
+            "f1": m_full.get("f1"),
+            "confusion_matrix": m_full.get("confusion_matrix"),
+            "brier": m_full.get("brier"),
+            "auroc": m_full.get("auroc"),
+            "average_precision": m_full.get("average_precision"),
+        },
+        "probabilities": p_cal,
+    }
 
 
 def evaluate_adaptive(
@@ -137,7 +185,7 @@ def evaluate_adaptive(
 ) -> Dict[str, Any]:
     """Evaluate AdaptiveDecisionPolicy on evaluated records with simulated feature unavailability."""
     decisions: List[DecisionRecord] = []
-    
+
     # Iterate through evaluation records
     for i in range(len(X_eval)):
         row = X_eval.iloc[i].to_dict()
@@ -160,9 +208,54 @@ def evaluate_adaptive(
     coverage = float(n_classified / n_total) if n_total > 0 else 0.0
     abstention_rate = 1.0 - coverage
 
-    # Compute metrics on covered (classified) respondents if any, and on all respondents for ranking
-    m_covered = metrics(y_eval[classified_mask], probs[classified_mask], threshold=threshold) if n_classified > 10 and len(np.unique(y_eval[classified_mask])) == 2 else {}
-    m_all = metrics(y_eval, probs, threshold=threshold)
+    # Full-population probability metrics (evaluating probability quality across all respondents)
+    m_full = metrics(y_eval, probs, threshold=threshold)
+
+    # Covered-only decision metrics (evaluating decision utility where policy did not abstain)
+    if n_classified > 0 and len(np.unique(y_eval[classified_mask])) == 2:
+        m_cov = metrics(y_eval[classified_mask], probs[classified_mask], threshold=threshold)
+        covered_metrics = {
+            "n": n_classified,
+            "prevalence": m_cov.get("prevalence"),
+            "sensitivity": m_cov.get("sensitivity"),
+            "specificity": m_cov.get("specificity"),
+            "precision": m_cov.get("precision"),
+            "f1": m_cov.get("f1"),
+            "confusion_matrix": m_cov.get("confusion_matrix"),
+            "brier": m_cov.get("brier"),
+            "auroc": m_cov.get("auroc"),
+            "average_precision": m_cov.get("average_precision"),
+        }
+    elif n_classified > 0:
+        # Single class present in covered subset
+        y_cov = np.asarray(y_eval[classified_mask])
+        p_cov = probs[classified_mask]
+        pred_cov = (p_cov >= threshold).astype(int)
+        covered_metrics = {
+            "n": n_classified,
+            "prevalence": float(y_cov.mean()),
+            "sensitivity": None,
+            "specificity": None,
+            "precision": None,
+            "f1": None,
+            "confusion_matrix": None,
+            "brier": float(brier_score_loss(y_cov, p_cov)),
+            "auroc": None,
+            "average_precision": None,
+        }
+    else:
+        covered_metrics = {
+            "n": 0,
+            "prevalence": None,
+            "sensitivity": None,
+            "specificity": None,
+            "precision": None,
+            "f1": None,
+            "confusion_matrix": None,
+            "brier": None,
+            "auroc": None,
+            "average_precision": None,
+        }
 
     result = {
         "n_total": n_total,
@@ -171,11 +264,13 @@ def evaluate_adaptive(
         "abstention_rate": abstention_rate,
         "mean_acquisition_steps": float(steps.mean()),
         "acquisition_frequency": float((steps > 0).mean()),
-        "auroc_all": m_all.get("auroc"),
-        "average_precision_all": m_all.get("average_precision"),
-        "brier_all": m_all.get("brier"),
-        "brier_covered": m_covered.get("brier"),
-        "sensitivity_covered": m_covered.get("sensitivity"),
+        "full_population_probability_metrics": {
+            "brier": m_full.get("brier"),
+            "auroc": m_full.get("auroc"),
+            "average_precision": m_full.get("average_precision"),
+            "ece": m_full.get("ece"),
+        },
+        "covered_decision_metrics": covered_metrics,
         "probabilities": probs,
         "actions": actions,
         "steps": steps,
@@ -213,7 +308,7 @@ def paired_bootstrap_brier_diff(
 
 def tune_policy_thresholds(
     base_model: Any,
-    calibrator: LogisticRegression,
+    calibrators: Dict[str, Any],
     donor_engine: ConditionalDonors,
     X_dev: pd.DataFrame,
     y_dev: pd.Series,
@@ -222,10 +317,15 @@ def tune_policy_thresholds(
     sample_limit: int = 500,
 ) -> Dict[str, Any]:
     """Select adaptive policy thresholds on development data to balance Brier score and coverage."""
-    # Subsample development data if large to keep threshold tuning fast
+    # Subsample development data if large to keep threshold tuning fast and preserve rare-positive representation
     if len(X_dev) > sample_limit:
-        rng = np.random.default_rng(42)
-        sub_idx = rng.choice(len(X_dev), sample_limit, replace=False)
+        from sklearn.model_selection import train_test_split
+        _, sub_idx = train_test_split(
+            np.arange(len(X_dev)),
+            test_size=sample_limit,
+            stratify=y_dev,
+            random_state=42,
+        )
         X_tune = X_dev.iloc[sub_idx].reset_index(drop=True)
         y_tune = y_dev.iloc[sub_idx].reset_index(drop=True)
     else:
@@ -255,11 +355,12 @@ def tune_policy_thresholds(
                 tau_entropy_abstain=tau_abs,
                 max_acquisition_steps=1,
                 donor_engine=donor_engine,
+                calibrators=calibrators,
             )
             res = evaluate_adaptive(policy, X_tune, y_tune, test_scenario, decision_threshold)
-            # Penalize abstention heavily if coverage falls below 80%
             cov = res["coverage"]
-            brier = res["brier_all"]
+            brier = res["full_population_probability_metrics"]["brier"]
+            # Penalize abstention heavily if coverage falls below 80%
             effective_score = brier if cov >= 0.80 else brier + 1.0 * (0.80 - cov)
 
             if effective_score < best_score:
@@ -327,12 +428,18 @@ def run_experiment(args) -> Dict[str, Any]:
         donors=donor_pool,
         neighbors=min(64, len(donor_pool)),
     )
+    # Construct scenario-calibrators mapping indexed both by scenario name and by tuple of features
+    calibrator_map = {}
+    for sc_name, allowed_cols in SCENARIOS.items():
+        cal = calibrators[sc_name]
+        calibrator_map[sc_name] = cal
+        calibrator_map[tuple(sorted(allowed_cols))] = cal
 
     print("Tuning adaptive policy thresholds on development split...")
     decision_threshold = 0.14
     tuned_cfg = tune_policy_thresholds(
         base_model,
-        calibrators["demographics"],
+        calibrator_map,
         donor_engine,
         X_dev,
         y_dev,
@@ -342,7 +449,7 @@ def run_experiment(args) -> Dict[str, Any]:
     )
     print(f"Tuned thresholds: {tuned_cfg}")
 
-    # Build frozen adaptive policy with tuned thresholds
+    # Build frozen adaptive policy with tuned thresholds and calibrators
     policy = AdaptiveDecisionPolicy(
         model=base_model,
         decision_threshold=decision_threshold,
@@ -350,6 +457,7 @@ def run_experiment(args) -> Dict[str, Any]:
         tau_entropy_abstain=tuned_cfg["tau_entropy_abstain"],
         max_acquisition_steps=tuned_cfg["max_acquisition_steps"],
         donor_engine=donor_engine,
+        calibrators=calibrator_map,
     )
 
     # Evaluate across all scenarios on the LOCKED test partition
