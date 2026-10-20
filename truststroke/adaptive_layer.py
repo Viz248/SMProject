@@ -172,13 +172,25 @@ class AdaptiveDecisionPolicy:
                 if obs_tuple in self.calibrators:
                     cal = self.calibrators[obs_tuple]
                 else:
-                    # Look for best subset or matching scenario name
+                    # Look for best matching scenario calibrator:
+                    # Prefer the largest predefined scenario subset that is contained in observed_cols
+                    best_match = None
+                    best_match_size = -1
+                    obs_set = set(observed_cols)
                     for k, c in self.calibrators.items():
-                        if isinstance(k, (list, tuple, set)) and set(k) == set(observed_cols):
-                            cal = c
-                            break
+                        if isinstance(k, (list, tuple, set)):
+                            k_set = set(k)
+                            if k_set == obs_set:
+                                cal = c
+                                break
+                            elif k_set.issubset(obs_set) and len(k_set) > best_match_size:
+                                best_match = c
+                                best_match_size = len(k_set)
                         elif isinstance(k, str) and k in ["recalibrated", "default", "global"]:
-                            cal = c
+                            if cal is None:
+                                cal = c
+                    if cal is None and best_match is not None:
+                        cal = best_match
             if cal is not None and hasattr(cal, "predict_proba"):
                 # Apply calibrator to logits of probabilities
                 logits = np.log(np.clip(p_array, 1e-6, 1 - 1e-6) / (1 - np.clip(p_array, 1e-6, 1 - 1e-6))).reshape(-1, 1)

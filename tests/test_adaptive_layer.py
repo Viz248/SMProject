@@ -386,6 +386,58 @@ class TestAdaptiveEvaluationHelpers(unittest.TestCase):
         self.assertEqual(res['covered_decision_metrics']['n'], 0)
         self.assertIsNone(res['covered_decision_metrics']['sensitivity'])
 
+    def test_paired_bootstrap_non_empty_and_sound(self):
+        """Regression test for non-empty paired bootstrap CIs and exact math."""
+        from truststroke.evaluate_adaptive import paired_bootstrap_brier_diff
+        y = np.array([0, 1, 0, 1])
+        p_base = np.array([0.2, 0.8, 0.3, 0.7])
+        p_cand = np.array([0.1, 0.9, 0.1, 0.9])
+        # Candidate is strictly better than baseline on all records
+        res = paired_bootstrap_brier_diff(y, p_base, p_cand, replicates=100, seed=42)
+        self.assertIsInstance(res, dict)
+        self.assertIn("mean_difference", res)
+        self.assertIn("ci95_low", res)
+        self.assertIn("ci95_high", res)
+        self.assertEqual(res["replicates"], 100)
+        # All differences are negative (candidate has lower Brier loss)
+        self.assertLess(res["mean_difference"], 0.0)
+        self.assertLess(res["ci95_high"], 0.0)
+        self.assertLessEqual(res["ci95_low"], res["ci95_high"])
+
+    def test_calibrator_routing_after_acquisition(self):
+        """Verify scenario calibrator updates when a feature is acquired."""
+        class CalBase:
+            def predict_proba(self, logits):
+                n = len(logits)
+                return np.column_stack([np.full(n, 0.8), np.full(n, 0.2)])
+
+        class CalAcquired:
+            def predict_proba(self, logits):
+                n = len(logits)
+                return np.column_stack([np.full(n, 0.96), np.full(n, 0.04)])
+
+        model = DummyPredictor(prob=0.50)  # High entropy trigger
+        donor = DummyDonorEngine(recommendation='_AGEG5YR', gain=0.1)
+
+        calibrator_map = {
+            ('SEXVAR',): CalBase(),
+            ('SEXVAR', '_AGEG5YR'): CalAcquired(),
+        }
+
+        policy = AdaptiveDecisionPolicy(
+            model=model,
+            decision_threshold=0.14,
+            tau_entropy_acq=0.5,
+            max_acquisition_steps=1,
+            donor_engine=donor,
+            calibrators=calibrator_map,
+        )
+
+        decision = policy.decide({'SEXVAR': 1.0}, ground_truth_provider=lambda f: 5.0)
+        self.assertIn('_AGEG5YR', decision.acquired_features)
+        # After acquiring _AGEG5YR, CalAcquired was routed, giving prob 0.04
+        self.assertAlmostEqual(decision.probability, 0.04)
+
 
 if __name__ == '__main__':
     unittest.main()
